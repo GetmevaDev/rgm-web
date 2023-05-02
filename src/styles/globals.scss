@@ -1,0 +1,13 @@
+@import "reset";
+@import "variables";
+@import "themes/dark";
+@import "themes/light";
+
+.app {
+  min-height: 100vh;
+  background: var(--bg-color);
+}
+
+.content-page {
+  display: flex;
+}

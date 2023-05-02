@@ -1,0 +1,27 @@
+.button {
+  font-family: var(--font-mont);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: -0.04px;
+  color: #000000;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.contained {
+  background: #bda76a;
+  border: 2px solid #bda76a;
+  border-radius: 5px;
+  padding: 23px 50px;
+}
+
+.outline {
+  border: 2px solid #bda76a;
+  border-radius: 5px;
+  padding: 22px 30px;
+  background: #fff;
+}
