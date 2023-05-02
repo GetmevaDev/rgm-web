@@ -6,7 +6,7 @@ import { ETheme } from "./theme";
 import { ThemeContext } from "./ThemeContext";
 
 let defaultTheme;
-if (typeof window !== "undefined") {
+if (typeof window !== "undefined" && window.localStorage) {
   defaultTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY || ETheme.Light);
 }
 

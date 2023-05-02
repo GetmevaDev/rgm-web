@@ -6,7 +6,7 @@
   line-height: 16px;
   text-align: center;
   letter-spacing: -0.04px;
-  color: #000000;
+  color: var(--primary-color);
   outline: none;
   border: none;
   cursor: pointer;
@@ -23,5 +23,10 @@
   border: 2px solid #bda76a;
   border-radius: 5px;
   padding: 22px 30px;
-  background: #fff;
+  background: var(--bg-color);
+
+  transition: background 0.2s ease;
+  &:hover {
+    background: var(--bg-color);
+  }
 }

@@ -1,59 +1,30 @@
 @import "../../../styles/variables.scss";
 
 .typography {
-  font-weight: 700;
-  text-align: center;
-  font-family: var(--font-rubik);
+  font-family: var(--font-mont);
 }
 
 .white {
-  color: #fff;
+  color: var(--primary-color);
 }
 
 .black {
-  color: #000;
+  color: var(--primary-color);
 }
 
 .small {
-  font-size: 40px;
-  line-height: 48px;
 }
 
 .medium {
-  font-size: 50px;
-  line-height: 58px;
 }
 
 .large {
-  font-size: 60px;
+  font-weight: 700;
+  font-size: 65px;
   line-height: 70px;
-}
-
-.center {
-  text-align: center;
-}
-
-.right {
-  text-align: right;
-}
-
-.left {
-  text-align: left;
+  letter-spacing: -4.24px;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: $phoneWidth) {
-  .small {
-    font-size: 30px;
-    line-height: 48px;
-  }
-
-  .medium {
-    font-size: 40px;
-    line-height: 58px;
-  }
-
-  .large {
-    font-size: 50px;
-    line-height: 70px;
-  }
 }

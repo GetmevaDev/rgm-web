@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 
-import { ThemeSwitcher } from "..";
+import { Switch, ThemeSwitcher } from "..";
 
 import styles from "./Navigation.module.scss";
 
@@ -50,6 +50,7 @@ export const items = [
 
 export const Navigation = ({ className }) => {
   const [nav, setNav] = useState(false);
+  const [value, setValue] = useState(false);
 
   const router = useRouter();
   return (
