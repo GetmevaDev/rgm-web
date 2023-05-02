@@ -22,9 +22,9 @@ export const ImageBannerText = () => {
         </p>
 
         <div className={styles.images}>
-          <Image width={81} height={87} src="/images/award-1.svg" />
-          <Image width={81} height={87} src="/images/award-1.svg" />
-          <Image width={81} height={87} src="/images/award-1.svg" />
+          <Image width={81} height={87} src="/images/award-1.svg" alt="award" />
+          <Image width={81} height={87} src="/images/award-1.svg" alt="award" />
+          <Image width={81} height={87} src="/images/award-1.svg" alt="award" />
         </div>
 
         <Button variant="outline">BOOK A FREE REVIEW</Button>
@@ -32,9 +32,19 @@ export const ImageBannerText = () => {
 
       <div className={styles.right}>
         {theme === "app_light_theme" ? (
-          <Image width={909} height={503} src="/images/banner-home-light.svg" />
+          <Image
+            width={909}
+            height={503}
+            src="/images/banner-home-light.svg"
+            alt="banner-light"
+          />
         ) : (
-          <Image width={909} height={503} src="/images/banner-home-dark.svg" />
+          <Image
+            width={909}
+            height={503}
+            src="/images/banner-home-dark.svg"
+            alt="banner-dark"
+          />
         )}
       </div>
     </div>

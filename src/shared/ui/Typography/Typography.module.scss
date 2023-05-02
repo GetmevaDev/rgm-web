@@ -1,4 +1,4 @@
-@import "../../../styles/variables.scss";
+@import "src/styles/variables.scss";
 
 .typography {
   text-transform: uppercase;
@@ -15,6 +15,15 @@
 }
 
 .small {
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: -1.92px;
+}
+
+.mini {
+  font-size: 45px;
+  line-height: 58px;
+  letter-spacing: -1.92px;
 }
 
 .medium {

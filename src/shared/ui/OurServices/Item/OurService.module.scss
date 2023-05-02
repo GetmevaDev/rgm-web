@@ -1,0 +1,44 @@
+@import "src/styles/variables.scss";
+
+.our_service {
+  font-family: var(--font-mont);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 22px 20px 30px;
+  background: var(--primary-color);
+
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: $color-khaki;
+  }
+}
+
+.title {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  color: var(--title-cover);
+  letter-spacing: -0.62px;
+  padding: 25px 0 20px;
+
+  transition: color 0.3s ease;
+}
+
+.border {
+  background: $color-khaki;
+  width: 36px;
+  height: 2px;
+  margin-bottom: 15px;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.2px;
+  color: var(--title-cover);
+  transition: color 0.3s ease;
+}

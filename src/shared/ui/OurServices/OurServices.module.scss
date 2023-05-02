@@ -1,0 +1,19 @@
+@import "src/styles/variables.scss";
+
+.description {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: var(--font-mont);
+  color: $color-khaki;
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding-bottom: 60px;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}

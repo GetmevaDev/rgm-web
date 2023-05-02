@@ -13,7 +13,7 @@ export const Logo = ({ className }) => (
       aria-label="logo"
       height={66}
       loading="lazy"
-      alt=""
+      alt="logo"
       className={classNames(styles.image, className)}
     />
 
