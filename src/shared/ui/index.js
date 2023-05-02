@@ -1,3 +1,4 @@
+export * from "./Banner/Banner";
 export * from "./Button/Button";
 export * from "./ImageBannerText/ImageBannerText";
 export * from "./Logo/Logo";

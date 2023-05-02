@@ -14,17 +14,10 @@ const colors = {
   black: styles.black,
 };
 
-const places = {
-  center: styles.center,
-  right: styles.right,
-  left: styles.left,
-};
-
 export const Typography = ({
   tag = "h1",
   size = "medium",
   color = "black",
-  place = "center",
   children,
   className,
 }) => {
@@ -35,8 +28,7 @@ export const Typography = ({
         styles.typography,
         className,
         sizes[size],
-        colors[color],
-        places[place]
+        colors[color]
       )}
     >
       {children}
