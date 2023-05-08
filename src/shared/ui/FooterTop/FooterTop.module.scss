@@ -1,0 +1,129 @@
+.footer_top {
+  padding-top: 82px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: var(--font-mont);
+  letter-spacing: -0.04px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  padding-bottom: 20px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: var(--font-mont);
+}
+
+.link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 50px;
+  color: var(--secondary-color);
+}
+
+.connect_item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.svg {
+  border: 1.37386px solid #bda76a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.connect_text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 50px;
+
+  color: var(--secondary-color);
+}
+
+.phone {
+  padding-top: 44px;
+}
+
+.title_phone {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.04px;
+  font-family: var(--font-mont);
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+.tel {
+  a {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 70px;
+    font-family: var(--font-mont);
+    letter-spacing: -1px;
+    color: var(--secondary-color);
+
+    span {
+      color: var(--hover-contained-button);
+      font-size: 35px;
+    }
+  }
+}
+.location_text {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 50px;
+  color: var(--secondary-color);
+}
+
+.location_description {
+  line-height: 22px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.number {
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 70px;
+  font-family: var(--font-mont);
+  letter-spacing: -1px;
+
+  color: var(--primary-color);
+}
+
+.rating {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--primary-color);
+  font-family: var(--font-mont);
+}
+
+.list_image {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

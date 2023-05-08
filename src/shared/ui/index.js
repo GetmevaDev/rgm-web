@@ -3,6 +3,7 @@ export * from "./Block/Block";
 export * from "./BlockMap/BlockMap";
 export * from "./BridgeBusiness/BridgeBusiness";
 export * from "./Button/Button";
+export * from "./FooterTop/FooterTop";
 export * from "./ImageBannerText/ImageBannerText";
 export * from "./Logo/Logo";
 export * from "./Navigation/Navigation";

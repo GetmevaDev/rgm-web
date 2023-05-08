@@ -33,7 +33,7 @@ export const Map = () => {
         zoom={16}
         options={defaultOptions}
       >
-        <MarkerF position={center} />
+        <MarkerF position={center} icon={{ url: "/svg/marker.svg" }} />
       </GoogleMap>
     </div>
   );
