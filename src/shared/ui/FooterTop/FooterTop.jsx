@@ -4,15 +4,23 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 
+import { useTheme } from "@/shared/hooks";
+import {
+  FacebookSvg,
+  InstagramSvg,
+  LinkedInSvg,
+  TwitterSvg,
+} from "@/shared/icons";
+
 import { items } from "..";
 
 import styles from "./FooterTop.module.scss";
 
 const connects = [
-  { svg: "/svg/facebook.svg", text: "Facebook", id: 1 },
-  { svg: "/svg/twitter.svg", text: "Twitter", id: 2 },
-  { svg: "/svg/instagram.svg", text: "Instagram", id: 3 },
-  { svg: "/svg/linkedin.svg", text: "Linkedin", id: 4 },
+  { svg: <FacebookSvg />, text: "Facebook", id: 1 },
+  { svg: <TwitterSvg />, text: "Twitter", id: 2 },
+  { svg: <InstagramSvg />, text: "Instagram", id: 3 },
+  { svg: <LinkedInSvg />, text: "Linkedin", id: 4 },
 ];
 
 const locations = [
@@ -35,6 +43,7 @@ const locations = [
 
 export const FooterTop = () => {
   const router = useRouter();
+  const { theme } = useTheme();
 
   return (
     <div className={styles.footer_top}>
@@ -56,9 +65,7 @@ export const FooterTop = () => {
         <ul className={styles.list}>
           {connects.map((item) => (
             <li key={item.id} className={styles.connect_item}>
-              <div className={styles.svg}>
-                <Image src={item.svg} width={16} height={16} />
-              </div>
+              <div className={styles.svg}>{item.svg}</div>
               <p className={styles.connect_text}>{item.text}</p>
             </li>
           ))}
@@ -92,12 +99,21 @@ export const FooterTop = () => {
         <h5 className={styles.title} />
         <ul className={styles.list_image}>
           <li className={styles.item}>
-            <Image
-              width={167}
-              height={168}
-              src="/svg/madein.svg"
-              alt="madein"
-            />
+            {theme === "app_light_theme" ? (
+              <Image
+                width={167}
+                height={168}
+                src="/svg/madein.svg"
+                alt="madein"
+              />
+            ) : (
+              <Image
+                width={167}
+                height={168}
+                src="/svg/madein-dark.svg"
+                alt="madein"
+              />
+            )}
           </li>
           <li className={styles.item}>
             <div className={styles.number}>5.0</div>
