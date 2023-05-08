@@ -1,4 +1,6 @@
 export * from "./Banner/Banner";
+export * from "./Block/Block";
+export * from "./BlockMap/BlockMap";
 export * from "./BridgeBusiness/BridgeBusiness";
 export * from "./Button/Button";
 export * from "./ImageBannerText/ImageBannerText";

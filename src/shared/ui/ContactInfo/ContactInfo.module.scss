@@ -1,0 +1,28 @@
+.info {
+  font-family: var(--font-mont);
+  background: #0f0f0f;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.title {
+  padding-top: 26px;
+  color: var(--button-color);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.description {
+  padding: 0 30px 20px;
+  display: flex;
+  text-align: center;
+  color: var(--button-color);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}

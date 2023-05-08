@@ -1,0 +1,53 @@
+.right {
+  padding-right: 42px;
+}
+
+.block {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin: 100px 0;
+
+  position: relative;
+}
+
+.description {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  font-family: var(--font-mont);
+  padding-top: 45px;
+  color: var(--secondary-color);
+}
+
+.image {
+  border-radius: 10px;
+  transform: matrix3d(
+      0.94,
+      0,
+      0.34,
+      -0.00025,
+      0,
+      1,
+      0,
+      0,
+      -0.34,
+      0,
+      0.94,
+      0,
+      1,
+      0,
+      10,
+      1
+    )
+    translateX(15px);
+  z-index: 2;
+  position: relative;
+}
+
+.dots {
+  position: absolute;
+  right: 0;
+  top: -30px;
+  z-index: 1;
+}

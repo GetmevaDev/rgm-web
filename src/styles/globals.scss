@@ -3,6 +3,11 @@
 @import "themes/dark";
 @import "themes/light";
 
+.layout {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
 .app {
   min-height: 100vh;
   background: var(--bg-color);
