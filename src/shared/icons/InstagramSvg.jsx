@@ -1,16 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import { ETheme } from "@/providers";
 
-import { LOCAL_STORAGE_THEME_KEY } from "../constants";
 import { useTheme } from "../hooks";
 
 export const InstagramSvg = () => {
-  const [theme, setTheme] = useState();
-
-  useEffect(() => {
-    setTheme(localStorage.getItem(LOCAL_STORAGE_THEME_KEY || ETheme.Light));
-  }, []);
+  const { theme } = useTheme();
 
   return (
     <svg

@@ -8,7 +8,7 @@ import styles from "./Awards.module.scss";
 export const Awards = () => (
   <div className={styles.awards}>
     <div className={styles.awards_inner}>
-      <Typography tag="h2" color="title">
+      <Typography tag="h2" size="title">
         Awards & <span>Partnerships</span>
       </Typography>
 

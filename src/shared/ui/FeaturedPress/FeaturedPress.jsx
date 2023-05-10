@@ -7,7 +7,7 @@ import styles from "./FeaturedPress.module.scss";
 
 export const FeaturedPress = () => (
   <div className={styles.featured}>
-    <Typography tag="h2" color="title">
+    <Typography tag="h2" size="title">
       ROBERTGEROV <span>FEATURED PRESS</span>
     </Typography>
 

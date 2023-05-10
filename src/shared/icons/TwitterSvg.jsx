@@ -1,16 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import { ETheme } from "@/providers";
 
-import { LOCAL_STORAGE_THEME_KEY } from "../constants";
 import { useTheme } from "../hooks";
 
 export const TwitterSvg = () => {
-  const [theme, setTheme] = useState();
+  const { theme } = useTheme();
 
-  useEffect(() => {
-    setTheme(localStorage.getItem(LOCAL_STORAGE_THEME_KEY || ETheme.Light));
-  }, []);
   return (
     <svg
       width="17"

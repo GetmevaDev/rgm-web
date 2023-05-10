@@ -1,8 +1,7 @@
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import { ETheme, ISSERVER } from "@/providers";
-import { LOCAL_STORAGE_THEME_KEY } from "@/shared/constants";
 import { useTheme } from "@/shared/hooks";
 
 import { Button, Typography } from "..";
@@ -18,11 +17,7 @@ export const ImageBannerText = ({
   imageLight,
   imageDark,
 }) => {
-  const [theme, setTheme] = useState();
-
-  useEffect(() => {
-    setTheme(localStorage.getItem(LOCAL_STORAGE_THEME_KEY || ETheme.Light));
-  }, []);
+  const { theme } = useTheme();
 
   return (
     <div className={styles.image_banner}>
