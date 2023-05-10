@@ -8,6 +8,7 @@ const sizes = {
   small: styles.small,
   medium: styles.medium,
   large: styles.large,
+  title: styles.title,
 };
 
 const colors = {
