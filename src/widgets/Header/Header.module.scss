@@ -5,5 +5,18 @@
 
   padding-top: 55px;
   max-width: 1170px;
+
+  position: relative;
   margin: 0 auto;
+  z-index: 2;
+}
+
+.bg {
+  background: #f3f3f3;
+  border-radius: 60px;
+  transform: rotate(25deg);
+  width: 1110px;
+  position: absolute;
+  height: 1110px;
+  z-index: 1;
 }

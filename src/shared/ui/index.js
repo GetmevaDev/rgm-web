@@ -4,6 +4,7 @@ export * from "./Block/Block";
 export * from "./BlockMap/BlockMap";
 export * from "./BridgeBusiness/BridgeBusiness";
 export * from "./Button/Button";
+export * from "./Cases/Cases";
 export * from "./FeaturedPress/FeaturedPress";
 export * from "./FooterTop/FooterTop";
 export * from "./ImageBannerText/ImageBannerText";

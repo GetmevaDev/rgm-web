@@ -15,7 +15,15 @@ import {
 export const HomeScreen = () => (
   <Layout title="Home" description="home" size="nolayout">
     <div className="layout">
-      <ImageBannerText />
+      <ImageBannerText
+        title="Robert Gerov"
+        subTitle="Media"
+        description="An award-winning Digital Agency based in New York"
+        button
+        images
+        imageLight="/images/banner-home-light.svg"
+        imageDark="/images/banner-home-dark.svg"
+      />
       <Banner />
       <BridgeBusiness />
     </div>

@@ -1,4 +1,5 @@
 /* eslint-disable indent */
+import Cookies from "js-cookie";
 import { useContext, useEffect } from "react";
 
 import { ETheme, ThemeContext } from "@/providers";

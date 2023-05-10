@@ -1,0 +1,11 @@
+.cases {
+  margin: 100px 0;
+  margin-bottom: 150px;
+}
+
+.cases_inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  gap: 50px;
+}

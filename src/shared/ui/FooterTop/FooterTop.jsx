@@ -2,8 +2,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
+import { ETheme } from "@/providers";
+import { LOCAL_STORAGE_THEME_KEY } from "@/shared/constants";
 import { useTheme } from "@/shared/hooks";
 import {
   FacebookSvg,
@@ -43,7 +45,11 @@ const locations = [
 
 export const FooterTop = () => {
   const router = useRouter();
-  const { theme } = useTheme();
+  const [theme, setTheme] = useState();
+
+  useEffect(() => {
+    setTheme(localStorage.getItem(LOCAL_STORAGE_THEME_KEY || ETheme.Light));
+  }, []);
 
   return (
     <div className={styles.footer_top}>
@@ -99,7 +105,7 @@ export const FooterTop = () => {
         <h5 className={styles.title} />
         <ul className={styles.list_image}>
           <li className={styles.item}>
-            {theme === "app_light_theme" ? (
+            {theme === ETheme.Light ? (
               <Image
                 width={167}
                 height={168}

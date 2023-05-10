@@ -1,0 +1,41 @@
+.case_item {
+  display: grid;
+  font-family: var(--font-mont);
+  position: relative;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+
+  text-align: center;
+  padding-top: 50px;
+  letter-spacing: -0.62px;
+  color: var(--primary-color);
+}
+
+.border {
+  margin: 15px auto;
+  width: 50px;
+  height: 2px;
+  background: #bda76a;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  text-align: center;
+  letter-spacing: -0.2px;
+  color: var(--secondary-color);
+}
+
+.button {
+  height: 61px;
+  position: absolute;
+  width: 100%;
+  bottom: -50px;
+}
