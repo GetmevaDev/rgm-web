@@ -27,6 +27,51 @@ export const BridgeBusiness = () => (
         }}
       />
     </div>
-    <div className={styles.right}>block</div>
+    <div className={styles.right}>
+      <div className={styles.item}>
+        <div className={styles.number}>2008</div>
+        <div className={styles.right_description}>
+          EXADEL ESTABLISHED IN NEW YORK, NY
+        </div>
+      </div>
+
+      <div className={styles.item}>
+        <div className={styles.number}>6</div>
+        <div className={styles.right_description}>
+          COUNTRIES ACROSS 3 CONTINENTS, AND GROWING
+        </div>
+      </div>
+
+      <div className={styles.item}>
+        <div className={styles.number}>25+</div>
+        <div className={styles.right_description}>
+          SERVICE ACCELERATORS THAT REDUCE TIME TO MARKET AND INCREASE SOFTWARE
+          QUALITY
+        </div>
+      </div>
+
+      <div className={styles.item}>
+        <div className={styles.number}>ISO 27001</div>
+        <div className={styles.right_description}>
+          GUARANTEEING ALL OUR SECURITY PRACTICES MEET THE HIGHEST INTERNATIONAL
+          STANDARDS
+        </div>
+      </div>
+
+      <div className={styles.item}>
+        <div className={styles.number}>10/10</div>
+        <div className={styles.right_description}>
+          CUSTOMER SATISFACTION SCORE BASED ON OUR MOST RECENT CUSTOMER SURVEY
+        </div>
+      </div>
+
+      <div className={styles.item}>
+        <div className={styles.number}>25+</div>
+        <div className={styles.right_description}>
+          CURRENT EMPLOYEES IN OUR RAPIDLY EXPANDING COMPANY*
+        </div>
+      </div>
+      <div className={styles.data}>*Data for Q4, 2022</div>
+    </div>
   </section>
 );
