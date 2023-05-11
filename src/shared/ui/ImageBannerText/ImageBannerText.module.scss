@@ -10,6 +10,16 @@
   width: 45%;
 }
 
+.sub_description {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 58px;
+  font-family: var(--font-mont);
+  letter-spacing: -1.92px;
+
+  color: var(--color-khaki);
+}
+
 .right {
   width: 55%;
 }
@@ -33,5 +43,12 @@
   align-items: center;
   gap: 25px;
   margin-top: 28px;
-  margin-bottom: 40px;
+}
+
+.button {
+  margin-top: 35px;
+}
+
+.title {
+  text-transform: uppercase;
 }

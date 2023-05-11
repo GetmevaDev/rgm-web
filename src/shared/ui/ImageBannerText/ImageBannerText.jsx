@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import Image from "next/image";
 import React, { useState } from "react";
 
@@ -16,15 +17,19 @@ export const ImageBannerText = ({
   images,
   imageLight,
   imageDark,
+  subDescrption,
+  transform,
 }) => {
   const { theme } = useTheme();
 
   return (
     <div className={styles.image_banner}>
       <div className={styles.left}>
-        <Typography color="black" size="large" clas>
+        <Typography color="black" size="large" transform={transform}>
           {title} <span className={styles.color}>{subTitle}</span>
         </Typography>
+
+        <p className={styles.sub_description}>{subDescrption}</p>
 
         <p className={styles.description}>{description}</p>
 
@@ -51,7 +56,11 @@ export const ImageBannerText = ({
           </div>
         )}
 
-        {button && <Button variant="outline">BOOK A FREE REVIEW</Button>}
+        {button && (
+          <Button variant="outline" className={styles.button}>
+            {button}
+          </Button>
+        )}
       </div>
 
       <div className={styles.right}>

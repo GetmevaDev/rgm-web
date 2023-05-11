@@ -44,5 +44,13 @@
   letter-spacing: -4.24px;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
 @media screen and (max-width: $phoneWidth) {
 }

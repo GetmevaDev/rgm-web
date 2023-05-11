@@ -1,0 +1,22 @@
+.outcomes {
+  h2 {
+    text-align: center;
+  }
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 85px 0;
+}
+
+.image_inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  border-radius: 10px;
+}

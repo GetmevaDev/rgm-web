@@ -16,7 +16,7 @@ export const items = [
   },
   {
     label: "Case Studies",
-    path: "/case-studies",
+    path: "/cases",
     id: 4,
   },
   {

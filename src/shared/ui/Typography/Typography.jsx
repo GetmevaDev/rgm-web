@@ -16,10 +16,16 @@ const colors = {
   black: styles.black,
 };
 
+const transforms = {
+  uppercase: styles.uppercase,
+  capitalize: styles.capitalize,
+};
+
 export const Typography = ({
   tag = "h1",
   size = "medium",
   color = "black",
+  transform = "uppercase",
   children,
   className,
 }) => {
@@ -30,7 +36,8 @@ export const Typography = ({
         styles.typography,
         className,
         sizes[size],
-        colors[color]
+        colors[color],
+        transforms[transform]
       )}
     >
       {children}

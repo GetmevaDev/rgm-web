@@ -1,5 +1,5 @@
 import { CaseStudiesScreen } from "@/screens";
 
-export default function CaseStudies() {
+export default function CasesStudies() {
   return <CaseStudiesScreen />;
 }
