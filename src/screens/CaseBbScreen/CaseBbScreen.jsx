@@ -2,16 +2,11 @@ import React from "react";
 
 import { Layout } from "@/shared";
 import {
-  Banner,
   Blanks,
   Block,
   BlockMap,
-  Feedback,
-  GivingBack,
   ImageBannerText,
-  KeywordProfile,
   OutComes,
-  Slider,
   Work,
 } from "@/shared/ui";
 
@@ -59,7 +54,6 @@ export const CaseBbScreen = () => (
 
     <OutComes image="/images/bb-screen.jpg" color="gray" />
 
-    <Slider />
     <BlockMap />
   </Layout>
 );

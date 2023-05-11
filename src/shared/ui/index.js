@@ -7,6 +7,7 @@ export * from "./Border/Border";
 export * from "./BridgeBusiness/BridgeBusiness";
 export * from "./Button/Button";
 export * from "./Cases/Cases";
+export * from "./Description/Description";
 export * from "./FeaturedPress/FeaturedPress";
 export * from "./Feedback/Feedback";
 export * from "./FooterTop/FooterTop";

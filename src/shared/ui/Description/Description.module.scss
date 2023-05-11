@@ -1,0 +1,23 @@
+.description_inner {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.description {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  color: var(--secondary-color);
+  font-family: var(--font-mont);
+}
+
+.sub {
+  padding-bottom: 42px;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 32px;
+  color: var(--secondary-color);
+  font-family: var(--font-mont);
+}
