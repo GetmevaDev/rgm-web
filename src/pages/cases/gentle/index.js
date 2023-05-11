@@ -1,3 +1,5 @@
+import { CaseGentleScreen } from "@/screens";
+
 export default function CaseGentle() {
-  return <>gentle</>;
+  return <CaseGentleScreen />;
 }

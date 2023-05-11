@@ -10,6 +10,7 @@ export * from "./FeaturedPress/FeaturedPress";
 export * from "./Feedback/Feedback";
 export * from "./FooterTop/FooterTop";
 export * from "./ImageBannerText/ImageBannerText";
+export * from "./KeywordProfile/KeywordProfile";
 export * from "./Logo/Logo";
 export * from "./Navigation/Navigation";
 export * from "./OurServices/OurServices";
