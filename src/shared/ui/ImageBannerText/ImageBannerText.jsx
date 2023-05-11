@@ -31,7 +31,10 @@ export const ImageBannerText = ({
 
         <p className={styles.sub_description}>{subDescrption}</p>
 
-        <p className={styles.description}>{description}</p>
+        <p
+          className={styles.description}
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
 
         {images && (
           <div className={styles.images}>

@@ -5,9 +5,25 @@
   font-family: var(--font-mont);
   flex-direction: column;
   padding: 80px 0;
-  gap: 30px;
-  justify-content: start;
   border-radius: 10px;
+}
+
+.work_item_image {
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  font-family: var(--font-mont);
+  flex-direction: column;
+  padding: 52px 0;
+  border-radius: 10px;
+}
+
+.image {
+  margin-bottom: 20px;
+}
+
+.border {
+  margin-bottom: 30px;
 }
 
 .title {
@@ -15,6 +31,7 @@
   font-size: 40px;
   line-height: 46px;
 
+  padding-bottom: 30px;
   text-align: center;
   letter-spacing: -0.62px;
   color: var(--title-cover);

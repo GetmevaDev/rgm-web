@@ -22,7 +22,7 @@ const arr = [
     id: 2,
     title: "Integrated marketing",
     description:
-      "We organized all her wants and needs and wrote all new content. The design team planned content placement and wireframed the website. We began to design the branding based on the 7 chakras of Buddhism. The heart chakra, or Anahata, is located near your heart, in the center of your chest; this was the logo inspiration. It comes as no surprise that the heart chakra is all about our ability to love and show compassion. We planned a complete user experience while maintaining encryption, website accessibility, content formatting, and SEO protocols.",
+      "We used our extensive knowledge and experience in search engine marketing, to optimize the website for the relevant user intent.",
   },
 ];
 
