@@ -9,6 +9,7 @@ export const Block = ({
   title,
   description,
   image,
+  subTitle,
   reverse,
   width,
   height,
@@ -19,8 +20,10 @@ export const Block = ({
         {title}
       </Typography>
 
+      <p className={styles.sub_title}>{subTitle}</p>
+
       <p
-        className={styles.description}
+        className={!subTitle ? styles.description : styles.description_sub}
         dangerouslySetInnerHTML={{
           __html: description,
         }}

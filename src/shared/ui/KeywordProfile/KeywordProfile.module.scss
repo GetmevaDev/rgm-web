@@ -1,7 +1,5 @@
 .keyword {
   background: var(--bg-nolayout-color);
-  margin-bottom: 100px;
-  margin-top: 100px;
 
   h2 {
     text-align: center;
@@ -12,9 +10,20 @@
   }
 }
 
+.gray {
+  padding: 100px 0;
+  margin-bottom: 100px;
+  background: var(--bg-nolayout-color);
+}
+
+.white {
+  background: var(--bg-color);
+}
+
 .keyword_inner {
   max-width: 1170px;
-  padding: 100px 0;
+  padding-top: 0;
+  padding-bottom: 100px;
   margin: 0 auto;
 }
 
@@ -22,6 +31,25 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.numbers {
+  padding: 60px 33px 0;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  list-style-position: inside;
+
+  li {
+    font-style: normal;
+    font-weight: 500;
+    text-align: left;
+    font-size: 14px;
+    line-height: 17px;
+    font-family: var(--font-mont);
+    color: var(--secondary-color);
+  }
 }
 
 .list {

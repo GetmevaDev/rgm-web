@@ -4,6 +4,7 @@ import { Layout } from "@/shared";
 import {
   Banner,
   Block,
+  BlockMap,
   Feedback,
   ImageBannerText,
   KeywordProfile,
@@ -53,7 +54,7 @@ export const CaseGentleScreen = () => (
       <Block
         title="Overview"
         width={475}
-        height={890}
+        height={690}
         image="/images/meditation.jpg"
         description={`
 				There is no cookie cutter solution in family law and as such, we built a custom solution to simplify the first interaction for a new generation of clients. 
@@ -80,6 +81,8 @@ export const CaseGentleScreen = () => (
       <OutComes image="/images/out-2.jpg" />
     </div>
 
-    <KeywordProfile />
+    <KeywordProfile startCenter={7} numbers color="gray" />
+
+    <BlockMap />
   </Layout>
 );

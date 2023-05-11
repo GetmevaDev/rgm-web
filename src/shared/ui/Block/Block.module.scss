@@ -20,6 +20,25 @@
   color: var(--secondary-color);
 }
 
+.description_sub {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  font-family: var(--font-mont);
+  padding-top: 20px;
+  color: var(--secondary-color);
+}
+
+.sub_title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 55px;
+  font-family: var(--font-mont);
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
 .image {
   border-radius: 10px;
   transform: matrix3d(

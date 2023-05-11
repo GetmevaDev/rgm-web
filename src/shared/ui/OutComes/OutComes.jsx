@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import Image from "next/image";
 import React from "react";
 
@@ -7,25 +8,32 @@ import { OutcomeItem } from "./Item/OutcomeItem";
 
 import styles from "./OutComes.module.scss";
 
-export const OutComes = ({ image, title }) => (
-  <div className={styles.outcomes}>
-    <Typography size="mini" tag="h2">
-      Outcomes
-    </Typography>
-    <div className={styles.items}>
-      <OutcomeItem />
-      <OutcomeItem />
-      <OutcomeItem />
-    </div>
+const colors = {
+  gray: styles.gray,
+  white: styles.white,
+};
 
-    <div className={styles.image_inner}>
-      <Image
-        width={727}
-        height={399}
-        src={image}
-        alt="outcome"
-        className={styles.image}
-      />
+export const OutComes = ({ image, title, color = "white" }) => (
+  <div className={classNames(styles.outcomes, colors[color])}>
+    <div className={styles.outcomes_inner}>
+      <Typography size="mini" tag="h2">
+        Outcomes
+      </Typography>
+      <div className={styles.items}>
+        <OutcomeItem />
+        <OutcomeItem />
+        <OutcomeItem />
+      </div>
+
+      <div className={styles.image_inner}>
+        <Image
+          width={727}
+          height={399}
+          src={image}
+          alt="outcome"
+          className={styles.image}
+        />
+      </div>
     </div>
   </div>
 );

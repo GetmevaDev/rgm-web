@@ -1,3 +1,5 @@
+import { CaseBbScreen } from "@/screens";
+
 export default function CaseBb() {
-  return <>bb</>;
+  return <CaseBbScreen />;
 }

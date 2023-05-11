@@ -1,3 +1,20 @@
+.outcomes_inner {
+  max-width: 1170px;
+
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+
+.gray {
+  background: var(--bg-nolayout-color);
+  margin-bottom: 100px;
+  padding-top: 100px;
+}
+
+.white {
+  background: var(--bg-color);
+}
+
 .outcomes {
   h2 {
     text-align: center;

@@ -1,3 +1,5 @@
+import { CaseSmilesScreen } from "@/screens";
+
 export default function CaseSmiles() {
-  return <>smiles</>;
+  return <CaseSmilesScreen />;
 }

@@ -4,6 +4,7 @@ import { Layout } from "@/shared";
 import {
   Banner,
   Block,
+  BlockMap,
   Feedback,
   ImageBannerText,
   OutComes,
@@ -69,5 +70,7 @@ export const CaseYagolawScreen = () => (
       <OutComes image="/images/out.jpg" />
     </div>
     <Feedback />
+
+    <BlockMap />
   </Layout>
 );
