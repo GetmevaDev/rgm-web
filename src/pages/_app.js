@@ -1,9 +1,9 @@
-import classNames from "classnames";
-
 import { ThemeProvider } from "@/providers";
-import { useTheme } from "@/shared/hooks";
 // eslint-disable-next-line import/order
 import { Inter, Montserrat } from "@next/font/google";
+
+import "swiper/css";
+import "swiper/css/pagination";
 
 import "@/styles/globals.scss";
 

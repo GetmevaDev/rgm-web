@@ -1,0 +1,27 @@
+.giving {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 69px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.description {
+  padding-top: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+
+  font-family: var(--font-mont);
+  text-align: center;
+  letter-spacing: -0.2px;
+
+  color: var(--secondary-color);
+}

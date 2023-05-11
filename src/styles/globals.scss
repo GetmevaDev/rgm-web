@@ -16,3 +16,21 @@
 .content-page {
   display: flex;
 }
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  padding-bottom: 75px;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--color-khaki);
+}
+
+.swiper-pagination-bullet {
+  width: 19px;
+  height: 19px;
+}
