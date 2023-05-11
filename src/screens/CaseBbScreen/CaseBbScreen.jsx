@@ -3,6 +3,7 @@ import React from "react";
 import { Layout } from "@/shared";
 import {
   Banner,
+  Blanks,
   Block,
   BlockMap,
   Feedback,
@@ -51,6 +52,8 @@ export const CaseBbScreen = () => (
     </div>
 
     <Work size="one" arr={arr} />
+
+    <Blanks />
 
     <OutComes image="/images/bb-screen.jpg" color="gray" />
 
