@@ -1,0 +1,124 @@
+.item {
+  text-align: center;
+  background: #ffffff;
+
+  padding-top: 40px;
+
+  border-radius: 8px;
+  &:nth-last-child(2) {
+    background: #bda76a;
+    border-radius: 8px;
+
+    .title {
+      color: var(--title-cover);
+    }
+
+    .description {
+      color: var(--title-cover);
+    }
+
+    .dollar,
+    .price,
+    .mouth {
+      color: var(--title-cover);
+    }
+
+    .list {
+      li {
+        font-weight: 600;
+        color: var(--title-cover);
+        &:nth-child(even) {
+          background: #d0bb7f;
+        }
+      }
+    }
+  }
+}
+
+.list {
+  margin-bottom: 10px;
+
+  li {
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 50px;
+    text-align: center;
+    font-family: var(--font-mont);
+
+    &:nth-child(even) {
+      background: #f5f5f5;
+    }
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  font-family: var(--font-mont);
+  color: var(--primary-color);
+}
+
+.description {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 2px 50px 0;
+  line-height: 20px;
+  font-family: var(--font-mont);
+  color: var(--primary-color);
+}
+
+.price_inner {
+  padding-bottom: 23px;
+  padding-top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  &::after {
+    position: absolute;
+    width: 100%;
+    content: "";
+    height: 1px;
+    bottom: 5px;
+    background: #d9d9d9;
+  }
+}
+
+.dollar {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  font-family: var(--font-mont);
+  text-align: center;
+  padding-right: 3px;
+  letter-spacing: 0.137143px;
+  text-transform: uppercase;
+  color: var(--color-price);
+}
+
+.price {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 60px;
+  text-align: center;
+
+  letter-spacing: 0.428571px;
+  text-transform: uppercase;
+  font-family: var(--font-mont);
+  color: var(--color-price);
+}
+
+.mouth {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  padding-left: 2px;
+  text-align: center;
+  letter-spacing: 0.137143px;
+  text-transform: uppercase;
+  font-family: var(--font-mont);
+  color: var(--color-price);
+}

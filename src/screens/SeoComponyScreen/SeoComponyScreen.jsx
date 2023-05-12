@@ -7,6 +7,7 @@ import {
   GivingBack,
   ImageBannerText,
   Pledge,
+  Price,
   Slider,
   Work,
 } from "@/shared/ui";
@@ -54,11 +55,14 @@ export const SeoComponyScreen = () => (
       />
 
       <Description sub />
-
-      <Pledge />
+      <Price />
     </div>
 
     <Work size="three" arr={arr} />
+
+    <div className="layout">
+      <Pledge />
+    </div>
 
     <Slider />
     <div className="layout">
