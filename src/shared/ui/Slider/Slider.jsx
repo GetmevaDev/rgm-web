@@ -6,7 +6,7 @@ import { SlideItem } from "./SlideItem/SlideItem";
 
 import styles from "./Slider.module.scss";
 
-const slides = [
+export const slides = [
   {
     id: 1,
     title: "BUSINESS ANALYSIS & INTERPRETATION",
