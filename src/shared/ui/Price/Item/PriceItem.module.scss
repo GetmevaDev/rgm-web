@@ -10,23 +10,24 @@
     border-radius: 8px;
 
     .title {
-      color: var(--title-cover);
+      color: var(--button-color);
     }
 
     .description {
-      color: var(--title-cover);
+      color: var(--button-color);
     }
 
     .dollar,
     .price,
     .mouth {
-      color: var(--title-cover);
+      color: var(--button-color);
     }
 
     .list {
+      margin: 0 10px;
       li {
         font-weight: 600;
-        color: var(--title-cover);
+        color: var(--button-color);
         &:nth-child(even) {
           background: #d0bb7f;
         }
@@ -57,7 +58,7 @@
   font-size: 20px;
   line-height: 28px;
   font-family: var(--font-mont);
-  color: var(--primary-color);
+  color: var(--color-price-title);
 }
 
 .description {
@@ -67,7 +68,7 @@
   padding: 2px 50px 0;
   line-height: 20px;
   font-family: var(--font-mont);
-  color: var(--primary-color);
+  color: var(--color-price-title);
 }
 
 .price_inner {
