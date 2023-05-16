@@ -1,3 +1,5 @@
+export * from "./AboutScreen/AboutScreen";
+export * from "./BusinessScreen/BusinessScreen";
 export * from "./CaseBbScreen/CaseBbScreen";
 export * from "./CaseGentleScreen/CaseGentleScreen";
 export * from "./CaseSmilesScreen/CaseSmilesScreen";
@@ -9,6 +11,7 @@ export * from "./HomeScreen/HomeScreen";
 export * from "./LawyerScreen/LawyerScreen";
 export * from "./ManagementScreen/ManagementScreen";
 export * from "./NonProfitScreen/NonProfitScreen";
+export * from "./RestaurantScreen/RestaurantScreen";
 export * from "./SeoComponyScreen/SeoComponyScreen";
 export * from "./VideoProductionScreen/VideoProductionScreen";
 export * from "./WebScreen/WebScreen";

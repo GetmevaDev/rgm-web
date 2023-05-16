@@ -11,5 +11,11 @@
 
   a {
     color: var(--color-price);
+    text-decoration: underline;
+    font-weight: 500;
+  }
+
+  h6 {
+    font-weight: 500;
   }
 }

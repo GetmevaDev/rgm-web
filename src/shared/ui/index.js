@@ -9,6 +9,7 @@ export * from "./BridgeBusiness/BridgeBusiness";
 export * from "./Button/Button";
 export * from "./Cases/Cases";
 export * from "./Description/Description";
+export * from "./DevelopmentProcess/DevelopmentProcess";
 export * from "./FeaturedPress/FeaturedPress";
 export * from "./Feedback/Feedback";
 export * from "./FooterTop/FooterTop";

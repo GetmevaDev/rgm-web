@@ -10,6 +10,13 @@
   line-height: 32px;
   color: var(--secondary-color);
   font-family: var(--font-mont);
+
+  ul {
+    list-style: disc;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 .semi_bold {

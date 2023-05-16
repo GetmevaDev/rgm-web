@@ -1,3 +1,5 @@
+import { AboutScreen } from "@/screens";
+
 export default function About() {
-  return <>home</>;
+  return <AboutScreen />;
 }

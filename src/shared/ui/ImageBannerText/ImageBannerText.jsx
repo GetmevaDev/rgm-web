@@ -68,9 +68,9 @@ export const ImageBannerText = ({
 
       <div className={styles.right}>
         {theme === ETheme.Light ? (
-          <Image width={909} height={503} src={imageLight} alt="banner-light" />
+          <Image width={724} height={439} src={imageLight} alt="banner-light" />
         ) : (
-          <Image width={909} height={503} src={imageDark} alt="banner-dark" />
+          <Image width={724} height={439} src={imageDark} alt="banner-dark" />
         )}
       </div>
     </div>
