@@ -1,5 +1,6 @@
 export * from "./Awards/Awards";
 export * from "./Banner/Banner";
+export * from "./BigDescription/BigDescription";
 export * from "./Blanks/Blanks";
 export * from "./Block/Block";
 export * from "./BlockMap/BlockMap";

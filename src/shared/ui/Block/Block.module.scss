@@ -143,6 +143,11 @@
   line-height: 40px;
   color: var(--secondary-color);
   font-family: var(--font-mont);
+
+  a {
+    color: var(--color-price);
+    text-decoration: underline;
+  }
 }
 
 .left {

@@ -38,9 +38,12 @@ export const Block = ({
 
         <p className={styles.sub_title}>{subTitle}</p>
 
-        <p className={classNames(styles.mini_title, positions[position])}>
-          {miniTitle}
-        </p>
+        <p
+          className={classNames(styles.mini_title, positions[position])}
+          dangerouslySetInnerHTML={{
+            __html: miniTitle,
+          }}
+        />
 
         <p
           className={classNames(

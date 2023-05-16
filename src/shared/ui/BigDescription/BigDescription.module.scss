@@ -1,0 +1,15 @@
+.big_description {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  /* or 178% */
+
+  font-family: var(--font-mont);
+
+  color: var(--secondary-color);
+
+  a {
+    color: var(--color-price);
+  }
+}
