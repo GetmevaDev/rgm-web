@@ -23,6 +23,7 @@ export * from "./OurServices/OurServices";
 export * from "./OutComes/OutComes";
 export * from "./Pledge/Pledge";
 export * from "./Price/Price";
+export * from "./ReadyToIncrease/ReadyToIncrease";
 export * from "./Slider/Slider";
 export * from "./Switch/Switch";
 export * from "./ThemeSwitcher/ThemeSwitcher";

@@ -9,6 +9,7 @@ import {
   DevelopmentProcess,
   GivingBack,
   ImageBannerText,
+  ReadyToIncrease,
   Slider,
 } from "@/shared/ui";
 
@@ -42,11 +43,22 @@ export const AboutScreen = () => (
       `}
       />
     </div>
+    <ReadyToIncrease
+      width={356}
+      height={492}
+      image="/images/robert.png"
+      title="Are you ready to increase revenue and productivity?"
+    />
+
     <DevelopmentProcess />
 
-    <div className="layout">
-      <GivingBack />
-    </div>
+    <ReadyToIncrease
+      width={356}
+      height={452}
+      color="white"
+      image="/images/robert-right.png"
+      title="Are you ready to increase revenue and productivity?"
+    />
 
     <BlockMap />
   </Layout>
