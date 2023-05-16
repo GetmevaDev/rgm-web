@@ -7,6 +7,7 @@ import {
   BlockMap,
   Description,
   DevelopmentProcess,
+  DevelopTeam,
   GivingBack,
   ImageBannerText,
   ReadyToIncrease,
@@ -49,6 +50,10 @@ export const AboutScreen = () => (
       image="/images/robert.png"
       title="Are you ready to increase revenue and productivity?"
     />
+
+    <div className="layout">
+      <DevelopTeam />
+    </div>
 
     <DevelopmentProcess />
 
