@@ -1,6 +1,7 @@
 .slider {
   background: var(--bg-nolayout-color);
   margin-bottom: 100px;
+  margin-top: 100px;
 }
 
 .slider_inner {
@@ -8,6 +9,5 @@
   padding: 100px 0;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
 }

@@ -18,6 +18,7 @@ export const Block = ({
   subTitle,
   reverse,
   width,
+  miniTitle,
   height,
   color = "white",
 }) => (
@@ -30,8 +31,14 @@ export const Block = ({
 
         <p className={styles.sub_title}>{subTitle}</p>
 
+        <p className={styles.mini_title}>{miniTitle}</p>
+
         <p
-          className={!subTitle ? styles.description : styles.description_sub}
+          className={
+            !subTitle && !miniTitle
+              ? styles.description
+              : styles.description_sub
+          }
           dangerouslySetInnerHTML={{
             __html: description,
           }}

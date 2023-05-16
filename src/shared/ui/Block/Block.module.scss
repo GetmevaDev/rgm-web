@@ -16,12 +16,12 @@
 }
 
 .gray {
-  background: #f3f3f3;
+  background: var(--bg-nolayout-color);
   padding: 100px 0;
 }
 
 .white {
-  background: #fff;
+  background: var(--bg-color);
   padding: 100px 0;
 }
 
@@ -129,4 +129,12 @@
   flex-direction: row-reverse;
 
   position: relative;
+}
+
+.mini_title {
+  font-weight: 600;
+  font-size: 23px;
+  line-height: 40px;
+  color: var(--secondary-color);
+  font-family: var(--font-mont);
 }
