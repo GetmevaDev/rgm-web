@@ -11,6 +11,12 @@ const colors = {
   white: styles.white,
 };
 
+const positions = {
+  left: styles.left,
+  center: styles.center,
+  right: styles.right,
+};
+
 export const Block = ({
   title,
   description,
@@ -21,6 +27,7 @@ export const Block = ({
   miniTitle,
   height,
   color = "white",
+  position = "left",
 }) => (
   <div className={classNames(styles.block_inner, colors[color])}>
     <div className={reverse ? styles.block : styles.block_reverse}>
@@ -31,14 +38,17 @@ export const Block = ({
 
         <p className={styles.sub_title}>{subTitle}</p>
 
-        <p className={styles.mini_title}>{miniTitle}</p>
+        <p className={classNames(styles.mini_title, positions[position])}>
+          {miniTitle}
+        </p>
 
         <p
-          className={
+          className={classNames(
             !subTitle && !miniTitle
               ? styles.description
-              : styles.description_sub
-          }
+              : styles.description_sub,
+            positions[position]
+          )}
           dangerouslySetInnerHTML={{
             __html: description,
           }}

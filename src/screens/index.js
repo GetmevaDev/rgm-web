@@ -5,5 +5,7 @@ export * from "./CaseStudiesScreen/CaseStudiesScreen";
 export * from "./CaseYagolawScreen/CaseYagolawScreen";
 export * from "./EcommerceScreen/EcommerceScreen";
 export * from "./HomeScreen/HomeScreen";
+export * from "./ManagementScreen/ManagementScreen";
 export * from "./SeoComponyScreen/SeoComponyScreen";
+export * from "./VideoProductionScreen/VideoProductionScreen";
 export * from "./WebScreen/WebScreen";

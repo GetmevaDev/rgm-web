@@ -12,9 +12,6 @@
   position: relative;
 }
 
-.block_inner {
-}
-
 .gray {
   background: var(--bg-nolayout-color);
   padding: 100px 0;
@@ -32,6 +29,11 @@
   font-family: var(--font-mont);
   padding-top: 45px;
   color: var(--secondary-color);
+
+  a {
+    color: var(--color-price);
+    text-decoration: underline;
+  }
 }
 
 .description_sub {
@@ -41,6 +43,10 @@
   font-family: var(--font-mont);
   padding-top: 20px;
   color: var(--secondary-color);
+  a {
+    color: var(--color-price);
+    text-decoration: underline;
+  }
 }
 
 .sub_title {
@@ -137,4 +143,16 @@
   line-height: 40px;
   color: var(--secondary-color);
   font-family: var(--font-mont);
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
 }
