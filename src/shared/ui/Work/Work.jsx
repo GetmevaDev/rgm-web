@@ -13,11 +13,16 @@ const sizes = {
   three: styles.three,
 };
 
-export const Work = ({ size = "two", arr }) => (
-  <div className={styles.work}>
+const colors = {
+  gray: styles.gray,
+  white: styles.white,
+};
+
+export const Work = ({ size = "two", color = "gray", arr, title }) => (
+  <div className={classNames(styles.work, colors[color])}>
     <div className={styles.work_inner}>
       <Typography tag="h2" size="mini">
-        Work
+        {title}
       </Typography>
       <div className={classNames(sizes[size])}>
         {arr.map((item) => (

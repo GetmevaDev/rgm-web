@@ -13,6 +13,7 @@ export * from "./Feedback/Feedback";
 export * from "./FooterTop/FooterTop";
 export * from "./GivingBack/GivingBack";
 export * from "./ImageBannerText/ImageBannerText";
+export * from "./Info/Info";
 export * from "./KeywordProfile/KeywordProfile";
 export * from "./Logo/Logo";
 export * from "./Navigation/Navigation";

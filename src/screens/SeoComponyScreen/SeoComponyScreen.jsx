@@ -12,7 +12,7 @@ import {
   Work,
 } from "@/shared/ui";
 
-const arr = [
+export const arr = [
   {
     id: 1,
     title: "Analysis",
