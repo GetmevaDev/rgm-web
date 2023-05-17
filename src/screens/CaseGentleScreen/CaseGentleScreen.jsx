@@ -78,7 +78,7 @@ export const CaseGentleScreen = () => (
     <Work size="three" arr={arr} />
 
     <div className="layout">
-      <OutComes image="/images/out-2.jpg" />
+      <OutComes image="/images/out-2.jpg" title=" Outcomes" />
     </div>
 
     <KeywordProfile startCenter={7} numbers color="gray" />

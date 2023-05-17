@@ -64,10 +64,10 @@ export const CaseYagolawScreen = () => (
       />
     </div>
 
-    <Work size="two" arr={arr} />
+    <Work size="two" arr={arr} title="work" />
 
     <div className="layout">
-      <OutComes image="/images/out.jpg" />
+      <OutComes image="/images/out.jpg" title=" Outcomes" />
     </div>
     <Feedback />
 

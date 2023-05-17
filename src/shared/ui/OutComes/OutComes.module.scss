@@ -5,6 +5,20 @@
   padding-bottom: 100px;
 }
 
+.description {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 26px;
+  padding-top: 27px;
+  padding-bottom: 45px;
+  /* identical to box height, or 118% */
+  font-family: var(--font-mont);
+  text-align: center;
+  letter-spacing: -0.2px;
+
+  color: var(--secondary-color);
+}
+
 .gray {
   background: var(--bg-nolayout-color);
   margin-bottom: 100px;

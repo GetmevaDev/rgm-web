@@ -5,6 +5,14 @@
   display: flex;
 }
 
+.center {
+  align-items: center;
+}
+
+.start {
+  align-items: flex-start;
+}
+
 .left {
   width: 45%;
 }

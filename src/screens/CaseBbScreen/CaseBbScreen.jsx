@@ -48,11 +48,11 @@ export const CaseBbScreen = () => (
       />
     </div>
 
-    <Work size="one" arr={arr} />
+    <Work size="one" arr={arr} title="work" />
 
     <Blanks />
 
-    <OutComes image="/images/bb-screen.jpg" color="gray" />
+    <OutComes image="/images/bb-screen.jpg" color="gray" title=" Outcomes" />
 
     <BlockMap />
   </Layout>

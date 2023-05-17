@@ -11,7 +11,7 @@ export const items = [
   { label: "Home", path: "/", id: 1, subMenu: [] },
   {
     label: "Services",
-    path: "/services",
+    path: "",
     id: 3,
     subMenu: [
       {

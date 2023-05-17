@@ -73,11 +73,17 @@ export const CaseSmilesScreen = () => (
       />
     </div>
 
-    <Work size="three" arr={arr} />
+    <Work size="three" arr={arr} title="work" />
 
-    <OutComes image="/images/smiles-screen.jpg" />
+    <OutComes image="/images/smiles-screen.jpg" title=" Outcomes" />
 
-    <OutComes image="/images/smiles.jpg" color="gray" />
+    <OutComes
+      image="/images/smiles.jpg"
+      color="gray"
+      outcomes={false}
+      description="Eastmeadowdentists.com Years of continuous growth displayed in the graph below."
+      title="SEO Outcomes"
+    />
 
     <KeywordProfile startCenter={13} startRight={25} />
 

@@ -24,10 +24,10 @@ export const inter = Inter({
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={`${mont.variable} ${inter.variable}`}>
-      <ThemeProvider>
+    <ThemeProvider>
+      <main className={`${mont.variable} ${inter.variable}`}>
         <Component {...pageProps} />
-      </ThemeProvider>
-    </main>
+      </main>
+    </ThemeProvider>
   );
 }

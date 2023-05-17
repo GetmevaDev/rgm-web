@@ -13,17 +13,26 @@ const colors = {
   white: styles.white,
 };
 
-export const OutComes = ({ image, title, color = "white" }) => (
+export const OutComes = ({
+  image,
+  title,
+  description,
+  color = "white",
+  outcomes = true,
+}) => (
   <div className={classNames(styles.outcomes, colors[color])}>
     <div className={styles.outcomes_inner}>
       <Typography size="mini" tag="h2">
-        Outcomes
+        {title}
       </Typography>
-      <div className={styles.items}>
-        <OutcomeItem />
-        <OutcomeItem />
-        <OutcomeItem />
-      </div>
+      {description && <div className={styles.description}>{description}</div>}
+      {outcomes && (
+        <div className={styles.items}>
+          <OutcomeItem />
+          <OutcomeItem />
+          <OutcomeItem />
+        </div>
+      )}
 
       <div className={styles.image_inner}>
         <Image

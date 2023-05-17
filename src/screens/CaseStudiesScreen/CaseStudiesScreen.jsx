@@ -7,6 +7,7 @@ export const CaseStudiesScreen = () => (
   <Layout title="CaseStudies" description="CaseStudies" size="nolayout">
     <div className="layout">
       <ImageBannerText
+        position="center"
         transform="capitalize"
         title="Case Studies"
         imageLight="/images/case-light.svg"

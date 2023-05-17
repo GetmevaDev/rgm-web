@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { ETheme, ISSERVER } from "@/providers";
 import { useTheme } from "@/shared/hooks";
@@ -8,6 +8,11 @@ import { useTheme } from "@/shared/hooks";
 import { Button, Typography } from "..";
 
 import styles from "./ImageBannerText.module.scss";
+
+const positions = {
+  center: styles.center,
+  start: styles.start,
+};
 
 export const ImageBannerText = ({
   title,
@@ -19,11 +24,20 @@ export const ImageBannerText = ({
   imageDark,
   subDescrption,
   transform,
+  position = "start",
 }) => {
+  const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
   return (
-    <div className={styles.image_banner}>
+    <div className={classNames(styles.image_banner, positions[position])}>
       <div className={styles.left}>
         <Typography color="black" size="large" transform={transform}>
           {title} <span className={styles.color}>{subTitle}</span>
