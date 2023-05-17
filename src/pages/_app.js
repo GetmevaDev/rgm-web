@@ -5,6 +5,7 @@ import { Inter, Montserrat } from "@next/font/google";
 import "swiper/css";
 import "swiper/css/pagination";
 
+import "boxicons/css/boxicons.min.css";
 import "@/styles/globals.scss";
 
 export const mont = Montserrat({
