@@ -17,6 +17,7 @@ export const OutComes = ({
   image,
   title,
   description,
+  items,
   color = "white",
   outcomes = true,
 }) => (
@@ -26,11 +27,11 @@ export const OutComes = ({
         {title}
       </Typography>
       {description && <div className={styles.description}>{description}</div>}
-      {outcomes && (
+      {items && (
         <div className={styles.items}>
-          <OutcomeItem />
-          <OutcomeItem />
-          <OutcomeItem />
+          {items.map((item) => (
+            <OutcomeItem key={item.id} {...item} />
+          ))}
         </div>
       )}
 

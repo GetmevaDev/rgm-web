@@ -4,12 +4,10 @@ import { Border } from "../..";
 
 import styles from "./OutcomeItem.module.scss";
 
-export const OutcomeItem = ({ number, description }) => (
+export const OutcomeItem = ({ title, description, border }) => (
   <div className={styles.item}>
-    <div className={styles.number}>1</div>
-    <Border />
-    <div className={styles.description}>
-      Robust mobile responsive user experience
-    </div>
+    <div className={styles.number}>{title}</div>
+    {border && <Border />}
+    <div className={styles.description}>{description}</div>
   </div>
 );

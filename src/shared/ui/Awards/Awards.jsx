@@ -5,15 +5,22 @@ import { Typography } from "..";
 
 import styles from "./Awards.module.scss";
 
-export const Awards = () => (
+export const Awards = ({ title, subTitle, images }) => (
   <div className={styles.awards}>
     <div className={styles.awards_inner}>
       <Typography tag="h2" size="title">
-        Awards & <span>Partnerships</span>
+        {title} <span>{subTitle}</span>
       </Typography>
 
       <div className={styles.card}>
-        <Image src="/images/awards.jpg" width={1170} height={454} />
+        {images?.map((img) => (
+          <Image
+            src={img?.attributes?.url}
+            width={img?.attributes?.width}
+            alt={img?.attributes?.name}
+            height={img?.attributes?.height}
+          />
+        ))}
       </div>
     </div>
   </div>

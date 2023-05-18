@@ -27,7 +27,12 @@ export const ItemBlank = ({
         <p className={styles.description}>{description}</p>
       </div>
       <div className={styles.right}>
-        <Image width={width} height={height} src={image} />
+        <Image
+          width={image?.data?.attributes?.width}
+          height={image?.data?.attributes?.height}
+          src={image?.data?.attributes?.url}
+          alt={title}
+        />
       </div>
     </div>
   </div>

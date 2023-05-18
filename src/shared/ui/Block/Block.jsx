@@ -62,6 +62,7 @@ export const Block = ({
         <Image
           width={width}
           height={height}
+          alt="banner"
           src={image}
           className={reverse ? styles.image : styles.image_reverse}
         />

@@ -5,14 +5,21 @@ import { Typography } from "..";
 
 import styles from "./FeaturedPress.module.scss";
 
-export const FeaturedPress = () => (
+export const FeaturedPress = ({ title, subTitle, images }) => (
   <div className={styles.featured}>
     <Typography tag="h2" size="title">
-      ROBERTGEROV <span>FEATURED PRESS</span>
+      {title} <span>{subTitle}</span>
     </Typography>
 
     <div className={styles.images}>
-      <Image width={717} height={237} src="/images/featured.jpg" />
+      {images?.map((img) => (
+        <Image
+          src={img?.attributes?.url}
+          width={img?.attributes?.width}
+          alt={img?.attributes?.name}
+          height={img?.attributes?.height}
+        />
+      ))}
     </div>
   </div>
 );

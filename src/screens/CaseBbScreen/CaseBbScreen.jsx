@@ -10,16 +10,7 @@ import {
   Work,
 } from "@/shared/ui";
 
-const arr = [
-  {
-    id: 1,
-    title: "Strategy",
-    description:
-      "We organized all her wants and needs and wrote all new content. The design team planned content placement and wireframed the website. We began to design the branding based on the 7 chakras of Buddhism. The heart chakra, or Anahata, is located near your heart, in the center of your chest; this was the logo inspiration. It comes as no surprise that the heart chakra is all about our ability to love and show compassion. We planned a complete user experience while maintaining encryption, website accessibility, content formatting, and SEO protocols.",
-  },
-];
-
-export const CaseBbScreen = () => (
+export const CaseBbScreen = ({ attributes }) => (
   <Layout
     title="BB Tax & Advisory"
     description="Gentle Touch Endo set out to build a new web presence in order to increase their already existing search engine ranking, and to continue to close the gap in an underserved market."
@@ -27,32 +18,38 @@ export const CaseBbScreen = () => (
   >
     <div className="layout">
       <ImageBannerText
-        subDescrption="Summary"
+        subDescrption={attributes?.Banner?.title_color}
         transform="capitalize"
-        title="BB Tax & Advisory"
-        imageLight="/images/bb-banner.svg"
-        imageDark="/images/bb-banner.svg"
-        description={`
-						BB Tax & Advisory is a full service bookkeeping, accounting and financial advisory firm specializing in the complex needs of small businesses owners and middle-class families. Our goal was to create a well organized User Experience to showcase the clients various specialties in a clean, sophisticated way. Our targets were middle class families, small businesses and retired couples.`}
-        button="Visit Website"
+        title={attributes?.Banner?.title}
+        imageLight={attributes?.Banner?.image_dark?.data?.attributes?.url}
+        imageDark={attributes?.Banner?.image_dark?.data?.attributes?.url}
+        description={attributes?.Banner?.description}
+        button={attributes?.Banner?.button}
       />
 
       <Block
-        title="Overview"
         width={475}
         height={420}
-        image="/images/bb.jpg"
-        description={`
-			We set out to create a well organized user experience and sophisticated-looking website that showcases the client’s wide spectrum of specialities. Creating a UX that efficiently organized the large amount of information, graphs, statistics and specialities offered by the client. We art directed and produced the website and graphics. We designed the wireframes which were crucial in organizing the site’s content.
-			`}
+        title={attributes?.ImageBannerText?.title}
+        image={attributes?.ImageBannerText?.image?.data?.attributes?.url}
+        description={attributes?.ImageBannerText?.description}
       />
     </div>
 
-    <Work size="one" arr={arr} title="work" />
+    <Work
+      size="one"
+      arr={attributes?.Work?.WorkItem}
+      title={attributes?.Work?.title}
+    />
 
-    <Blanks />
+    <Blanks blanks={attributes?.Blanks} />
 
-    <OutComes image="/images/bb-screen.jpg" color="gray" title=" Outcomes" />
+    <OutComes
+      color="gray"
+      items={attributes?.Outcomes?.OutcomeItem}
+      image={attributes?.Outcomes?.image?.data?.attributes?.url}
+      title={attributes?.Outcomes?.title}
+    />
 
     <BlockMap />
   </Layout>

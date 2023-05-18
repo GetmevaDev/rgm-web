@@ -11,65 +11,47 @@ import {
   Work,
 } from "@/shared/ui";
 
-const arr = [
-  {
-    id: 1,
-    title: "Branding",
-    description:
-      "Our design team immediately began building a world class brand book including a new logo, color palette, business cards, letterhead, envelopes, pens, etc.",
-  },
-  {
-    id: 2,
-    title: "Integrated marketing",
-    description:
-      "We used our extensive knowledge and experience in search engine marketing, to optimize the website for the relevant user intent.",
-  },
-];
-
-export const CaseYagolawScreen = () => (
+export const CaseYagolawScreen = ({ attributes }) => (
   <Layout title="Case yagolaw" description="Case yagolaw" size="nolayout">
     <div className="layout">
       <ImageBannerText
-        subDescrption="Summary"
+        subDescrption={attributes?.banner?.title_color}
         transform="capitalize"
-        title="YagoLaw.com"
-        imageLight="/images/yagolaw-banner.svg"
-        imageDark="/images/yagolaw-banner.svg"
-        description={`
-						Yago Law, wanted to build a new web presence that emulates their commitment to cut the complex legal speak in order for them to reach their audience in a new way.`}
-        button="Visit Website"
+        title={attributes?.banner?.title}
+        imageLight={attributes?.banner?.image_dark?.data?.attributes?.url}
+        imageDark={attributes?.banner?.image_dark?.data?.attributes?.url}
+        description={attributes?.banner?.description}
+        button={attributes?.banner?.button}
       />
 
       <Block
-        title="Overview"
+        title={attributes?.ImageBannerText?.title}
         width={475}
         height={890}
-        image="/images/banner-yagolaw.jpg"
-        description={`
-				There is no cookie cutter solution in family law and as such, we built a custom solution to simplify the first interaction for a new generation of clients. 
-				<br/>
-				<br/>
-
-				Starting with branding and web design, YagoLaw wanted us to help establish them as the go-to Law Firm for a powerful, dedicated, and devoted team that will fight for each and every client. How do you reach a generation navigating one of life’s major milestones for the first time? You make things as simple as possible.
-				<br/>
-				<br/>
-
-				Using our web development and SEO teams, we wanted to show how YagoLaw cuts out intimidating jargon and explains their fields of practice in a simple, human way; and then broadcast it on the web.  
-				<br/>
-				<br/>
-
-				Our teams not only worked together to create an easy to navigate user interface, but also worked in conjunction with legal writers to bring it all together, with an empathetic tone in the verbiage. Empathy has long been used to make tough topics digestible - we embraced the term in every way so that we could expose YagoLaw’s capabilities in the best way possible.
-
-			`}
+        image={attributes?.ImageBannerText?.image?.data?.attributes?.url}
+        description={attributes?.ImageBannerText?.description}
       />
     </div>
 
-    <Work size="two" arr={arr} title="work" />
+    <Work
+      size="two"
+      arr={attributes?.Work?.WorkItem}
+      title={attributes?.Work?.title}
+    />
 
     <div className="layout">
-      <OutComes image="/images/out.jpg" title=" Outcomes" />
+      <OutComes
+        items={attributes?.Outcomes?.OutcomeItem}
+        image={attributes?.Outcomes?.image?.data?.attributes?.url}
+        title={attributes?.Outcomes?.title}
+      />
     </div>
-    <Feedback />
+    <Feedback
+      title={attributes?.Feedback?.color_title}
+      subTitle={attributes?.Feedback?.title}
+      description={attributes?.Feedback?.description}
+      user={attributes?.Feedback?.user}
+    />
 
     <BlockMap />
   </Layout>

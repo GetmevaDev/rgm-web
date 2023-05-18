@@ -25,7 +25,7 @@ export const Work = ({ size = "two", color = "gray", arr, title }) => (
         {title}
       </Typography>
       <div className={classNames(sizes[size])}>
-        {arr.map((item) => (
+        {arr?.map((item) => (
           <WorkItem key={item.id} {...item} />
         ))}
       </div>

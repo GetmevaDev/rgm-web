@@ -3,18 +3,18 @@ import React from "react";
 import { Layout } from "@/shared";
 import { BlockMap, Cases, ImageBannerText } from "@/shared/ui";
 
-export const CaseStudiesScreen = () => (
+export const CaseStudiesScreen = ({ attributes }) => (
   <Layout title="CaseStudies" description="CaseStudies" size="nolayout">
     <div className="layout">
       <ImageBannerText
         position="center"
         transform="capitalize"
-        title="Case Studies"
-        imageLight="/images/case-light.svg"
-        imageDark="/images/case-dark.svg"
+        title={attributes?.Banner?.title}
+        imageLight={attributes?.Banner?.image_light?.data?.attributes?.url}
+        imageDark={attributes?.Banner?.image_dark?.data?.attributes?.url}
       />
 
-      <Cases />
+      <Cases data={attributes?.Cases?.CaseItem} />
     </div>
 
     <BlockMap />

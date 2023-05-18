@@ -52,24 +52,15 @@ export const ImageBannerText = ({
 
         {images && (
           <div className={styles.images}>
-            <Image
-              width={81}
-              height={87}
-              src="/images/award-1.svg"
-              alt="award"
-            />
-            <Image
-              width={81}
-              height={87}
-              src="/images/award-1.svg"
-              alt="award"
-            />
-            <Image
-              width={81}
-              height={87}
-              src="/images/award-1.svg"
-              alt="award"
-            />
+            {images.map((img) => (
+              <Image
+                width={81}
+                height={87}
+                alt="award"
+                key={img.id}
+                src={img?.attributes?.url}
+              />
+            ))}
           </div>
         )}
 
