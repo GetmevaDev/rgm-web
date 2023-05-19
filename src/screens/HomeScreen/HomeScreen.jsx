@@ -20,10 +20,13 @@ export const HomeScreen = ({ attributes }) => (
         subTitle={attributes?.banner?.title_color}
         description={attributes?.banner?.description}
         button={attributes?.banner?.button}
+        buttonLink={attributes?.banner?.button_link}
         images={attributes?.banner?.images_awards?.data}
         imageLight={attributes?.banner?.image_light?.data?.attributes?.url}
         imageDark={attributes?.banner?.image_dark?.data?.attributes?.url}
       />
+
+      {console.log(attributes, "attr")}
       <Banner
         button={attributes?.image_banner?.button}
         subTitle={attributes?.image_banner?.title_color}
@@ -36,7 +39,9 @@ export const HomeScreen = ({ attributes }) => (
         subTitle={attributes?.BridgeBusiness?.title_color}
         title={attributes?.BridgeBusiness?.title}
         description={attributes?.BridgeBusiness?.description}
-        items={attributes?.BridgeBusiness?.BridgeItem}
+        items={
+          attributes?.BridgeBusiness?.RightBlockBridge?.RightBlockBridgeItem
+        }
         date={attributes?.BridgeBusiness?.date}
       />
     </div>

@@ -21,7 +21,5 @@ export async function getStaticProps() {
 }
 
 export default function About({ attributes }) {
-  console.log(attributes, "attr");
-
   return <AboutScreen attributes={attributes} />;
 }

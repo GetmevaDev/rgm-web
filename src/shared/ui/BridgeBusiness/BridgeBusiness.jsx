@@ -33,7 +33,7 @@ export const BridgeBusiness = ({
         </div>
       ))}
 
-      <div className={styles.data}>{date}</div>
+      <div className={styles.data}>*Data for Q4, 2022</div>
     </div>
   </section>
 );
