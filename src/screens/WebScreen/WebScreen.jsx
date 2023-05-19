@@ -14,7 +14,7 @@ import {
 
 import { arr } from "..";
 
-export const WebScreen = () => (
+export const WebScreen = ({ attributes }) => (
   <Layout
     title="WEB DEVELOPMENT"
     description="Behind every Google search, there is a user-intention. We leverage that user intent and place you where your product or service fits best."
@@ -23,40 +23,32 @@ export const WebScreen = () => (
     <div className="layout">
       <ImageBannerText
         transform="capitalize"
-        title="WEB DEVELOPMENT"
-        imageLight="/images/web.svg"
-        imageDark="/images/web.svg"
-        description={`
-						A REVOLUTIONARY DIGITAL DEVELOPMENT AGENCY BASED IN TIMES SQUARE`}
-        button="Visit Website"
+        title={attributes?.banner?.title}
+        description={attributes?.banner?.description}
+        button={attributes?.banner?.button}
+        buttonLink={attributes?.banner?.button_link}
+        imageLight={attributes?.banner?.image_light?.data?.attributes?.url}
+        imageDark={attributes?.banner?.image_dark?.data?.attributes?.url}
       />
 
-      <Description description="Design never stands still, and any brand investing in a new website or application wants it to look and feel contemporary. The philosophy behind your design should stand the test of time." />
+      <Description description={attributes?.description} />
     </div>
 
-    <Info />
-    <Work size="three" arr={arr} color="white" title="WHY WEBSITES SUCCEED" />
+    <Info slides={attributes?.Items?.SliderItem} />
+    <Work
+      size="three"
+      color="white"
+      arr={attributes?.website_succeed?.WorkItem}
+      title={attributes?.website_succeed?.title}
+    />
 
     <Block
       color="gray"
-      image="/images/africa.jpg"
-      title="A PARTNERSHIP MENTALITY"
+      title={attributes?.ImageBannerText?.title}
+      image={attributes?.ImageBannerText?.image?.data?.attributes?.url}
+      description={attributes?.ImageBannerText?.description}
       width={475}
       height={980}
-      description={`
-				ROBERTGEROV started out in web design many years ago, and designed websites for big brands and rising startups alike. Seeing the evolution towards more audience-focused websites – and helped brands move with these changes as they happen.
-				<br/>
-				<br/>
-				Whether you’re building a website for a new business or you’re ready for a transformation, his team of web designers  and brand specialists can help you show off your brand. We live in a mobile-first world, and we wouldn’t dream of starting a website without responsive designs for all devices. Redesigning a website is a big step for many businesses.
-				<br/>
-				<br/>
-
-				There are big design decisions to make and many stakeholders’ views to consider. How you’re guided through the process is almost as important as what’s ultimately designed. We take an iterative, dialogue-based approach to design, exploring ideas and directions and leaving ample time and space for feedback and refinement.
-				<br/>
-				<br/>
-
-				You’ll get a clear sense of what your options are and how they affect the overall design. And we’ll help guide the conversation to generate the most valuable, relevant feedback possible from your wider team. A true digital partner who helps brands make deeper connections with audiences and accelerates growth.
-			`}
     />
 
     <div className="layout">

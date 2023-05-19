@@ -4,17 +4,12 @@ import { Layout } from "@/shared";
 import {
   Block,
   BlockMap,
-  Description,
   GivingBack,
   ImageBannerText,
-  Info,
   Slider,
-  Work,
 } from "@/shared/ui";
 
-import { arr } from "..";
-
-export const EcommerceScreen = () => (
+export const EcommerceScreen = ({ attributes }) => (
   <Layout
     title="ECOMMERCE"
     description="We are a fast growing eCommerce giant with offices across the globe. With strategists, consultants, designers, and developers with decades of experience."
@@ -23,36 +18,24 @@ export const EcommerceScreen = () => (
     <div className="layout">
       <ImageBannerText
         transform="capitalize"
-        title="ECOMMERCE"
-        imageLight="/images/web.svg"
-        imageDark="/images/web.svg"
-        description={`
-						We are a fast growing eCommerce giant with offices across the globe. With strategists, consultants, designers, and developers with decades of experience.`}
-        button="BOOK AN APPOINTMENT"
+        title={attributes?.banner?.title}
+        description={attributes?.banner?.description}
+        button={attributes?.banner?.button}
+        buttonLink={attributes?.banner?.button_link}
+        imageLight={attributes?.banner?.image_light?.data?.attributes?.url}
+        imageDark={attributes?.banner?.image_dark?.data?.attributes?.url}
       />
 
       <Block
         width={551}
         height={825}
-        miniTitle="Many sites give customers a way to make a
-					purchase. What’s harder to deliver is a great
-					experience across the entire digital journey,
-					from discovery to purchasing decision."
-        image="/images/ecommerce.jpg"
-        description={`
-				As online competition <b>increases</b>, margin pressures grow, and your audience becomes more and more discriminating, making effective eCommerce website design even more critical.
-					</br>
-					</br>
-				There are best practices in <b>eCommerce</b>, but no magic formulas. Success requires a delicate balance of business savvy, brand strategy, user experience, content, and intuitive design. Getting it right means finding your “sweet spot” – as well as a willingness to test constantly, so you can iterate and learn.
-					</br>
-					</br>
-
-				When you partner with us, years of eCommerce experience are just a starting point. we apply an <b>in-depth</b>, problem-solving approach to your brand and business challenges. We don’t just check boxes to deliver a digital storefront – we create <b>experiences</b> that drive your brand forward.
-			`}
+        miniTitle={attributes?.ImageBannerText?.title}
+        image={attributes?.ImageBannerText?.image?.data?.attributes?.url}
+        description={attributes?.ImageBannerText?.description}
       />
     </div>
 
-    <Slider />
+    <Slider items={attributes?.Slider?.SliderItem} />
 
     <div className="layout">
       <GivingBack />

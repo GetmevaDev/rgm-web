@@ -21,9 +21,12 @@ const colors = {
 export const Work = ({ size = "two", color = "gray", arr, title }) => (
   <div className={classNames(styles.work, colors[color])}>
     <div className={styles.work_inner}>
-      <Typography tag="h2" size="mini">
-        {title}
-      </Typography>
+      {title && (
+        <Typography tag="h2" size="mini">
+          {title}
+        </Typography>
+      )}
+
       <div className={classNames(sizes[size])}>
         {arr?.map((item) => (
           <WorkItem key={item.id} {...item} />

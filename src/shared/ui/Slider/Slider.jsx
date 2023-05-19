@@ -6,53 +6,7 @@ import { SlideItem } from "./SlideItem/SlideItem";
 
 import styles from "./Slider.module.scss";
 
-export const slides = [
-  {
-    id: 1,
-    title: "BUSINESS ANALYSIS & INTERPRETATION",
-    description: `
-		I comb through your analytic data to better grasp the psychological factors that will familiarize you with your visitors’ needs and preferences.
-	`,
-    image: "/images/slide.jpg",
-  },
-
-  {
-    id: 2,
-    title: "Content Strategy",
-    description: `
-		I comb through your analytic data to better grasp the psychological factors that will familiarize you with your visitors’ needs and preferences.
-	`,
-    image: "/images/slide.jpg",
-  },
-
-  {
-    id: 3,
-    title: "Creative Strategy",
-    description: `
-		I comb through your analytic data to better grasp the psychological factors that will familiarize you with your visitors’ needs and preferences.
-	`,
-    image: "/images/slide.jpg",
-  },
-  {
-    id: 4,
-    title: "BUSINESS ANALYSIS & INTERPRETATION",
-    description: `
-		I comb through your analytic data to better grasp the psychological factors that will familiarize you with your visitors’ needs and preferences.
-	`,
-    image: "/images/slide.jpg",
-  },
-
-  {
-    id: 5,
-    title: "BUSINESS ANALYSIS & INTERPRETATION",
-    description: `
-		I comb through your analytic data to better grasp the psychological factors that will familiarize you with your visitors’ needs and preferences.
-	`,
-    image: "/images/slide.jpg",
-  },
-];
-
-export const Slider = () => (
+export const Slider = ({ items }) => (
   <div className={styles.slider}>
     <div className={styles.slider_inner}>
       <Swiper
@@ -85,7 +39,7 @@ export const Slider = () => (
         modules={[FreeMode, Pagination]}
         className="mySwiper"
       >
-        {slides?.map((item) => (
+        {items?.map((item) => (
           <SwiperSlide key={item.id}>
             <SlideItem {...item} />
           </SwiperSlide>

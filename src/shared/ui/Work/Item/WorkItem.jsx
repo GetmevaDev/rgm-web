@@ -5,13 +5,13 @@ import { Border } from "../..";
 
 import styles from "./WorkItem.module.scss";
 
-export const WorkItem = ({ title, description, image }) => (
-  <div className={!image ? styles.work_item : styles.work_item_image}>
-    {image && (
+export const WorkItem = ({ title, description, svg }) => (
+  <div className={!svg ? styles.work_item : styles.work_item_image}>
+    {svg && (
       <Image
         width={90}
         height={90}
-        src={image}
+        src={svg?.data?.attributes?.url}
         alt="svg"
         className={styles.image}
       />

@@ -2,24 +2,19 @@ import React from "react";
 import { FreeMode, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { slides, Typography } from "..";
+import { Typography } from "..";
 
 import { PledgeItem } from "./Item/PledgeItem";
 
 import styles from "./Pledge.module.scss";
 
-export const Pledge = () => (
+export const Pledge = ({ title, description, items }) => (
   <div className={styles.plegde}>
     <Typography tag="h2" size="small">
-      MY PLEDGE TO YOU
+      {title}
     </Typography>
 
-    <div className={styles.description}>
-      I am forthcoming as to what my SEO services can accomplish and am upfront
-      about my methods. For example, we will ONLY engage in white-hat tactics in
-      pursuing your goals, in accordance with guidelines setforth by the search
-      engines.
-    </div>
+    <div className={styles.description}>{description}</div>
 
     <Swiper
       slidesPerView={1}
@@ -51,9 +46,9 @@ export const Pledge = () => (
       modules={[FreeMode, Pagination]}
       className="mySwiper"
     >
-      {slides?.map((item) => (
+      {items?.map((item) => (
         <SwiperSlide key={item.id}>
-          <PledgeItem />
+          <PledgeItem {...item} />
         </SwiperSlide>
       ))}
     </Swiper>

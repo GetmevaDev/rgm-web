@@ -43,7 +43,7 @@ RGM provides various solutions tailored to their individual needs. Our services 
   },
 ];
 
-export const ManagementScreen = () => (
+export const ManagementScreen = ({ attributes }) => (
   <Layout
     title="PUBLIC RELATIONS MANAGEMENT NYC"
     description="RGM offers a powerful complement of Internet, TV, Billboard and Print PR services in New York City."
@@ -52,31 +52,29 @@ export const ManagementScreen = () => (
     <div className="layout">
       <ImageBannerText
         transform="capitalize"
-        title="PUBLIC RELATIONS MANAGEMENT NYC"
-        imageLight="/images/web.svg"
-        imageDark="/images/web.svg"
-        description={`
-						RGM offers a powerful complement of Internet, TV, Billboard and Print PR services in New York City.`}
-        button="BOOK AN APPOINTMENT"
+        title={attributes?.banner?.title}
+        description={attributes?.banner?.description}
+        button={attributes?.banner?.button}
+        buttonLink={attributes?.banner?.button_link}
+        imageLight={attributes?.banner?.image_light?.data?.attributes?.url}
+        imageDark={attributes?.banner?.image_dark?.data?.attributes?.url}
       />
 
       <Description
         weight="semi_bold"
-        description={`
-            We go boldly beyond the stale parameters of traditional Public Relations Management. Offering the very best in innovative concepts and fresh ideas in NYC.
-			`}
+        description={attributes?.description?.description}
       />
     </div>
-    {texts.map((item) => (
+    {attributes?.ImageBannerText.map((item) => (
       <Block
         color={item.color}
         key={item.id}
-        width={item.width}
+        width={item.image?.data?.attributes?.width}
         position={item.position}
-        height={item.height}
+        height={item.image?.data?.attributes?.height}
         miniTitle={item.miniTitle}
         reverse={item.reverse}
-        image={item.image}
+        image={item.image?.data?.attributes?.url}
         description={item.description}
       />
     ))}

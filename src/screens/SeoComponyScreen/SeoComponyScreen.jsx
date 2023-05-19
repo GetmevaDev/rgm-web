@@ -37,7 +37,7 @@ export const arr = [
   },
 ];
 
-export const SeoComponyScreen = () => (
+export const SeoComponyScreen = ({ attributes }) => (
   <Layout
     title="SEO COMPANY NYC"
     description="Behind every Google search, there is a user-intention. We leverage that user intent and place you where your product or service fits best."
@@ -46,25 +46,38 @@ export const SeoComponyScreen = () => (
     <div className="layout">
       <ImageBannerText
         transform="capitalize"
-        title="SEO COMPANY NYC"
-        imageLight="/images/seo.jpg"
-        imageDark="/images/seo.jpg"
-        description={`
-						Behind every Google search, there is a <b>user-intention</b>. We leverage that user intent and place you where your product or service fits best.`}
-        button="Visit Website"
+        title={attributes?.banner?.title}
+        subTitle={attributes?.banner?.title_color}
+        description={attributes?.banner?.description}
+        button={attributes?.banner?.button}
+        buttonLink={attributes?.banner?.button_link}
+        images={attributes?.banner?.images_awards?.data}
+        imageLight={attributes?.banner?.image_light?.data?.attributes?.url}
+        imageDark={attributes?.banner?.image_dark?.data?.attributes?.url}
       />
 
-      <Description sub />
-      <Price />
+      <Description
+        sub={attributes?.Description?.sub_description}
+        description={attributes?.Description?.description}
+      />
+      <Price items={attributes?.PricingItemsss} />
     </div>
 
-    <Work size="three" arr={arr} />
+    <Work
+      size="three"
+      arr={attributes?.Block?.WorkItem}
+      title={attributes?.Block?.title}
+    />
 
     <div className="layout">
-      <Pledge />
+      <Pledge
+        title={attributes?.PledgeToYou?.title}
+        description={attributes?.PledgeToYou?.description}
+        items={attributes?.PledgeToYou?.PledgeToYouItem}
+      />
     </div>
 
-    <Slider />
+    <Slider items={attributes?.Slider?.SliderItem} />
     <div className="layout">
       <GivingBack />
     </div>

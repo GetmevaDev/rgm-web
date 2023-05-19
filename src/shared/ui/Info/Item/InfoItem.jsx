@@ -9,8 +9,8 @@ export const InfoItem = ({ title, image, description }) => (
       <Image
         width={370}
         height={240}
-        src={image}
-        alt="slide"
+        src={image?.data?.attributes?.url}
+        alt={title}
         className={styles.image}
       />
     </div>

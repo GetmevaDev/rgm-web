@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 import { ETheme, ISSERVER } from "@/providers";
@@ -24,6 +25,7 @@ export const ImageBannerText = ({
   imageDark,
   subDescrption,
   transform,
+  buttonLink,
   position = "start",
 }) => {
   const [mounted, setMounted] = useState(false);
@@ -65,9 +67,11 @@ export const ImageBannerText = ({
         )}
 
         {button && (
-          <Button variant="outline" className={styles.button}>
-            {button}
-          </Button>
+          <Link href={buttonLink}>
+            <Button variant="outline" className={styles.button}>
+              {button}
+            </Button>
+          </Link>
         )}
       </div>
 

@@ -9,7 +9,7 @@ export const SlideItem = ({ title, image, description }) => (
       <Image
         width={370}
         height={240}
-        src={image}
+        src={image?.data?.attributes?.url}
         alt="slide"
         className={styles.image}
       />

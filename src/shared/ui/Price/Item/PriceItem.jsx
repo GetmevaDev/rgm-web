@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./PriceItem.module.scss";
 
-export const PriceItem = ({ title, description, price, list }) => (
+export const PriceItem = ({ title, description, price, PricingItemsList }) => (
   <div className={styles.item}>
     <div className={styles.title}>{title}</div>
     <p className={styles.description}>{description}</p>
@@ -13,8 +13,8 @@ export const PriceItem = ({ title, description, price, list }) => (
     </div>
 
     <ul className={styles.list}>
-      {list.map((item) => (
-        <li key={item.id}>{item.title}</li>
+      {PricingItemsList?.map(({ Item, id }) => (
+        <li key={id}>{Item}</li>
       ))}
     </ul>
   </div>

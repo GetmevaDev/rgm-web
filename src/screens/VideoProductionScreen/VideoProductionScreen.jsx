@@ -53,7 +53,7 @@ const texts = [
   },
 ];
 
-export const VideoProductionScreen = () => (
+export const VideoProductionScreen = ({ attributes }) => (
   <Layout
     title="VIDEO PRODUCTION STUDIO"
     description="Whether you want to animate, sell, explain, or inspire – we can help."
@@ -62,34 +62,32 @@ export const VideoProductionScreen = () => (
     <div className="layout">
       <ImageBannerText
         transform="capitalize"
-        title="VIDEO PRODUCTION STUDIO"
-        imageLight="/images/web.svg"
-        imageDark="/images/web.svg"
-        description="Whether you want to animate, sell, explain, or inspire – we can help."
-        button="BOOK AN APPOINTMENT"
+        title={attributes?.banner?.title}
+        description={attributes?.banner?.description}
+        button={attributes?.banner?.button}
+        buttonLink={attributes?.banner?.button_link}
+        imageLight={attributes?.banner?.image_light?.data?.attributes?.url}
+        imageDark={attributes?.banner?.image_dark?.data?.attributes?.url}
       />
 
       <Description
         weight="semi_bold"
-        description={`
-						We offer full-service content laboratories for the 21st century. In-house studios furnished with modern equipment make our end-to-end process streamlined and nimble. Onsite and location scouting services available.
-			`}
+        description={attributes?.description?.description}
       />
     </div>
-    {texts.map((item) => (
+    {attributes?.ImageBannerText.map((item) => (
       <Block
         color={item.color}
         key={item.id}
-        width={item.width}
+        width={item.image?.data?.attributes?.width}
         position={item.position}
-        height={item.height}
+        height={item.image?.data?.attributes?.height}
         miniTitle={item.miniTitle}
         reverse={item.reverse}
-        image={item.image}
+        image={item.image?.data?.attributes?.url}
         description={item.description}
       />
     ))}
-
     <div className="layout">
       <div className="border" />
 
