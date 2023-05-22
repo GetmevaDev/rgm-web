@@ -5,10 +5,10 @@ import React from "react";
 
 import styles from "./Logo.module.scss";
 
-export const Logo = ({ className }) => (
+export const Logo = ({ className, logo, text }) => (
   <Link href="/" className={styles.logo}>
     <Image
-      src="/svg/logo.svg"
+      src={logo}
       width={153}
       aria-label="logo"
       height={66}
@@ -17,6 +17,6 @@ export const Logo = ({ className }) => (
       className={classNames(styles.image, className)}
     />
 
-    <div className={styles.logo_text}>ROBERT GEROV MEDIA</div>
+    <div className={styles.logo_text}>{text}</div>
   </Link>
 );

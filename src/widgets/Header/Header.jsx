@@ -4,10 +4,13 @@ import { Logo, Navigation } from "@/shared/ui";
 
 import styles from "./Header.module.scss";
 
-export const Header = () => (
+export const Header = ({ navigation }) => (
   <header className={styles.header}>
-    <Logo />
+    <Logo
+      logo={navigation?.Header?.Logo?.data?.attributes?.url}
+      text={navigation?.Header?.text}
+    />
 
-    <Navigation />
+    <Navigation items={navigation?.HeaderItems} />
   </header>
 );

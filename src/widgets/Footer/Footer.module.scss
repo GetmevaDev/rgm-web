@@ -27,7 +27,7 @@
 }
 .footer__inner {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
 }
 
@@ -39,8 +39,16 @@
   color: var(--secondary-color);
   font-family: var(--font-mont);
 
-  span + span {
+  a + a {
     padding-left: 20px;
+  }
+
+  a {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.186667px;
+    color: var(--secondary-color);
+    font-family: var(--font-mont);
   }
 }
 

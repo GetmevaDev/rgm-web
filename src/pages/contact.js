@@ -1,3 +1,26 @@
-export default function Contact() {
-  return <>home</>;
+import { ContactScreen } from "@/screens";
+import { fetchAPI } from "@/shared/lib";
+
+export async function getStaticProps() {
+  const {
+    data: { attributes },
+  } = await fetchAPI("contact-page?populate=deep");
+
+  if (!attributes) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      attributes,
+    },
+    revalidate: 60, // In seconds
+  };
+}
+
+export default function Contact({ attributes }) {
+  console.log(attributes, "contact");
+  return <ContactScreen attributes={attributes} />;
 }

@@ -1,7 +1,29 @@
 .footer_top {
   padding-top: 82px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  gap: 30px;
+}
+
+.navigation {
+  flex-grow: 2;
+  flex-shrink: 1;
+}
+
+.who {
+  flex: 2 300px;
+}
+
+.connect {
+}
+
+.locations {
+  flex: 2 300px;
+}
+
+.made {
+  flex-shrink: 2;
+
+  flex-grow: 2;
 }
 
 .title {
@@ -13,6 +35,11 @@
   text-transform: uppercase;
   color: var(--primary-color);
   padding-bottom: 20px;
+}
+
+.description {
+  display: -webkit-inline-box;
+  gap: 5px;
 }
 
 .list {
@@ -79,7 +106,7 @@
 
     span {
       color: var(--hover-contained-button);
-      font-size: 35px;
+      font-size: 30px;
     }
   }
 }

@@ -13,8 +13,6 @@ import {
   TwitterSvg,
 } from "@/shared/icons";
 
-import { items } from "..";
-
 import styles from "./FooterTop.module.scss";
 
 const connects = [
@@ -24,26 +22,7 @@ const connects = [
   { svg: <LinkedInSvg />, text: "Linkedin", id: 4 },
 ];
 
-const locations = [
-  {
-    description: "1501 Broadway, 12th Floor, New York, NY 10036",
-    text: "Times Square",
-    id: 1,
-  },
-  {
-    description: "1979 Marcus Ave, Ste 210, Lake Success, NY 11042",
-    text: "Lake Success",
-    id: 2,
-  },
-  {
-    description: "1 Garvies Pt Rd, Glen Cove, NY 11542",
-    text: "Glen Cove",
-    id: 3,
-  },
-];
-
-export const FooterTop = () => {
-  const router = useRouter();
+export const FooterTop = ({ footer }) => {
   const { theme } = useTheme();
 
   return (
@@ -51,10 +30,23 @@ export const FooterTop = () => {
       <div className={styles.navigation}>
         <h5 className={styles.title}>Navigation</h5>
         <ul className={styles.list}>
-          {items.map((item) => (
+          {footer?.Navigation?.map((item) => (
             <li key={item.id} className={styles.item}>
-              <Link href={item.path} className={styles.link}>
-                {item.label}
+              <Link href={item.href} className={styles.link}>
+                {item.text}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className={styles.who}>
+        <h5 className={styles.title}>Who We Help</h5>
+        <ul className={styles.list}>
+          {footer?.WhoWeHelp?.map((item) => (
+            <li key={item.id} className={styles.item}>
+              <Link href={item.description} className={styles.link}>
+                {item.title}
               </Link>
             </li>
           ))}
@@ -64,30 +56,52 @@ export const FooterTop = () => {
       <div className={styles.connect}>
         <h5 className={styles.title}>Connect</h5>
         <ul className={styles.list}>
-          {connects.map((item) => (
-            <li key={item.id} className={styles.connect_item}>
-              <div className={styles.svg}>{item.svg}</div>
-              <p className={styles.connect_text}>{item.text}</p>
-            </li>
+          {footer?.Connect.map((item) => (
+            <Link href={item.link}>
+              <li key={item.id} className={styles.connect_item}>
+                {theme === ETheme.Light ? (
+                  <div className={styles.svg}>
+                    <Image
+                      width={15}
+                      height={15}
+                      src={item?.light_svg?.data?.attributes?.url}
+                    />
+                  </div>
+                ) : (
+                  <div className={styles.svg}>
+                    <Image
+                      width={15}
+                      height={15}
+                      src={item?.dark_svg?.data?.attributes?.url}
+                    />
+                  </div>
+                )}
+                <p className={styles.connect_text}>{item.text}</p>
+              </li>
+            </Link>
           ))}
         </ul>
 
         <div className={styles.phone}>
           <div className={styles.title_phone}>Phone</div>
           <div className={styles.tel}>
-            <a href="tel: (888) 982-1410">
-              (888) <span>982-1410</span>
+            <a
+              href={`tel:${footer?.phone_number_left} ${footer?.phone_number_right}`}
+              className={styles.description}
+            >
+              <p className={styles.tel}>{footer?.phone_number_left}</p>
+              <span> {footer?.phone_number_right}</span>
             </a>
           </div>
         </div>
       </div>
 
-      <div className={styles.connect}>
+      <div className={styles.locations}>
         <h5 className={styles.title}>Locations</h5>
         <ul className={styles.list}>
-          {locations.map((item) => (
+          {footer?.Locations?.map((item) => (
             <li key={item.id} className={styles.item}>
-              <div className={styles.location_text}> {item.text}</div>
+              <div className={styles.location_text}> {item.title}</div>
               <div className={styles.location_description}>
                 {item.description}
               </div>
@@ -96,7 +110,7 @@ export const FooterTop = () => {
         </ul>
       </div>
 
-      <div className={styles.connect}>
+      <div className={styles.made}>
         <h5 className={styles.title} />
         <ul className={styles.list_image}>
           <li className={styles.item}>
@@ -127,9 +141,6 @@ export const FooterTop = () => {
               <Image src="/svg/star.svg" width={16} height={16} alt="star" />
               <Image src="/svg/star.svg" width={16} height={16} alt="star" />
             </div>
-          </li>
-          <li className={styles.item}>
-            <div className={styles.rating}>1,938 Rating</div>
           </li>
         </ul>
       </div>

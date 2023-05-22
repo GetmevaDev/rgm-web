@@ -22,6 +22,7 @@ export const CaseYagolawScreen = ({ attributes }) => (
         imageDark={attributes?.banner?.image_dark?.data?.attributes?.url}
         description={attributes?.banner?.description}
         button={attributes?.banner?.button}
+        buttonLink={attributes?.banner?.button_link}
       />
 
       <Block

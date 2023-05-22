@@ -26,7 +26,6 @@ export const HomeScreen = ({ attributes }) => (
         imageDark={attributes?.banner?.image_dark?.data?.attributes?.url}
       />
 
-      {console.log(attributes, "attr")}
       <Banner
         button={attributes?.image_banner?.button}
         subTitle={attributes?.image_banner?.title_color}
