@@ -1,27 +1,48 @@
-import classNames from "classnames";
-import { memo, useEffect, useState } from "react";
+/* eslint-disable jsx-a11y/label-has-associated-control */
+import cx from "classnames";
+import Image from "next/image";
+import React from "react";
 
 import { ETheme } from "@/providers";
-import { useTheme } from "@/shared/hooks";
+import { useLocalStorage, useTheme } from "@/shared/hooks";
 
-import { Button } from "..";
+import styles from "./ThemeSwitcher.module.scss";
 
-export const ThemeSwitcher = memo(({ className = "" }) => {
-  const [mounted, setMounted] = useState(false);
+export const ThemeSwitcher = ({ className }) => {
+  const [checked, setChecked] = useLocalStorage("checked", false);
+
   const { theme, toggleTheme } = useTheme();
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  React.useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
-  if (!mounted) {
-    return null;
-  }
-
-  const color = theme === ETheme.Light ? <div>light</div> : <div>dark</div>;
   return (
-    <Button onClick={toggleTheme} className={classNames("", {}, [className])}>
-      {color}
-    </Button>
+    <div className={styles.switchContainer}>
+      <Image width={25} height={25} src="/svg/theme.svg" alt="theme" />
+      <label className={styles.switch}>
+        {/* <button
+          onClick={toggleTheme}
+          className={classNames("", {}, [className])}
+        >
+          {theme === ETheme.Light ? "light" : "dark"}
+        </button> */}
+        <input
+          type="checkbox"
+          value={checked}
+          checked={checked}
+          onChange={(e) => setChecked(e.target.checked)}
+        />
+        <span
+          onClick={toggleTheme}
+          className={cx(
+            styles.slider,
+            styles.round,
+            theme === ETheme.Light ? styles.dark : styles.light
+          )}
+        />
+      </label>
+    </div>
   );
-});
+};
