@@ -35,7 +35,6 @@ export const Navigation = ({ className, items }) => {
         <div>
           <ThemeSwitcher />
         </div>
-        <div className={styles.lang}>En</div>
       </div>
       <ul
         className={classNames(

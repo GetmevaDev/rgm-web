@@ -20,14 +20,13 @@ export const ThemeSwitcher = ({ className }) => {
 
   return (
     <div className={styles.switchContainer}>
-      <Image width={25} height={25} src="/svg/theme.svg" alt="theme" />
+      {theme === ETheme.Light ? (
+        <Image width={25} height={25} src="/svg/theme.svg" alt="theme" />
+      ) : (
+        <Image width={25} height={25} src="/svg/theme-dark.svg" alt="theme" />
+      )}
+
       <label className={styles.switch}>
-        {/* <button
-          onClick={toggleTheme}
-          className={classNames("", {}, [className])}
-        >
-          {theme === ETheme.Light ? "light" : "dark"}
-        </button> */}
         <input
           type="checkbox"
           value={checked}
