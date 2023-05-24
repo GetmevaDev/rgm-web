@@ -38,3 +38,73 @@
 .border {
   border: 1px solid rgba(0, 0, 0, 0.103969);
 }
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  z-index: 100;
+
+  justify-content: center;
+  pointer-events: none;
+  align-items: center;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.modal__content {
+  padding: 20px;
+  border-radius: 12px;
+  background: #fff;
+  transform: scale(0.5);
+  transition: 0.5s all;
+}
+
+.modal__content.active {
+  transform: scale(1);
+}
+
+.rw-date-picker {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.rw-widget-input {
+  background-color: #f8f7f7 !important;
+  padding: 15px;
+}
+
+.rw-dropdown-list {
+  width: 260px;
+}
+
+.rw-widget-picker {
+  border-radius: 10px;
+}
+
+.rw-picker-btn {
+  background-color: #f8f7f7 !important;
+  color: black !important;
+}
+
+.rw-state-focus .rw-widget-picker {
+  border-color: #eae7e7 !important;
+}
+
+.rw-input-addon,
+.rw-input-addon.rw-picker-btn {
+  border: none;
+
+  svg {
+    position: absolute;
+    right: 10px;
+    color: #bda76a;
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -10,14 +10,14 @@ import Meta from "../seo/Meta";
 
 import styles from "./layout.module.scss";
 
-const fetcher = (...args) => fetch(...args).then((res) => res.json());
+export const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const sizes = {
   layout: styles.layout,
   nolayout: styles.nolayout,
 };
 
-const override = {
+export const override = {
   display: "block",
   margin: "0 auto",
   borderColor: "red",

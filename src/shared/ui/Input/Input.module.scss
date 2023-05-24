@@ -1,0 +1,36 @@
+.input {
+  background: #f8f7f7;
+  border-radius: 10px;
+  padding: 15px;
+  height: 50px;
+  font-weight: 500;
+  font-size: 16px;
+  width: 260px;
+  line-height: 20px;
+  border: 1px solid transparent;
+  outline: none;
+  /* identical to box height */
+  font-family: var(--font-mont);
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+
+  &:active,
+  &:focus {
+    border-color: #eae7e7;
+    background: #f2efef;
+  }
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: var(--font-mont);
+
+  color: var(--secondary-color);
+}
