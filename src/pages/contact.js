@@ -21,6 +21,5 @@ export async function getStaticProps() {
 }
 
 export default function Contact({ attributes }) {
-  console.log(attributes, "contact");
   return <ContactScreen attributes={attributes} />;
 }

@@ -29,11 +29,6 @@ export const Contact = ({ title, address, phoneLeft, phoneRight, email }) => (
             </a>
           </div>
         </div>
-
-        <div className={styles.description}>
-          <Image width={37} height={50} src="/svg/mail.svg" alt="location" />
-          <div className={styles.email}>{email}</div>
-        </div>
       </div>
     </div>
 
