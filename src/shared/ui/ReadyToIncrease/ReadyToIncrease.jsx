@@ -1,5 +1,5 @@
+/* eslint-disable import/order */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import axios from "axios";
 import classNames from "classnames";
 import Image from "next/image";
 import { useRef, useState } from "react";
