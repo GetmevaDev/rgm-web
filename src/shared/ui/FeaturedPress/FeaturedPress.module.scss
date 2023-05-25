@@ -1,3 +1,5 @@
+@import "src/styles/variables.scss";
+
 .featured {
   margin-bottom: 100px;
   display: flex;
@@ -21,5 +23,29 @@
   row-gap: 0;
   img {
     mix-blend-mode: darken;
+  }
+}
+
+@media screen and (max-width: $smDesktopWidth) {
+  .featured {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: $tableWidth) {
+  .featured {
+    text-align: center;
+  }
+
+  .images {
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: $phoneWidth) {
+  .images {
+    grid-template-columns: auto;
+    height: 100%;
   }
 }

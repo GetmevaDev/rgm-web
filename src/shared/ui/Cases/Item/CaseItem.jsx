@@ -15,7 +15,12 @@ export const CaseItem = ({
   button_link,
 }) => (
   <div className={styles.case_item}>
-    <Image width={265} height={155} src={image?.data?.attributes?.url} />
+    <Image
+      width={265}
+      height={155}
+      src={image?.data?.attributes?.url}
+      alt={title}
+    />
 
     <p className={styles.title}>{title}</p>
     <div className={styles.border} />

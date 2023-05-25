@@ -1,3 +1,5 @@
+@import "src/styles/variables.scss";
+
 .cases {
   margin: 100px 0;
   margin-bottom: 150px;
@@ -7,5 +9,10 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 50px;
-  gap: 50px;
+}
+
+@media screen and (max-width: $smDesktopWidth) {
+  .cases_inner {
+    grid-template-columns: auto;
+  }
 }

@@ -1,3 +1,5 @@
+@import "src/styles/variables.scss";
+
 .footer_top {
   padding-top: 82px;
   display: flex;
@@ -11,9 +13,6 @@
 
 .who {
   flex: 2 300px;
-}
-
-.connect {
 }
 
 .locations {
@@ -154,4 +153,31 @@
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+@media screen and (max-width: $smDesktopWidth) {
+  .footer_top {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: $phoneWidth) {
+  .footer_top {
+    align-items: center;
+    justify-content: center;
+
+    h5 {
+      text-align: center;
+    }
+
+    .list {
+      align-items: center;
+    }
+  }
+
+  .locations {
+    .list {
+      align-items: flex-start;
+    }
+  }
 }

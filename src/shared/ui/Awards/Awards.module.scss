@@ -1,3 +1,5 @@
+@import "src/styles/variables.scss";
+
 .awards {
   background: var(--bg-nolayout-color);
   margin-bottom: 100px;
@@ -76,5 +78,15 @@
 
     grid-row-end: 5;
     grid-column-end: 7;
+  }
+}
+
+@media screen and (max-width: $smDesktopWidth) {
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
   }
 }

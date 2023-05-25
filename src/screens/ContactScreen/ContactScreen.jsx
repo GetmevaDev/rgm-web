@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Layout } from "@/shared";
-import { BlockMap, Contact, ImageBannerText } from "@/shared/ui";
+import { Contact, ImageBannerText } from "@/shared/ui";
 
 export const ContactScreen = ({ attributes }) => (
   <Layout

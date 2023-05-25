@@ -1,3 +1,5 @@
+@import "src/styles/variables.scss";
+
 .case_item {
   display: grid;
   font-family: var(--font-mont);
@@ -38,4 +40,16 @@
   position: absolute;
   width: 100%;
   bottom: -50px;
+}
+
+@media screen and (max-width: $smDesktopWidth) {
+  .case_item {
+    place-items: center;
+    position: initial;
+
+    .button {
+      position: initial;
+      width: 250px;
+    }
+  }
 }

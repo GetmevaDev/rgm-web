@@ -1,3 +1,5 @@
+@import "src/styles/variables.scss";
+
 .footer {
   max-width: 1170px;
   margin: 0 auto;
@@ -29,6 +31,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .right {
@@ -73,6 +76,33 @@
       &::after {
         content: "";
       }
+    }
+  }
+}
+
+@media screen and (max-width: $smDesktopWidth) {
+  .footer__inner {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: $phoneWidth) {
+  .footer__inner {
+    flex-direction: column;
+  }
+
+  .copyright {
+    flex-direction: column;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    a + a {
+      padding-left: 0;
     }
   }
 }

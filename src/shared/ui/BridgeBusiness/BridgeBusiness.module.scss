@@ -82,3 +82,14 @@
   right: 30px;
   bottom: 20px;
 }
+
+@media screen and (max-width: $tableWidth) {
+  .bridge {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: $smTableWidth) {
+  .right {
+    grid-template-columns: auto;
+  }
+}

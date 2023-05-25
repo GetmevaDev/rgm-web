@@ -1,3 +1,5 @@
+@import "src/styles/variables.scss";
+
 .loader {
   margin: 0 auto;
   display: flex;
@@ -84,4 +86,14 @@
   font-family: var(--font-mont);
 
   color: var(--secondary-color);
+}
+
+@media screen and (max-width: $tableWidth) {
+  .ready_inner {
+    flex-direction: column;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
 }

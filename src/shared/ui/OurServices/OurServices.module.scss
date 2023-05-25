@@ -28,3 +28,22 @@
   padding: 100px 0;
   margin: 0 auto;
 }
+
+@media screen and (max-width: $smDesktopWidth) {
+  .services {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: $smTableWidth) {
+  .services {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: $phoneWidth) {
+  .services {
+    grid-template-columns: auto;
+    padding: 0 5px;
+  }
+}
