@@ -165,7 +165,8 @@
 }
 
 @media screen and (max-width: $smDesktopWidth) {
-  .block {
+  .block,
+  .block_reverse {
     flex-direction: column-reverse;
 
     img {
@@ -179,7 +180,8 @@
     padding-right: 0;
   }
 
-  .dots {
+  .dots,
+  .dots_reverse {
     display: none;
   }
 }

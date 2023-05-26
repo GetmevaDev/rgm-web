@@ -1,3 +1,5 @@
+@import "src/styles/variables.scss";
+
 .work {
   background: var(--bg-nolayout-color);
   margin-bottom: 100px;
@@ -33,4 +35,17 @@
 
 .white {
   background: #fff;
+}
+
+@media screen and (max-width: $smDesktopWidth) {
+}
+
+@media screen and (max-width: $tableWidth) {
+  .three {
+    grid-template-columns: auto;
+  }
+
+  .two {
+    grid-template-columns: auto;
+  }
 }

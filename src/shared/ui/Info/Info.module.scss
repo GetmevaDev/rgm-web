@@ -1,3 +1,5 @@
+@import "src/styles/variables.scss";
+
 .info {
   background: var(--bg-nolayout-color);
   margin-bottom: 100px;
@@ -11,4 +13,29 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
+}
+
+@media screen and (max-width: $smDesktopWidth) {
+  .info_inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: $smTableWidth) {
+  .info_inner {
+    grid-template-columns: auto;
+
+    text-align: center;
+    img {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: $phoneWidth) {
+  .info_inner {
+    img {
+      width: 100%;
+    }
+  }
 }

@@ -64,6 +64,7 @@ export const FooterTop = ({ footer }) => {
                     <Image
                       width={15}
                       height={15}
+                      alt={item.text}
                       src={item?.light_svg?.data?.attributes?.url}
                     />
                   </div>
@@ -72,6 +73,7 @@ export const FooterTop = ({ footer }) => {
                     <Image
                       width={15}
                       height={15}
+                      alt={item.text}
                       src={item?.dark_svg?.data?.attributes?.url}
                     />
                   </div>

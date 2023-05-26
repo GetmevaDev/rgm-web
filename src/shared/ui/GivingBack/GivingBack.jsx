@@ -9,7 +9,12 @@ export const GivingBack = () => (
   <div className={styles.giving}>
     <div className={styles.left}>
       <div className={styles.image}>
-        <Image src="/images/assistance.svg" width={130} height={130} />
+        <Image
+          src="/images/assistance.svg"
+          width={130}
+          height={130}
+          alt="assistance"
+        />
       </div>
 
       <div className={styles.text}>
@@ -22,7 +27,7 @@ export const GivingBack = () => (
       </div>
     </div>
     <div className={styles.right}>
-      <Image width={176} height={194} src="/svg/dots.svg" />
+      <Image width={176} height={194} src="/svg/dots.svg" alt="dots" />
     </div>
   </div>
 );

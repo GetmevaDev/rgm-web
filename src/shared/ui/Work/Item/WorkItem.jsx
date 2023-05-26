@@ -12,7 +12,7 @@ export const WorkItem = ({ title, description, svg }) => (
         width={90}
         height={90}
         src={svg?.data?.attributes?.url}
-        alt="svg"
+        alt={title}
         className={styles.image}
       />
     )}

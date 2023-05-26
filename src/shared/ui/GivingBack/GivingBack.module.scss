@@ -1,3 +1,5 @@
+@import "src/styles/variables.scss";
+
 .giving {
   display: flex;
   align-items: center;
@@ -25,4 +27,27 @@
   letter-spacing: -0.2px;
 
   color: var(--secondary-color);
+}
+
+@media screen and (max-width: $tableWidth) {
+  .giving {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: $phoneWidth) {
+  .giving {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .left {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 }
