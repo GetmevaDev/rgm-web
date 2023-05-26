@@ -81,10 +81,10 @@ export const ReadyToIncrease = ({
   const sendEmail = () => {
     emailjs
       .sendForm(
-        "service_bljgq6j",
-        "template_ktugqqm",
+        "service_mw3qmm3",
+        "template_fhgximq",
         form.current,
-        "user_UVUfWNWhv4kTBLfUHosjS"
+        "user_iw2a3XOS7O7HrGbR8S31M"
       )
       .then(
         (result) => {
