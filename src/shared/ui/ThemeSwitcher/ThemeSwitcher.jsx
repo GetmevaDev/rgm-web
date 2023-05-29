@@ -5,7 +5,7 @@ import React from "react";
 
 import { ETheme } from "@/providers";
 import { useLocalStorage, useTheme } from "@/shared/hooks";
-import { setCookie } from "@/shared/lib";
+import { setCookies } from "@/shared/lib/cookies";
 
 import styles from "./ThemeSwitcher.module.scss";
 
@@ -16,7 +16,8 @@ export const ThemeSwitcher = ({ className }) => {
 
   React.useEffect(() => {
     document.documentElement.dataset.theme = theme;
-    setCookie("theme", theme);
+    // localStorage.setItem("theme", theme);
+    setCookies("theme", theme);
   }, [theme]);
 
   return (

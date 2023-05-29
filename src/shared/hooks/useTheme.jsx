@@ -4,7 +4,7 @@ import { useContext, useEffect } from "react";
 import { ETheme, ThemeContext } from "@/providers";
 
 import { LOCAL_STORAGE_THEME_KEY } from "../constants";
-import { setCookie } from "../lib";
+import { setCookies } from "../lib/cookies";
 
 export const useTheme = () => {
   const { setTheme, theme } = useContext(ThemeContext);
@@ -12,11 +12,11 @@ export const useTheme = () => {
   const toggleTheme = () => {
     let newTheme;
     switch (theme) {
-      case ETheme.Light:
-        newTheme = ETheme.Dark;
-        break;
       case ETheme.Dark:
         newTheme = ETheme.Light;
+        break;
+      case ETheme.Light:
+        newTheme = ETheme.Dark;
         break;
       default:
         newTheme = ETheme.Light;
@@ -25,7 +25,7 @@ export const useTheme = () => {
 
     setTheme(newTheme);
     // localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
-    setCookie(LOCAL_STORAGE_THEME_KEY, newTheme);
+    setCookies(LOCAL_STORAGE_THEME_KEY, newTheme);
   };
 
   useEffect(() => {
