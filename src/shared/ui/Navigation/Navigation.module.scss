@@ -19,7 +19,7 @@
   line-height: 24px;
   letter-spacing: -0.274286px;
   font-family: var(--font-mont);
-  color: var(--color-price-title);
+  color: var(--primary-color);
 }
 
 .link {
@@ -28,7 +28,7 @@
   line-height: 24px;
   font-family: var(--font-mont);
   letter-spacing: -0.274286px;
-  color: var(--color-price-title);
+  color: var(--primary-color);
   &:hover {
     color: #bda76a;
   }
@@ -111,6 +111,10 @@
 }
 
 @media (max-width: $tableWidth) {
+  .link {
+    color: var(--color-price-title);
+  }
+
   .item + .item {
     padding-left: 0 !important;
   }
