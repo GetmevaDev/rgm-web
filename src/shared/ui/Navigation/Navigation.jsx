@@ -1,13 +1,19 @@
+/* eslint-disable react/jsx-no-useless-fragment */
 import classNames from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
+
+import { ETheme } from "@/providers";
+import { useTheme } from "@/shared/hooks";
+import { CloseSvg, MenuDarkIcon, MenuLightIcon } from "@/shared/icons";
 
 import { ThemeSwitcher } from "..";
 
 import styles from "./Navigation.module.scss";
 
 export const Navigation = ({ className, items }) => {
+  const { theme } = useTheme();
   const [nav, setNav] = useState(false);
   const [activeMenuItem, setActiveMenuItem] = useState(null);
 
@@ -63,9 +69,9 @@ export const Navigation = ({ className, items }) => {
 
       <div onClick={() => setNav(!nav)} className={styles.mobile_btn}>
         {nav ? (
-          <i className="bx bx-window-close bx-rotate-180" />
+          <CloseSvg />
         ) : (
-          <i className="bx bx-menu-alt-right" />
+          <>{theme === ETheme.Light ? <MenuLightIcon /> : <MenuDarkIcon />}</>
         )}
       </div>
     </nav>
