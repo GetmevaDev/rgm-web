@@ -1,10 +1,10 @@
 /* eslint-disable indent */
-import Cookies from "js-cookie";
 import { useContext, useEffect } from "react";
 
 import { ETheme, ThemeContext } from "@/providers";
 
 import { LOCAL_STORAGE_THEME_KEY } from "../constants";
+import { setCookie } from "../lib";
 
 export const useTheme = () => {
   const { setTheme, theme } = useContext(ThemeContext);
@@ -24,7 +24,8 @@ export const useTheme = () => {
     }
 
     setTheme(newTheme);
-    localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
+    // localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
+    setCookie(LOCAL_STORAGE_THEME_KEY, newTheme);
   };
 
   useEffect(() => {
