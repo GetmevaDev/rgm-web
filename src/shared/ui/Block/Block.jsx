@@ -2,7 +2,7 @@ import classNames from "classnames";
 import Image from "next/image";
 import React from "react";
 
-import { Typography } from "..";
+import { ProcessItem, Typography } from "..";
 
 import styles from "./Block.module.scss";
 
@@ -26,6 +26,7 @@ export const Block = ({
   width,
   miniTitle,
   height,
+  items,
   color = "white",
   position = "left",
 }) => (
@@ -59,21 +60,27 @@ export const Block = ({
       </div>
 
       <div className={styles.right}>
-        <Image
-          width={width}
-          height={height}
-          alt="banner"
-          src={image}
-          className={reverse ? styles.image : styles.image_reverse}
-        />
+        {items && <ProcessItem items={items} />}
 
-        <Image
-          width={176}
-          height={191}
-          src="/svg/dots.svg"
-          alt="dots"
-          className={reverse ? styles.dots : styles.dots_reverse}
-        />
+        {!items && (
+          <Image
+            width={width}
+            height={height}
+            alt="banner"
+            src={image}
+            className={reverse ? styles.image : styles.image_reverse}
+          />
+        )}
+
+        {!items && (
+          <Image
+            width={176}
+            height={191}
+            src="/svg/dots.svg"
+            alt="dots"
+            className={reverse ? styles.dots : styles.dots_reverse}
+          />
+        )}
       </div>
     </div>
   </div>

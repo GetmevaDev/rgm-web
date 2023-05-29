@@ -17,13 +17,18 @@
 .gray {
   background: var(--bg-nolayout-color);
   padding: 100px 0;
+
+  p {
+    text-align: right;
+  }
 }
 
 .white {
   background: var(--bg-color);
   padding: 100px 0;
+  padding-bottom: 50px;
 }
-
+// ######
 .description {
   font-weight: 500;
   font-size: 18px;

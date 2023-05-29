@@ -1,4 +1,5 @@
 export * from "./AboutScreen/AboutScreen";
+export * from "./AccessibilityScreen/AccessibilityScreen";
 export * from "./BusinessScreen/BusinessScreen";
 export * from "./CaseBbScreen/CaseBbScreen";
 export * from "./CaseGentleScreen/CaseGentleScreen";

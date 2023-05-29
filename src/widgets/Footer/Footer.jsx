@@ -41,13 +41,13 @@ export const Footer = ({ footer }) => {
               <span>Privacy Policy</span>
             </Link>
 
-            <a>
-              <span>Return Policy</span>
-            </a>
-            <a>
+            <Link href="/accessibility">
+              <span>Accessibility Policy Commitment Statement</span>
+            </Link>
+            <a href="https://pay.quickfee.com/P-ELRMC">
               <span>Pay with Installments</span>
             </a>
-            <a>
+            <a href="https://app.meliopayments.com/meliome/pay/RGM">
               <span>Make a Payment</span>
             </a>
           </div>

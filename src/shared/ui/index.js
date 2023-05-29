@@ -11,6 +11,7 @@ export * from "./Cases/Cases";
 export * from "./Contact/Contact";
 export * from "./Description/Description";
 export * from "./DevelopmentProcess/DevelopmentProcess";
+export * from "./DevelopmentProcess/Item/ProcessItem";
 export * from "./DevelopTeam/DevelopTeam";
 export * from "./FeaturedPress/FeaturedPress";
 export * from "./Feedback/Feedback";

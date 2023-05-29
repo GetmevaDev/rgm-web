@@ -33,7 +33,7 @@ export const BusinessScreen = ({ attributes }) => (
         description={attributes?.ImageBannerText?.description}
         image={attributes?.ImageBannerText?.image?.data?.attributes?.url}
       />
-      <BigDescription description={attributes?.description} />i
+      <BigDescription description={attributes?.description} />
     </div>
 
     <Slider items={attributes?.Slider?.SliderItem} />

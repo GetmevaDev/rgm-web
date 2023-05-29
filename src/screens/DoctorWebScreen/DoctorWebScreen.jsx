@@ -29,7 +29,7 @@ export const DoctorWebScreen = ({ attributes }) => (
 
       <Block
         width={475}
-        height={370}
+        height={808}
         miniTitle={attributes?.ImageBannerText?.title}
         image={attributes?.ImageBannerText?.image?.data?.attributes?.url}
         description={attributes?.ImageBannerText?.description}

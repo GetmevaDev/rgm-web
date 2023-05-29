@@ -29,7 +29,7 @@ export const LawyerScreen = ({ attributes }) => (
 
       <Block
         width={475}
-        height={370}
+        height={902}
         miniTitle={attributes?.ImageBannerText?.title}
         image={attributes?.ImageBannerText?.image?.data?.attributes?.url}
         description={attributes?.ImageBannerText?.description}

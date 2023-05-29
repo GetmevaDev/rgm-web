@@ -4,12 +4,9 @@ import React from "react";
 
 import { Typography } from "..";
 
-import styles from "./DevelopmentProcess.module.scss";
+import { ProcessItem } from "./Item/ProcessItem";
 
-const colors = {
-  khaki: styles.khaki,
-  black: styles.black,
-};
+import styles from "./DevelopmentProcess.module.scss";
 
 export const DevelopmentProcess = ({ items, title, description }) => (
   <div className={styles.process}>
@@ -20,21 +17,7 @@ export const DevelopmentProcess = ({ items, title, description }) => (
 
       <div className={styles.main}>
         <div className={styles.left}>
-          <div className={styles.items}>
-            {items.map((item) => (
-              <div className={styles.item} key={item.id}>
-                <div className={classNames(styles.image, colors[item.color])}>
-                  <Image
-                    width={50}
-                    height={50}
-                    src={item?.svg?.data?.attributes?.url}
-                    alt={item.text}
-                  />
-                </div>
-                <p className={styles.item_description}>{item.text}</p>
-              </div>
-            ))}
-          </div>
+          <ProcessItem items={items} />
         </div>
         <div
           className={styles.right}

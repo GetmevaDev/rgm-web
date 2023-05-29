@@ -63,9 +63,7 @@ export const HomeScreen = ({ attributes }) => {
       />
       <div className="layout">
         <Block
-          image={
-            attributes?.OurDevelopmentProcess?.image?.data?.attributes?.url
-          }
+          items={attributes?.image_banner?.DevelopmentProcessItem}
           title={attributes?.OurDevelopmentProcess?.title}
           reverse={attributes?.OurDevelopmentProcess?.reverse}
           width={475}

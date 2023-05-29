@@ -17,8 +17,10 @@ export const Map = () => {
     googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
   });
 
-  const center = useMemo(() => ({ lat: 40.7571437, lng: -73.9864708 }), []);
-
+  const center = useMemo(
+    () => ({ lat: 40.85837639470487, lng: -73.64867593976045 }),
+    []
+  );
   if (!isLoaded) return null;
 
   const defaultOptions = {

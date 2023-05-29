@@ -21,9 +21,16 @@ export const ContactInfo = () => {
 
       {!isLoading ? (
         <div className={styles.description}>
-          <span>{data?.data?.attributes?.address}</span>
-          <span>{data?.data?.attributes?.email}</span>
-          <span>{data?.data?.attributes?.phone}</span>
+          <span className={styles.item}>{data?.data?.attributes?.address}</span>
+          <span>
+            <a
+              href={`tel:${data?.data?.attributes?.phone}`}
+              className={styles.item}
+            >
+              {data?.data?.attributes?.phone}
+            </a>
+          </span>
+          <span className={styles.item}>{data?.data?.attributes?.email}</span>
         </div>
       ) : (
         <PulseLoader
