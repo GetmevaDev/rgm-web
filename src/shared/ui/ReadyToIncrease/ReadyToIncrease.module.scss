@@ -88,6 +88,13 @@
   color: var(--secondary-color);
 }
 
+@media screen and (max-width: $smDesktopWidth) {
+  .inputs {
+    grid-template-columns: 1fr 1fr;
+    place-items: baseline;
+  }
+}
+
 @media screen and (max-width: $tableWidth) {
   .ready_inner {
     flex-direction: column;
@@ -95,5 +102,27 @@
 
   .buttons {
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: $smTableWidth) {
+  .inputs {
+    grid-template-columns: auto;
+    place-items: center;
+  }
+
+  .block {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .block_inner {
+    grid-template-columns: 1fr;
+  }
+
+  .about {
+    flex-direction: column;
+    gap: 20px;
   }
 }

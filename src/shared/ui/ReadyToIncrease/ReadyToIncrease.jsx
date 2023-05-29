@@ -111,13 +111,17 @@ export const ReadyToIncrease = ({
           </div>
         </div>
         {isActive && (
-          <Modal onClose={closePopup}>
+          <Modal onClose={closePopup} isActive={isActive}>
             <Typography tag="h2" size="mini">
               Request for Proposal
             </Typography>
 
             {!isLoading ? (
-              <form onSubmit={handleSubmit(sendEmail)} ref={form}>
+              <form
+                onSubmit={handleSubmit(sendEmail)}
+                ref={form}
+                className={styles.form}
+              >
                 <div className={styles.inputs}>
                   <Input
                     label="Company Name"
