@@ -12,6 +12,12 @@
   position: relative;
 }
 
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
 .color {
   color: $color-khaki;
 }

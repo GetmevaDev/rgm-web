@@ -26,6 +26,7 @@ export const ImageBannerText = ({
   subDescrption,
   transform,
   buttonLink,
+  buttonForm,
   position = "start",
 }) => {
   const [mounted, setMounted] = useState(false);
@@ -38,6 +39,7 @@ export const ImageBannerText = ({
   if (!mounted) {
     return null;
   }
+
   return (
     <div className={classNames(styles.image_banner, positions[position])}>
       <div className={styles.left}>

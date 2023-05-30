@@ -1,0 +1,128 @@
+@import "src/styles/variables.scss";
+
+.loader {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
+
+.ready_inner {
+  max-width: 1170px;
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  gap: 37px;
+}
+
+.image {
+  object-fit: cover;
+  mix-blend-mode: darken;
+}
+
+.gray {
+  background: var(--bg-nolayout-color);
+  margin-top: 100px;
+}
+
+.white {
+  background: var(--bg-color);
+}
+
+.buttons {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  button {
+    width: 250px;
+    background: transparent;
+    &:first-child {
+      width: 220px;
+    }
+  }
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-bottom: 20px;
+  place-items: self-end;
+  gap: 10px;
+}
+
+.block_inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  gap: 2px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: var(--font-mont);
+  color: var(--secondary-color);
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: var(--font-mont);
+
+  color: var(--secondary-color);
+}
+
+@media screen and (max-width: $smDesktopWidth) {
+  .inputs {
+    grid-template-columns: 1fr 1fr;
+    place-items: baseline;
+  }
+}
+
+@media screen and (max-width: $tableWidth) {
+  .ready_inner {
+    flex-direction: column;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: $smTableWidth) {
+  .inputs {
+    grid-template-columns: auto;
+    place-items: center;
+  }
+
+  .block {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .block_inner {
+    grid-template-columns: 1fr;
+  }
+
+  .about {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

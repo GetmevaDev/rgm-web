@@ -1,14 +1,21 @@
 .header {
+  background: var(--bg-color);
+  padding-top: 55px;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header_inner {
+  max-width: 1170px;
   display: flex;
   align-items: center;
+  padding-bottom: 10px;
   justify-content: space-between;
-
-  padding-top: 55px;
-  max-width: 1170px;
-
-  position: relative;
   margin: 0 auto;
-  z-index: 2;
 }
 
 .bg {

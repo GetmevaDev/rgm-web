@@ -38,6 +38,7 @@ export const HomeScreen = ({ attributes }) => {
         />
 
         <Banner
+          buttonForm
           button={attributes?.image_banner?.button}
           subTitle={attributes?.image_banner?.title_color}
           title={attributes?.image_banner?.title}

@@ -176,6 +176,14 @@
   }
 
   .locations {
+    flex: none;
+  }
+
+  .item {
+    text-align: center;
+  }
+
+  .locations {
     .list {
       align-items: flex-start;
     }
