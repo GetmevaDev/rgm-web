@@ -1,26 +1,12 @@
 /* eslint-disable jsx-a11y/heading-has-content */
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import React from "react";
 
 import { ETheme } from "@/providers";
 import { useTheme } from "@/shared/hooks";
-import {
-  FacebookSvg,
-  InstagramSvg,
-  LinkedInSvg,
-  TwitterSvg,
-} from "@/shared/icons";
 
 import styles from "./FooterTop.module.scss";
-
-const connects = [
-  { svg: <FacebookSvg />, text: "Facebook", id: 1 },
-  { svg: <TwitterSvg />, text: "Twitter", id: 2 },
-  { svg: <InstagramSvg />, text: "Instagram", id: 3 },
-  { svg: <LinkedInSvg />, text: "Linkedin", id: 4 },
-];
 
 export const FooterTop = ({ footer }) => {
   const { theme } = useTheme();

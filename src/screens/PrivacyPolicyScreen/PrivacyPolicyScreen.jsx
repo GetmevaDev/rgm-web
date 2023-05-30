@@ -1,5 +1,4 @@
 import React from "react";
-import ReactMarkdown from "react-markdown";
 
 import { Layout } from "@/shared";
 import { Markdown } from "@/shared/ui";

@@ -16,12 +16,10 @@ export async function getStaticProps() {
     props: {
       attributes,
     },
-    revalidate: 60, // In seconds
+    revalidate: 60,
   };
 }
 
 export default function CaseSmiles({ attributes }) {
-  console.log(attributes, "attr");
-
   return <CaseSmilesScreen attributes={attributes} />;
 }

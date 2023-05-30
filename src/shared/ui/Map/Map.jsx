@@ -1,12 +1,6 @@
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useMemo } from "react";
 
-import {
-  GoogleMap,
-  Marker,
-  MarkerF,
-  useLoadScript,
-} from "@react-google-maps/api";
-import { GoogleMapsProvider } from "@ubilabs/google-maps-react-hooks";
+import { GoogleMap, MarkerF, useLoadScript } from "@react-google-maps/api";
 
 import { defaultTheme } from "./Theme";
 

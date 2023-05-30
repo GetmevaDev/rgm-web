@@ -8,11 +8,8 @@ import {
   GivingBack,
   ImageBannerText,
   Info,
-  Slider,
   Work,
 } from "@/shared/ui";
-
-import { arr } from "..";
 
 export const WebScreen = ({ attributes }) => (
   <Layout

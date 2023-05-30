@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-import { Layout } from "@/shared";
 import { ROUTES } from "@/shared/constants";
 import { Typography } from "@/shared/ui";
 

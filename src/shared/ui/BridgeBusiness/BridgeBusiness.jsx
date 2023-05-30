@@ -4,13 +4,7 @@ import { Typography } from "..";
 
 import styles from "./BridgeBusiness.module.scss";
 
-export const BridgeBusiness = ({
-  title,
-  subTitle,
-  description,
-  date,
-  items,
-}) => (
+export const BridgeBusiness = ({ title, subTitle, description, items }) => (
   <section className={styles.bridge}>
     <div className={styles.left}>
       <Typography tag="h3" size="mini">

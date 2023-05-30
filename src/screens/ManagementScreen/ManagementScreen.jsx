@@ -31,7 +31,6 @@ export const ManagementScreen = ({ attributes }) => (
         description={attributes?.description?.description}
       />
     </div>
-    {console.log(attributes, "attr")}
     {attributes?.ImageBannerText.map((item) => (
       <Block
         color={item.color}

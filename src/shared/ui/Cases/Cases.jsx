@@ -1,7 +1,5 @@
 import React from "react";
 
-import { ROUTES } from "@/shared/constants";
-
 import { CaseItem } from "./Item/CaseItem";
 
 import styles from "./Cases.module.scss";

@@ -30,6 +30,7 @@ export const HomeScreen = ({ attributes }) => {
           title={attributes?.banner?.title}
           subTitle={attributes?.banner?.title_color}
           description={attributes?.banner?.description}
+          buttonForm
           button={attributes?.banner?.button}
           buttonLink={attributes?.banner?.button_link}
           images={attributes?.banner?.images_awards?.data}

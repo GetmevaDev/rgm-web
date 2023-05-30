@@ -1,5 +1,5 @@
 import React from "react";
-import { Controller, useController, useForm } from "react-hook-form";
+import { useController } from "react-hook-form";
 
 import styles from "./Input.module.scss";
 

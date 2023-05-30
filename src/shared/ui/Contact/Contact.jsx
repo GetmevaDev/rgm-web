@@ -5,7 +5,7 @@ import { Map } from "../Map/Map";
 
 import styles from "./Contact.module.scss";
 
-export const Contact = ({ title, address, phoneLeft, phoneRight, email }) => (
+export const Contact = ({ title, address, phoneLeft, phoneRight }) => (
   <div className={styles.contact}>
     <div className={styles.info}>
       <h4 className={styles.title}>{title}</h4>

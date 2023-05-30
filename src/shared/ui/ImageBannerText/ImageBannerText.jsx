@@ -3,8 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-import { ETheme, ISSERVER } from "@/providers";
+import { ETheme } from "@/providers";
 import { useTheme } from "@/shared/hooks";
+import { SubmitForm } from "@/widgets";
 
 import { Button, Typography } from "..";
 
@@ -29,6 +30,8 @@ export const ImageBannerText = ({
   buttonForm,
   position = "start",
 }) => {
+  const [isActive, setIsActive] = useState(false);
+
   const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
 
@@ -39,6 +42,14 @@ export const ImageBannerText = ({
   if (!mounted) {
     return null;
   }
+
+  const openPopup = () => {
+    setIsActive(true);
+  };
+
+  const closePopup = () => {
+    setIsActive(false);
+  };
 
   return (
     <div className={classNames(styles.image_banner, positions[position])}>
@@ -68,13 +79,29 @@ export const ImageBannerText = ({
           </div>
         )}
 
-        {button && (
-          <Link href={buttonLink}>
-            <Button variant="outline" className={styles.button}>
-              {button}
-            </Button>
-          </Link>
-        )}
+        <div className={styles.buttons}>
+          {button && (
+            <Link href={buttonLink}>
+              <Button variant="outline" className={styles.button}>
+                {button}
+              </Button>
+            </Link>
+          )}
+
+          {buttonForm && (
+            <span>
+              <Button
+                variant="outline"
+                onClick={openPopup}
+                className={styles.right_button}
+              >
+                Submit RFP
+              </Button>
+            </span>
+          )}
+        </div>
+
+        {isActive && <SubmitForm isActive={isActive} closePopup={closePopup} />}
       </div>
 
       <div className={styles.right}>

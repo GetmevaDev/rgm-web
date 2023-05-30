@@ -2,16 +2,12 @@ import React from "react";
 
 import { Layout } from "@/shared";
 import {
-  BigDescription,
-  Block,
   BlockMap,
   Description,
   DevelopmentProcess,
   DevelopTeam,
-  GivingBack,
   ImageBannerText,
   ReadyToIncrease,
-  Slider,
 } from "@/shared/ui";
 
 export const AboutScreen = ({ attributes }) => (

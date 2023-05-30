@@ -1,6 +1,6 @@
 /* eslint-disable react/button-has-type */
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React from "react";
 
 import styles from "./Modal.module.scss";
 

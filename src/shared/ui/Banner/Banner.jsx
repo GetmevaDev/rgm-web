@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
-
-import { SubmitForm } from "@/widgets";
+import React from "react";
 
 import { Button, Typography } from "..";
 
@@ -15,68 +13,42 @@ export const Banner = ({
   image,
   button,
   link,
-  buttonForm,
-}) => {
-  const [isActive, setIsActive] = useState(false);
-  const openPopup = () => {
-    setIsActive(true);
-  };
+}) => (
+  <>
+    <section className={styles.banner}>
+      <div className={styles.image_inner}>
+        <Image
+          width={475}
+          height={650}
+          src={image}
+          alt="robert"
+          className={styles.image}
+        />
 
-  const closePopup = () => {
-    setIsActive(false);
-  };
+        <Image
+          width={176}
+          height={191}
+          src="svg/dots.svg"
+          alt="dots"
+          className={styles.dots}
+        />
+      </div>
 
-  return (
-    <>
-      <section className={styles.banner}>
-        <div className={styles.image_inner}>
-          <Image
-            width={475}
-            height={650}
-            src={image}
-            alt="robert"
-            className={styles.image}
-          />
+      <div className={styles.banner_right}>
+        <Typography tag="h2">
+          {title} <span className={styles.color}>{subTitle}</span>
+        </Typography>
 
-          <Image
-            width={176}
-            height={191}
-            src="svg/dots.svg"
-            alt="dots"
-            className={styles.dots}
-          />
+        <p className={styles.description}>{description}</p>
+        <div className={styles.buttons}>
+          <Link href={link}>
+            <Button variant="contained" className={styles.left_button}>
+              {button}
+            </Button>
+          </Link>
         </div>
-
-        <div className={styles.banner_right}>
-          <Typography tag="h2">
-            {title} <span className={styles.color}>{subTitle}</span>
-          </Typography>
-
-          <p className={styles.description}>{description}</p>
-          <div className={styles.buttons}>
-            <Link href={link}>
-              <Button variant="contained" className={styles.left_button}>
-                {button}
-              </Button>
-            </Link>
-
-            {buttonForm && (
-              <Button
-                variant="outline"
-                onClick={openPopup}
-                className={styles.right_button}
-              >
-                Submit RFP
-              </Button>
-            )}
-          </div>
-
-          {isActive && (
-            <SubmitForm isActive={isActive} closePopup={closePopup} />
-          )}
-        </div>
-      </section>
-      <div className={styles.border} />
-    </>
-  );
-};
+      </div>
+    </section>
+    <div className={styles.border} />
+  </>
+);

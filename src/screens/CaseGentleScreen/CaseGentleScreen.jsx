@@ -2,7 +2,6 @@ import React from "react";
 
 import { Layout } from "@/shared";
 import {
-  Banner,
   Block,
   BlockMap,
   ImageBannerText,

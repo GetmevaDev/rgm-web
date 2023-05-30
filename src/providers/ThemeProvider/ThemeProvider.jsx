@@ -1,12 +1,10 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 import { LOCAL_STORAGE_THEME_KEY } from "@/shared/constants";
 import { getCookies } from "@/shared/lib/cookies";
 
 import { ETheme } from "./theme";
 import { ThemeContext } from "./ThemeContext";
-
-// const ISSERVER = typeof window === "undefined";
 
 const defaultTheme = getCookies(LOCAL_STORAGE_THEME_KEY) || ETheme.Light;
 

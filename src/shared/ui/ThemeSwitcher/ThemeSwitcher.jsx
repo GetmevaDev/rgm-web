@@ -9,7 +9,7 @@ import { setCookies } from "@/shared/lib/cookies";
 
 import styles from "./ThemeSwitcher.module.scss";
 
-export const ThemeSwitcher = ({ className }) => {
+export const ThemeSwitcher = () => {
   const [checked, setChecked] = useLocalStorage("checked", false);
 
   const { theme, toggleTheme } = useTheme();

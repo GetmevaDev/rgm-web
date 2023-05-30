@@ -11,15 +11,7 @@ const colors = {
   gray: styles.gray,
 };
 
-export const ItemBlank = ({
-  color,
-  reverse,
-  title,
-  description,
-  image,
-  width,
-  height,
-}) => (
+export const ItemBlank = ({ color, reverse, title, description, image }) => (
   <div className={classNames(styles.blank, colors[color])}>
     <div className={reverse ? styles.blank_inner : styles.blank_inner_reverse}>
       <div className={styles.left}>
