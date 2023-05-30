@@ -55,11 +55,17 @@ export const Banner = ({
           <p className={styles.description}>{description}</p>
           <div className={styles.buttons}>
             <Link href={link}>
-              <Button variant="contained">{button}</Button>
+              <Button variant="contained" className={styles.left_button}>
+                {button}
+              </Button>
             </Link>
 
             {buttonForm && (
-              <Button variant="outline" onClick={openPopup}>
+              <Button
+                variant="outline"
+                onClick={openPopup}
+                className={styles.right_button}
+              >
                 Submit RFP
               </Button>
             )}

@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-import { FooterTop } from "@/shared/ui";
+import { Button, FooterTop } from "@/shared/ui";
 
 import styles from "./Footer.module.scss";
 
@@ -50,6 +50,21 @@ export const Footer = ({ footer }) => {
             <a href="https://app.meliopayments.com/meliome/pay/RGM">
               <span>Make a Payment</span>
             </a>
+          </div>
+          {console.log(footer, "footer")}
+
+          <div className={styles.buttons}>
+            <a href={`tel: ${footer?.Buttons?.phone}`}>
+              <Button variant="contained" className={styles.call}>
+                Call Us
+              </Button>
+            </a>
+
+            <Link href={footer?.Buttons?.link}>
+              <Button variant="outline" className={styles.book}>
+                Book an Appointment
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

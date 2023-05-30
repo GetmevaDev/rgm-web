@@ -1,3 +1,5 @@
+@import "src/styles/variables.scss";
+
 .header {
   background: var(--bg-color);
   padding-top: 55px;
@@ -26,4 +28,15 @@
   position: absolute;
   height: 1110px;
   z-index: 1;
+}
+
+@media screen and (max-width: $phoneWidth) {
+  .header {
+    padding-top: 25px;
+  }
+
+  .header_inner {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
