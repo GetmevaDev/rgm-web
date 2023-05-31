@@ -54,7 +54,7 @@
 }
 
 .black {
-  background: var(--color-develop);
+  background: var(--color-develop-item);
 }
 
 .image {
@@ -80,14 +80,14 @@
 
   .item {
     &:after {
-      right: 50px;
-      top: 0;
+      right: 12px;
+      top: -10px;
     }
 
     &:nth-child(even) {
       &:after {
-        left: 23%;
-        top: 10%;
+        left: 19%;
+        top: 0%;
       }
     }
   }

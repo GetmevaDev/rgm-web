@@ -53,4 +53,23 @@
 }
 
 @media screen and (max-width: $phoneWidth) {
+  .small {
+    font-size: 40px;
+    line-height: 58px;
+    letter-spacing: -1.92px;
+  }
+
+  .title {
+    font-size: 45px;
+    line-height: 58px;
+    letter-spacing: -1.92px;
+  }
+
+  .mini {
+    font-size: 35px;
+    line-height: 58px;
+    text-align: center;
+    white-space: pre-line;
+    letter-spacing: -1.92px;
+  }
 }

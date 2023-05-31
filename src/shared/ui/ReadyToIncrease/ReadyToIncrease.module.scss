@@ -126,3 +126,16 @@
     gap: 20px;
   }
 }
+
+@media screen and (max-width: $phoneWidth) {
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      width: 100% !important;
+    }
+  }
+}
