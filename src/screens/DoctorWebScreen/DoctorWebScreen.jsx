@@ -12,8 +12,8 @@ import {
 
 export const DoctorWebScreen = ({ attributes }) => (
   <Layout
-    title="DOCTOR WEBSITE DESIGN"
-    description="RGM’s Doctor website design will take your medical practice to the next level."
+    title={attributes?.seo?.title}
+    description={attributes?.seo?.description}
     size="nolayout"
   >
     <div className="layout">

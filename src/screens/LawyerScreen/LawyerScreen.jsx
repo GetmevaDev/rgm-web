@@ -12,8 +12,8 @@ import {
 
 export const LawyerScreen = ({ attributes }) => (
   <Layout
-    title="LAWYER WEBSITE DESIGN"
-    description="Confidence Inspiring Lawyer Website Design."
+    title={attributes?.seo?.title}
+    description={attributes?.seo?.description}
     size="nolayout"
   >
     <div className="layout">

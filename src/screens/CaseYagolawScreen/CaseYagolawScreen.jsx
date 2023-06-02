@@ -11,7 +11,11 @@ import {
 } from "@/shared/ui";
 
 export const CaseYagolawScreen = ({ attributes }) => (
-  <Layout title="Case yagolaw" description="Case yagolaw" size="nolayout">
+  <Layout
+    title={attributes?.seo?.title}
+    description={attributes?.seo?.description}
+    size="nolayout"
+  >
     <div className="layout">
       <ImageBannerText
         subDescrption={attributes?.banner?.title_color}

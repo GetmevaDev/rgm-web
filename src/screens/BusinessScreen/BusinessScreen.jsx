@@ -12,8 +12,8 @@ import {
 
 export const BusinessScreen = ({ attributes }) => (
   <Layout
-    title="BUSINESS WEBSITE DESIGN"
-    description="We understand the importance of creating a professional business web design that inspires your audience and generates clientele."
+    title={attributes?.seo?.title}
+    description={attributes?.seo?.description}
     size="nolayout"
   >
     <div className="layout">

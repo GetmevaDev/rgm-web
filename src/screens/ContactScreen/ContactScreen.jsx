@@ -5,8 +5,8 @@ import { Contact, ImageBannerText } from "@/shared/ui";
 
 export const ContactScreen = ({ attributes }) => (
   <Layout
-    title="Contact"
-    description="THE RIGHT ONLINE BUSINESS MODEL"
+    title={attributes?.seo?.title}
+    description={attributes?.seo?.description}
     size="layout"
   >
     <div className="layout">

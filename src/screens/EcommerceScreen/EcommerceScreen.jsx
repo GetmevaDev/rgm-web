@@ -11,8 +11,8 @@ import {
 
 export const EcommerceScreen = ({ attributes }) => (
   <Layout
-    title="ECOMMERCE"
-    description="We are a fast growing eCommerce giant with offices across the globe. With strategists, consultants, designers, and developers with decades of experience."
+    title={attributes?.seo?.title}
+    description={attributes?.seo?.description}
     size="nolayout"
   >
     <div className="layout">

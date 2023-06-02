@@ -39,8 +39,8 @@ export const arr = [
 
 export const SeoComponyScreen = ({ attributes }) => (
   <Layout
-    title="SEO COMPANY NYC"
-    description="Behind every Google search, there is a user-intention. We leverage that user intent and place you where your product or service fits best."
+    title={attributes?.seo?.title}
+    description={attributes?.seo?.description}
     size="nolayout"
   >
     <div className="layout">

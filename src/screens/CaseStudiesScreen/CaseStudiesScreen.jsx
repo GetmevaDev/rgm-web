@@ -4,7 +4,11 @@ import { Layout } from "@/shared";
 import { BlockMap, Cases, ImageBannerText } from "@/shared/ui";
 
 export const CaseStudiesScreen = ({ attributes }) => (
-  <Layout title="CaseStudies" description="CaseStudies" size="nolayout">
+  <Layout
+    title={attributes?.seo?.title}
+    description={attributes?.seo?.description}
+    size="nolayout"
+  >
     <div className="layout">
       <ImageBannerText
         position="center"

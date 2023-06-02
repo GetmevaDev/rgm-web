@@ -12,8 +12,8 @@ import {
 
 export const AboutScreen = ({ attributes }) => (
   <Layout
-    title="We’re About You. Not Us."
-    description="THE RIGHT ONLINE BUSINESS MODEL"
+    title={attributes?.seo?.title}
+    description={attributes?.seo?.description}
     size="nolayout"
   >
     <div className="layout">

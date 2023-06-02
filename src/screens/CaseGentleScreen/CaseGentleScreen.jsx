@@ -12,8 +12,8 @@ import {
 
 export const CaseGentleScreen = ({ attributes }) => (
   <Layout
-    title="Gentle Touch Endo"
-    description="Gentle Touch Endo set out to build a new web presence in order to increase their already existing search engine ranking, and to continue to close the gap in an underserved market."
+    title={attributes?.seo?.title}
+    description={attributes?.seo?.description}
     size="nolayout"
   >
     <div className="layout">

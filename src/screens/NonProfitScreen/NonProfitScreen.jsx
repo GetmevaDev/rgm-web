@@ -12,8 +12,8 @@ import {
 
 export const NonProfitScreen = ({ attributes }) => (
   <Layout
-    title="NON-PROFIT WEBSITE DESIGN"
-    description="Captivating Charity Website Design that will Inspire Change."
+    title={attributes?.seo?.title}
+    description={attributes?.seo?.description}
     size="nolayout"
   >
     <div className="layout">

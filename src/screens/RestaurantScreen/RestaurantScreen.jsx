@@ -12,8 +12,8 @@ import {
 
 export const RestaurantScreen = ({ attributes }) => (
   <Layout
-    title="RESTAURANT WEBSITE DESIGN"
-    description="Effective, Flavorful Restaurant Web Design"
+    title={attributes?.seo?.title}
+    description={attributes?.seo?.description}
     size="nolayout"
   >
     <div className="layout">

@@ -11,8 +11,8 @@ import {
 
 export const VideoProductionScreen = ({ attributes }) => (
   <Layout
-    title="VIDEO PRODUCTION STUDIO"
-    description="Whether you want to animate, sell, explain, or inspire – we can help."
+    title={attributes?.seo?.title}
+    description={attributes?.seo?.description}
     size="nolayout"
   >
     <div className="layout">

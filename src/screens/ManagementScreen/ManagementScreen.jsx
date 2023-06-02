@@ -11,8 +11,8 @@ import {
 
 export const ManagementScreen = ({ attributes }) => (
   <Layout
-    title="PUBLIC RELATIONS MANAGEMENT NYC"
-    description="RGM offers a powerful complement of Internet, TV, Billboard and Print PR services in New York City."
+    title={attributes?.seo?.title}
+    description={attributes?.seo?.description}
     size="nolayout"
   >
     <div className="layout">

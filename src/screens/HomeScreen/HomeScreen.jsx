@@ -24,7 +24,11 @@ export const HomeScreen = ({ attributes }) => {
   }
 
   return (
-    <Layout title="Home" description="home" size="nolayout">
+    <Layout
+      title={attributes?.seo?.title}
+      description={attributes?.seo?.description}
+      size="nolayout"
+    >
       <div className="layout">
         <ImageBannerText
           title={attributes?.banner?.title}
