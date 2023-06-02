@@ -7,7 +7,7 @@ export const ContactScreen = ({ attributes }) => (
   <Layout
     title={attributes?.seo?.title}
     description={attributes?.seo?.description}
-    size="layout"
+    size="nolayout"
   >
     <div className="layout">
       <ImageBannerText
