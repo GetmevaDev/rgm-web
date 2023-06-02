@@ -35,11 +35,11 @@
   background: #fff;
   width: 200px;
 
-  color: var(--outline-button-color);
+  color: #000;
 
-  transition: background 0.2s ease;
+  transition: background 0.3s ease;
   &:hover {
-    background: var(--hover-color);
+    background: #bda76a;
   }
 }
 

@@ -9,6 +9,7 @@ import {
   ImageBannerText,
   Slider,
 } from "@/shared/ui";
+import { FadeInWhenVisible } from "@/widgets";
 
 export const BusinessScreen = ({ attributes }) => (
   <Layout
@@ -26,6 +27,7 @@ export const BusinessScreen = ({ attributes }) => (
         imageLight={attributes?.banner?.image_light?.data?.attributes?.url}
         imageDark={attributes?.banner?.image_dark?.data?.attributes?.url}
       />
+
       <Block
         width={475}
         height={370}
@@ -33,6 +35,7 @@ export const BusinessScreen = ({ attributes }) => (
         description={attributes?.ImageBannerText?.description}
         image={attributes?.ImageBannerText?.image?.data?.attributes?.url}
       />
+
       <BigDescription description={attributes?.description} />
     </div>
 

@@ -4,6 +4,13 @@
   padding-top: 82px;
   display: flex;
   gap: 30px;
+
+  a {
+    transition: all 0.2s ease;
+    &:hover {
+      color: #bda76a;
+    }
+  }
 }
 
 .navigation {

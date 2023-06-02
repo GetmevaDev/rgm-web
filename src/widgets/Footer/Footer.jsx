@@ -51,7 +51,6 @@ export const Footer = ({ footer }) => {
               <span>Make a Payment</span>
             </a>
           </div>
-          {console.log(footer, "footer")}
 
           <div className={styles.buttons}>
             <a href={`tel: ${footer?.Buttons?.phone}`}>

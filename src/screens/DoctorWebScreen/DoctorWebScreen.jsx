@@ -9,6 +9,7 @@ import {
   ImageBannerText,
   Slider,
 } from "@/shared/ui";
+import { FadeInWhenVisible } from "@/widgets";
 
 export const DoctorWebScreen = ({ attributes }) => (
   <Layout
@@ -34,6 +35,7 @@ export const DoctorWebScreen = ({ attributes }) => (
         image={attributes?.ImageBannerText?.image?.data?.attributes?.url}
         description={attributes?.ImageBannerText?.description}
       />
+
       <BigDescription description={attributes?.description} />
     </div>
 

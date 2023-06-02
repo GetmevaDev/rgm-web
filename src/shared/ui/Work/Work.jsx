@@ -1,6 +1,8 @@
 import classNames from "classnames";
 import React from "react";
 
+import { FadeInWhenVisible } from "@/widgets";
+
 import { Typography } from "..";
 
 import { WorkItem } from "./Item/WorkItem";
@@ -19,19 +21,21 @@ const colors = {
 };
 
 export const Work = ({ size = "two", color = "gray", arr, title }) => (
-  <div className={classNames(styles.work, colors[color])}>
-    <div className={styles.work_inner}>
-      {title && (
-        <Typography tag="h2" size="mini">
-          {title}
-        </Typography>
-      )}
+  <FadeInWhenVisible>
+    <div className={classNames(styles.work, colors[color])}>
+      <div className={styles.work_inner}>
+        {title && (
+          <Typography tag="h2" size="mini">
+            {title}
+          </Typography>
+        )}
 
-      <div className={classNames(sizes[size])}>
-        {arr?.map((item) => (
-          <WorkItem key={item.id} {...item} />
-        ))}
+        <div className={classNames(sizes[size])}>
+          {arr?.map((item) => (
+            <WorkItem key={item.id} {...item} />
+          ))}
+        </div>
       </div>
     </div>
-  </div>
+  </FadeInWhenVisible>
 );

@@ -9,6 +9,7 @@ import {
   OutComes,
   Work,
 } from "@/shared/ui";
+import { FadeInWhenVisible } from "@/widgets";
 
 export const CaseYagolawScreen = ({ attributes }) => (
   <Layout
@@ -50,6 +51,7 @@ export const CaseYagolawScreen = ({ attributes }) => (
         title={attributes?.Outcomes?.title}
       />
     </div>
+
     <Feedback
       title={attributes?.Feedback?.color_title}
       subTitle={attributes?.Feedback?.title}

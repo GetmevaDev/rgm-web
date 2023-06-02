@@ -9,6 +9,7 @@ import {
   ImageBannerText,
   ReadyToIncrease,
 } from "@/shared/ui";
+import { FadeInWhenVisible } from "@/widgets";
 
 export const AboutScreen = ({ attributes }) => (
   <Layout
@@ -29,6 +30,7 @@ export const AboutScreen = ({ attributes }) => (
 
       <Description weight="semi_bold" description={attributes?.description} />
     </div>
+
     <ReadyToIncrease
       width={356}
       height={492}

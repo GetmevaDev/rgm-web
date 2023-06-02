@@ -9,6 +9,7 @@ import {
   ImageBannerText,
   Slider,
 } from "@/shared/ui";
+import { FadeInWhenVisible } from "@/widgets";
 
 export const LawyerScreen = ({ attributes }) => (
   <Layout

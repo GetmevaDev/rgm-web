@@ -8,6 +8,7 @@ import {
   ImageBannerText,
   Slider,
 } from "@/shared/ui";
+import { FadeInWhenVisible } from "@/widgets";
 
 export const EcommerceScreen = ({ attributes }) => (
   <Layout

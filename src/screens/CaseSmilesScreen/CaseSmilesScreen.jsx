@@ -9,6 +9,7 @@ import {
   OutComes,
   Work,
 } from "@/shared/ui";
+import { FadeInWhenVisible } from "@/widgets";
 
 export const CaseSmilesScreen = ({ attributes }) => (
   <Layout

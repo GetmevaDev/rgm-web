@@ -11,6 +11,7 @@ import {
   ImageBannerText,
   OurServices,
 } from "@/shared/ui";
+import { FadeInWhenVisible } from "@/widgets";
 
 export const HomeScreen = ({ attributes }) => {
   const [mounted, setMounted] = useState(false);
@@ -51,6 +52,7 @@ export const HomeScreen = ({ attributes }) => {
           description={attributes?.image_banner?.description}
           image={attributes?.image_banner?.image?.data?.attributes?.url}
         />
+
         <BridgeBusiness
           subTitle={attributes?.BridgeBusiness?.title_color}
           title={attributes?.BridgeBusiness?.title}
@@ -67,6 +69,7 @@ export const HomeScreen = ({ attributes }) => {
         description={attributes?.OurServices?.description}
         items={attributes?.OurServices?.OurServicesItems?.OurServiceItem}
       />
+
       <div className="layout">
         <Block
           items={attributes?.image_banner?.DevelopmentProcessItem}
@@ -83,6 +86,7 @@ export const HomeScreen = ({ attributes }) => {
         title={attributes?.Awards?.title}
         subTitle={attributes?.Awards?.title_color}
       />
+
       <div className="layout">
         <FeaturedPress
           images={attributes?.Featured?.images?.data}

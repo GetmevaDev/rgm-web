@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
+import { FadeInWhenVisible } from "@/widgets";
+
 import { Button, Typography } from "..";
 
 import styles from "./Banner.module.scss";
@@ -14,7 +16,7 @@ export const Banner = ({
   button,
   link,
 }) => (
-  <>
+  <FadeInWhenVisible>
     <section className={styles.banner}>
       <div className={styles.image_inner}>
         <Image
@@ -50,5 +52,5 @@ export const Banner = ({
       </div>
     </section>
     <div className={styles.border} />
-  </>
+  </FadeInWhenVisible>
 );

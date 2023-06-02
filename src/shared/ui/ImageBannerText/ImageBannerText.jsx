@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 
 import { ETheme } from "@/providers";
 import { useTheme } from "@/shared/hooks";
-import { SubmitForm } from "@/widgets";
+import { FadeInWhenVisible, SubmitForm } from "@/widgets";
 
 import { Button, Typography } from "..";
 
