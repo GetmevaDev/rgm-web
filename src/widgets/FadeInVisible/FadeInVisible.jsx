@@ -16,11 +16,11 @@ export const FadeInWhenVisible = ({ children }) => {
     <motion.div
       ref={ref}
       animate={controls}
-      initial="hidden"
+      initial="visible"
       transition={{ duration: 0.6 }}
       variants={{
         visible: { opacity: 1, scale: 1 },
-        hidden: { opacity: 0, scale: 0 },
+        hidden: { opacity: 1, scale: 1 },
       }}
     >
       {children}
