@@ -43,8 +43,8 @@ export const FooterTop = ({ footer }) => {
         <h5 className={styles.title}>Connect</h5>
         <ul className={styles.list}>
           {footer?.Connect.map((item) => (
-            <Link href={item.link}>
-              <li key={item.id} className={styles.connect_item}>
+            <li key={item.id}>
+              <Link href={item.link} className={styles.connect_item}>
                 {theme === ETheme.Light ? (
                   <div className={styles.svg}>
                     <Image
@@ -65,8 +65,8 @@ export const FooterTop = ({ footer }) => {
                   </div>
                 )}
                 <p className={styles.connect_text}>{item.text}</p>
-              </li>
-            </Link>
+              </Link>
+            </li>
           ))}
         </ul>
 

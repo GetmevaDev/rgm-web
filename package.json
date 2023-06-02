@@ -11,13 +11,13 @@
     "lint:": "eslint \"**/*.{js,jsx}\"",
     "lint:fix": "eslint \"**/*.{js,jsx}\" --fix",
     "lint:scss": "npx stylelint \"**/*.scss\"",
+    "postbuild": "next-sitemap --config sitemap.config.js",
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@next/font": "^13.3.0",
     "@react-google-maps/api": "^2.18.1",
-    "@ubilabs/google-maps-react-hooks": "^2.0.2",
     "axios": "^1.4.0",
     "boxicons": "^2.1.4",
     "eslint": "8.39.0",

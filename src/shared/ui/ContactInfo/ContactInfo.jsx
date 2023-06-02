@@ -17,7 +17,7 @@ export const ContactInfo = () => {
 
   return (
     <div className={styles.info}>
-      <h4 className={styles.title}>We are here!</h4>
+      <h6 className={styles.title}>We are here!</h6>
 
       {!isLoading ? (
         <div className={styles.description}>
