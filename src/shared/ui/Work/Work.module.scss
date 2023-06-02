@@ -29,12 +29,12 @@
 }
 
 .gray {
-  background: #f3f3f3;
+  background: var(--bg-nolayout-color);
   padding: 100px 0;
 }
 
 .white {
-  background: #fff;
+  background: var(--bg-color);
 }
 
 @media screen and (max-width: $smDesktopWidth) {

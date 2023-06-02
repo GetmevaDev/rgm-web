@@ -4,6 +4,8 @@ import classNames from "classnames";
 import Image from "next/image";
 import { useState } from "react";
 
+import { ETheme } from "@/providers";
+import { useTheme } from "@/shared/hooks";
 import { SubmitForm } from "@/widgets";
 
 import { Button, Typography } from "..";
@@ -23,6 +25,8 @@ export const ReadyToIncrease = ({
   height,
 }) => {
   const [isActive, setIsActive] = useState(false);
+
+  const { theme } = useTheme();
 
   const openPopup = () => {
     setIsActive(true);
@@ -55,7 +59,9 @@ export const ReadyToIncrease = ({
             width={width}
             height={height}
             alt="robert"
-            className={styles.image}
+            className={
+              theme === ETheme.Light ? styles.image_darken : styles.image
+            }
           />
         </div>
       </div>

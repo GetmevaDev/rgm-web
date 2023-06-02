@@ -21,6 +21,10 @@
 
 .image {
   object-fit: cover;
+  mix-blend-mode: initial;
+}
+
+.image_darken {
   mix-blend-mode: darken;
 }
 

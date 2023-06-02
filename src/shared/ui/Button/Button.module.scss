@@ -35,7 +35,7 @@
   background: #fff;
   width: 200px;
 
-  color: #000;
+  color: var(--outline-button-color);
 
   transition: background 0.2s ease;
   &:hover {
