@@ -17,6 +17,7 @@ export const FeaturedPress = ({ title, subTitle, images }) => (
       <div className={styles.images}>
         {images?.map((img) => (
           <Image
+            key={img?.id}
             src={img?.attributes?.url}
             width={img?.attributes?.width}
             alt={img?.attributes?.name}

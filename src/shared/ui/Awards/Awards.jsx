@@ -18,7 +18,7 @@ export const Awards = ({ title, subTitle, images }) => (
         <div className={styles.card}>
           {images?.map((img) => (
             <Image
-              key={img?.attributes?.id}
+              key={img?.id}
               src={img?.attributes?.url}
               width={img?.attributes?.width}
               alt={img?.attributes?.name}

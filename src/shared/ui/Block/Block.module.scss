@@ -173,7 +173,7 @@
 @media screen and (max-width: $smDesktopWidth) {
   .block,
   .block_reverse {
-    flex-direction: column-reverse;
+    grid-template-columns: auto;
 
     img {
       width: 100%;
