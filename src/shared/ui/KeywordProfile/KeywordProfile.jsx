@@ -12,7 +12,7 @@ const colors = {
   white: styles.white,
 };
 
-export const KeywordProfile = ({
+const KeywordProfile = ({
   numbers,
   startCenter,
   startRight,
@@ -64,3 +64,5 @@ export const KeywordProfile = ({
     </div>
   </FadeInWhenVisible>
 );
+
+export default KeywordProfile;

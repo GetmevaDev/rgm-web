@@ -6,7 +6,7 @@ import { defaultTheme } from "./Theme";
 
 import styles from "./Map.module.scss";
 
-export const Map = () => {
+const Map = () => {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
   });
@@ -34,3 +34,5 @@ export const Map = () => {
     </div>
   );
 };
+
+export default Map;

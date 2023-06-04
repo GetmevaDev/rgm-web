@@ -8,7 +8,7 @@ import { SlideItem } from "./SlideItem/SlideItem";
 
 import styles from "./Slider.module.scss";
 
-export const Slider = ({ items }) => (
+const Slider = ({ items }) => (
   <FadeInWhenVisible>
     <div className={styles.slider}>
       <div className={styles.slider_inner}>
@@ -52,3 +52,5 @@ export const Slider = ({ items }) => (
     </div>
   </FadeInWhenVisible>
 );
+
+export default Slider;

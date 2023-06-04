@@ -6,7 +6,7 @@ import { Typography } from "..";
 
 import styles from "./BridgeBusiness.module.scss";
 
-export const BridgeBusiness = ({ title, subTitle, description, items }) => (
+const BridgeBusiness = ({ title, subTitle, description, items }) => (
   <FadeInWhenVisible>
     <section className={styles.bridge}>
       <div className={styles.left}>
@@ -35,3 +35,4 @@ export const BridgeBusiness = ({ title, subTitle, description, items }) => (
     </section>
   </FadeInWhenVisible>
 );
+export default BridgeBusiness;

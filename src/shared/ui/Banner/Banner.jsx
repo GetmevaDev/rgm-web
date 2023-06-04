@@ -8,14 +8,7 @@ import { Button, Typography } from "..";
 
 import styles from "./Banner.module.scss";
 
-export const Banner = ({
-  title,
-  subTitle,
-  description,
-  image,
-  button,
-  link,
-}) => (
+const Banner = ({ title, subTitle, description, image, button, link }) => (
   <FadeInWhenVisible>
     <section className={styles.banner}>
       <div className={styles.image_inner}>
@@ -54,3 +47,4 @@ export const Banner = ({
     <div className={styles.border} />
   </FadeInWhenVisible>
 );
+export default Banner;

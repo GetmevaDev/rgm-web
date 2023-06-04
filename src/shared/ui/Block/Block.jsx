@@ -19,7 +19,7 @@ const positions = {
   right: styles.right,
 };
 
-export const Block = ({
+const Block = ({
   title,
   description,
   image,
@@ -89,3 +89,5 @@ export const Block = ({
     </div>
   </FadeInWhenVisible>
 );
+
+export default Block;

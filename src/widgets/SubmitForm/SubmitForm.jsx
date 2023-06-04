@@ -41,7 +41,7 @@ const values = {
   aboutUs: "",
 };
 
-export const SubmitForm = ({ isActive, closePopup }) => {
+const SubmitForm = ({ isActive, closePopup }) => {
   const { data, isError, isLoading } = useSWR(
     "https://cms-rgm.herokuapp.com/api/submit-form?populate=deep",
     // "http://localhost:1337/api/navigation?populate=deep",
@@ -322,3 +322,5 @@ export const SubmitForm = ({ isActive, closePopup }) => {
     </Modal>
   );
 };
+
+export default SubmitForm;

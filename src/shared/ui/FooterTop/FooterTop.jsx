@@ -8,7 +8,7 @@ import { useTheme } from "@/shared/hooks";
 
 import styles from "./FooterTop.module.scss";
 
-export const FooterTop = ({ footer }) => {
+const FooterTop = ({ footer }) => {
   const { theme } = useTheme();
 
   return (
@@ -135,3 +135,5 @@ export const FooterTop = ({ footer }) => {
     </div>
   );
 };
+
+export default FooterTop;

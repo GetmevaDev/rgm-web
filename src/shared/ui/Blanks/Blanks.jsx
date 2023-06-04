@@ -6,7 +6,7 @@ import { ItemBlank } from "./ItemBlank/ItemBlank";
 
 import styles from "./Blanks.module.scss";
 
-export const Blanks = ({ blanks }) => (
+const Blanks = ({ blanks }) => (
   <FadeInWhenVisible>
     <div className={styles.blanks}>
       {blanks.map((item) => (
@@ -20,3 +20,5 @@ export const Blanks = ({ blanks }) => (
     </div>
   </FadeInWhenVisible>
 );
+
+export default Blanks;

@@ -12,7 +12,7 @@ import { ThemeSwitcher } from "..";
 
 import styles from "./Navigation.module.scss";
 
-export const Navigation = ({ className, items }) => {
+const Navigation = ({ className, items }) => {
   const { theme } = useTheme();
   const [nav, setNav] = useState(false);
   const [activeMenuItem, setActiveMenuItem] = useState(null);
@@ -77,3 +77,5 @@ export const Navigation = ({ className, items }) => {
     </nav>
   );
 };
+
+export default Navigation;

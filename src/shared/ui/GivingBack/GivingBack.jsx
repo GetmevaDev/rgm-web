@@ -7,7 +7,7 @@ import { Typography } from "..";
 
 import styles from "./GivingBack.module.scss";
 
-export const GivingBack = () => (
+const GivingBack = () => (
   <FadeInWhenVisible>
     <div className={styles.giving}>
       <div className={styles.left}>
@@ -35,3 +35,5 @@ export const GivingBack = () => (
     </div>
   </FadeInWhenVisible>
 );
+
+export default GivingBack;

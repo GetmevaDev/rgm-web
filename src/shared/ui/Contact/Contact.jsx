@@ -3,11 +3,11 @@ import React from "react";
 
 import { FadeInWhenVisible } from "@/widgets";
 
-import { Map } from "../Map/Map";
+import { Map } from "..";
 
 import styles from "./Contact.module.scss";
 
-export const Contact = ({ title, address, phoneLeft, phoneRight }) => (
+const Contact = ({ title, address, phoneLeft, phoneRight }) => (
   <FadeInWhenVisible>
     <div className={styles.contact}>
       <div className={styles.info}>
@@ -44,3 +44,5 @@ export const Contact = ({ title, address, phoneLeft, phoneRight }) => (
     </div>
   </FadeInWhenVisible>
 );
+
+export default Contact;

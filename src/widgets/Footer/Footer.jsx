@@ -1,12 +1,17 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-import { Button, FooterTop } from "@/shared/ui";
+import { Button } from "@/shared/ui";
 
 import styles from "./Footer.module.scss";
 
-export const Footer = ({ footer }) => {
+const FooterTop = dynamic(() => import("../../shared/ui/FooterTop/FooterTop"), {
+  loading: () => <p>Loading...</p>,
+});
+
+const Footer = ({ footer }) => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -70,3 +75,5 @@ export const Footer = ({ footer }) => {
     </footer>
   );
 };
+
+export default Footer;

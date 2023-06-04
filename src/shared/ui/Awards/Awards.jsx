@@ -7,7 +7,7 @@ import { Typography } from "..";
 
 import styles from "./Awards.module.scss";
 
-export const Awards = ({ title, subTitle, images }) => (
+const Awards = ({ title, subTitle, images }) => (
   <FadeInWhenVisible>
     <div className={styles.awards}>
       <div className={styles.awards_inner}>
@@ -30,3 +30,5 @@ export const Awards = ({ title, subTitle, images }) => (
     </div>
   </FadeInWhenVisible>
 );
+
+export default Awards;

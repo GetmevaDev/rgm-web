@@ -17,13 +17,7 @@ const colors = {
   white: styles.white,
 };
 
-export const ReadyToIncrease = ({
-  title,
-  image,
-  color = "gray",
-  width,
-  height,
-}) => {
+const ReadyToIncrease = ({ title, image, color = "gray", width, height }) => {
   const [isActive, setIsActive] = useState(false);
 
   const { theme } = useTheme();
@@ -72,3 +66,5 @@ export const ReadyToIncrease = ({
     </FadeInWhenVisible>
   );
 };
+
+export default ReadyToIncrease;

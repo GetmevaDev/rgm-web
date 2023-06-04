@@ -4,7 +4,7 @@ import { FadeInWhenVisible } from "@/widgets";
 
 import styles from "./BigDescription.module.scss";
 
-export const BigDescription = ({ description }) => (
+const BigDescription = ({ description }) => (
   <FadeInWhenVisible>
     <div
       className={styles.big_description}
@@ -12,3 +12,4 @@ export const BigDescription = ({ description }) => (
     />
   </FadeInWhenVisible>
 );
+export default BigDescription;

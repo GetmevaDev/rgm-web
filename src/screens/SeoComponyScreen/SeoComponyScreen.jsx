@@ -12,31 +12,6 @@ import {
   Work,
 } from "@/shared/ui";
 
-export const arr = [
-  {
-    id: 1,
-    title: "Analysis",
-    description:
-      "To start, we begin with a professional review of your current website, in many cases we will introduce a business analyst to assist, to determine the most effective way to move forward.",
-    image: "/svg/data.svg",
-  },
-  {
-    id: 2,
-    title: "RESEARCH",
-    description:
-      "Following a thorough review of your current website’s performance, we procure the desired goals based on the products and/or services you offer, your target demographic and industry competition.",
-    image: "/svg/search.svg",
-  },
-
-  {
-    id: 3,
-    title: "Methodology",
-    description:
-      "Data science replaces previous guesswork regarding what the user actually wants. Based on a deep learning technology, from millions of analyzed data segments, we determine the precise user intention behind search terms.",
-    image: "/svg/process.svg",
-  },
-];
-
 export const SeoComponyScreen = ({ attributes }) => (
   <Layout
     title={attributes?.seo?.title}

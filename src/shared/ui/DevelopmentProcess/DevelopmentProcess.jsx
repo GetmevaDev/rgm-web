@@ -8,7 +8,7 @@ import { ProcessItem } from "./Item/ProcessItem";
 
 import styles from "./DevelopmentProcess.module.scss";
 
-export const DevelopmentProcess = ({ items, title, description }) => (
+const DevelopmentProcess = ({ items, title, description }) => (
   <FadeInWhenVisible>
     <div className={styles.process}>
       <div className={styles.process_inner}>
@@ -31,3 +31,5 @@ export const DevelopmentProcess = ({ items, title, description }) => (
     </div>
   </FadeInWhenVisible>
 );
+
+export default DevelopmentProcess;

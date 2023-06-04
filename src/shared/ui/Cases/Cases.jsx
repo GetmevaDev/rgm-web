@@ -4,7 +4,7 @@ import { CaseItem } from "./Item/CaseItem";
 
 import styles from "./Cases.module.scss";
 
-export const Cases = ({ data }) => (
+const Cases = ({ data }) => (
   <div className={styles.cases}>
     <div className={styles.cases_inner}>
       {data.map((item) => (
@@ -13,3 +13,5 @@ export const Cases = ({ data }) => (
     </div>
   </div>
 );
+
+export default Cases;

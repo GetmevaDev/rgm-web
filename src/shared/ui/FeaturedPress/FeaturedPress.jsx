@@ -7,7 +7,7 @@ import { Typography } from "..";
 
 import styles from "./FeaturedPress.module.scss";
 
-export const FeaturedPress = ({ title, subTitle, images }) => (
+const FeaturedPress = ({ title, subTitle, images }) => (
   <FadeInWhenVisible>
     <div className={styles.featured}>
       <Typography tag="h2" size="title">
@@ -28,3 +28,5 @@ export const FeaturedPress = ({ title, subTitle, images }) => (
     </div>
   </FadeInWhenVisible>
 );
+
+export default FeaturedPress;

@@ -10,7 +10,7 @@ import { PledgeItem } from "./Item/PledgeItem";
 
 import styles from "./Pledge.module.scss";
 
-export const Pledge = ({ title, description, items }) => (
+const Pledge = ({ title, description, items }) => (
   <FadeInWhenVisible>
     <div className={styles.plegde}>
       <Typography tag="h2" size="small">
@@ -58,3 +58,5 @@ export const Pledge = ({ title, description, items }) => (
     </div>
   </FadeInWhenVisible>
 );
+
+export default Pledge;

@@ -7,7 +7,7 @@ import { Typography } from "..";
 
 import styles from "./Feedback.module.scss";
 
-export const Feedback = ({ title, subTitle, description, user }) => (
+const Feedback = ({ title, subTitle, description, user }) => (
   <FadeInWhenVisible>
     <div className={styles.feedback}>
       <div className={styles.feedback_inner}>
@@ -47,3 +47,5 @@ export const Feedback = ({ title, subTitle, description, user }) => (
     </div>
   </FadeInWhenVisible>
 );
+
+export default Feedback;

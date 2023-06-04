@@ -8,7 +8,7 @@ import { OurService } from "./Item/OurService";
 
 import styles from "./OurServices.module.scss";
 
-export const OurServices = ({ title, description, items }) => (
+const OurServices = ({ title, description, items }) => (
   <FadeInWhenVisible>
     <div className={styles.our_services}>
       <div className={styles.our_services_inner}>
@@ -26,3 +26,5 @@ export const OurServices = ({ title, description, items }) => (
     </div>
   </FadeInWhenVisible>
 );
+
+export default OurServices;

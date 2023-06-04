@@ -1,5 +1,5 @@
 import { ContactInfo } from "../ContactInfo/ContactInfo";
-import { Map } from "../Map/Map";
+import { Map } from "..";
 
 import styles from "./BlockMap.module.scss";
 

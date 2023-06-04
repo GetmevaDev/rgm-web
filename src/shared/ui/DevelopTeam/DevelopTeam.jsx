@@ -7,7 +7,7 @@ import { Typography } from "..";
 
 import styles from "./DevelopTeam.module.scss";
 
-export const DevelopTeam = ({ items, title, description }) => (
+const DevelopTeam = ({ items, title, description }) => (
   <FadeInWhenVisible>
     <div className={styles.develop}>
       <Typography tag="h2" className={styles.title}>
@@ -44,3 +44,5 @@ export const DevelopTeam = ({ items, title, description }) => (
     </div>
   </FadeInWhenVisible>
 );
+
+export default DevelopTeam;

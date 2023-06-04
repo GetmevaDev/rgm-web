@@ -16,7 +16,7 @@ const positions = {
   start: styles.start,
 };
 
-export const ImageBannerText = ({
+const ImageBannerText = ({
   title,
   subTitle,
   description,
@@ -114,3 +114,5 @@ export const ImageBannerText = ({
     </div>
   );
 };
+
+export default ImageBannerText;
