@@ -19,7 +19,6 @@
     "@next/bundle-analyzer": "^13.4.4",
     "@next/font": "^13.3.0",
     "@react-google-maps/api": "^2.18.1",
-    "axios": "^1.4.0",
     "boxicons": "^2.1.4",
     "eslint": "8.39.0",
     "eslint-config-next": "13.3.4",
