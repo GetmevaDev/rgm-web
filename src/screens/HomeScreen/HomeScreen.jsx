@@ -37,7 +37,6 @@ export const HomeScreen = ({ attributes }) => {
       twitterUrl={attributes?.seo?.twitter_url}
       size="nolayout"
     >
-      {console.log(attributes, "attr")}
       <div className="layout">
         <ImageBannerText
           title={attributes?.banner?.title}
