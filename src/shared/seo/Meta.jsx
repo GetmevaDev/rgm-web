@@ -24,6 +24,9 @@ const Meta = ({
           <meta name="og:title" content={title} />
           <meta name="og:description" content={description} />
           <meta property="og:image" content={image} />
+          <meta property="og:type" content="website" />
+          <meta property="og:image" content={image} />
+          <meta property="og:url" content={twitterUrl} />
 
           <meta name="twitter:card" content={twitterCard} />
           <meta property="twitter:domain" content={twitterDomain} />
