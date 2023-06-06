@@ -25,7 +25,19 @@ export const override = {
   borderColor: "red",
 };
 
-export const Layout = ({ children, title, description, size = "layout" }) => {
+export const Layout = ({
+  children,
+  title,
+  description,
+  size = "layout",
+  twitterCard,
+  twitterDomain,
+  twitterUrl,
+  twitterTitle,
+  twitterDescription,
+  twitterImage,
+  image,
+}) => {
   const { theme } = useTheme();
 
   const {
@@ -53,7 +65,17 @@ export const Layout = ({ children, title, description, size = "layout" }) => {
   if (isError) return <div>Error...</div>;
 
   return (
-    <Meta title={title} description={description}>
+    <Meta
+      title={title}
+      description={description}
+      twitterCard={twitterCard}
+      twitterDescription={twitterDescription}
+      twitterDomain={twitterDomain}
+      twitterImage={twitterImage}
+      twitterTitle={twitterTitle}
+      twitterUrl={twitterUrl}
+      image={image}
+    >
       <div className="overlay">
         <Image
           className={styles.image}
