@@ -40,9 +40,9 @@ const ReadyToIncrease = ({ title, image, color = "gray", width, height }) => {
             </Typography>
 
             <div className={styles.buttons}>
-              <Button variant="outline" onClick={openPopup}>
+              {/* <Button variant="outline" onClick={openPopup}>
                 Submit RFP
-              </Button>
+              </Button> */}
               <Button variant="outline">Book a Free Review</Button>
             </div>
           </div>

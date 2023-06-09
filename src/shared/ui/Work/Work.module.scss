@@ -28,6 +28,13 @@
   gap: 30px;
 }
 
+.four {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  place-items: flex-start;
+}
+
 .gray {
   background: var(--bg-nolayout-color);
   padding: 100px 0;

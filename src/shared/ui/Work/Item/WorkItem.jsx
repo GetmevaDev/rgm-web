@@ -5,7 +5,7 @@ import { Border } from "../..";
 
 import styles from "./WorkItem.module.scss";
 
-export const WorkItem = ({ title, description, svg }) => (
+export const WorkItem = ({ title, description, svg, size }) => (
   <div className={!svg ? styles.work_item : styles.work_item_image}>
     {svg && (
       <Image
@@ -16,7 +16,7 @@ export const WorkItem = ({ title, description, svg }) => (
         className={styles.image}
       />
     )}
-    <p className={styles.title}>{title}</p>
+    <p className={!size ? styles.title : styles.title_size}>{title}</p>
     <div className={styles.border}>
       <Border />
     </div>

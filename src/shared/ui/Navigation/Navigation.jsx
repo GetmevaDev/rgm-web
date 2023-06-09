@@ -37,11 +37,11 @@ const Navigation = ({ className, items }) => {
 
   return (
     <nav className={styles.navigation}>
-      <div className={styles.theme}>
+      {/* <div className={styles.theme}>
         <div>
           <ThemeSwitcher />
         </div>
-      </div>
+      </div> */}
       <ul
         className={classNames(
           nav ? [styles.menu, styles.active].join(" ") : [styles.menu],

@@ -88,7 +88,7 @@ const ImageBannerText = ({
             </Link>
           )}
 
-          {buttonForm && (
+          {/* {buttonForm && (
             <span>
               <Button
                 variant="outline"
@@ -98,7 +98,7 @@ const ImageBannerText = ({
                 Submit RFP
               </Button>
             </span>
-          )}
+          )} */}
         </div>
 
         {isActive && <SubmitForm isActive={isActive} closePopup={closePopup} />}

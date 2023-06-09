@@ -1,0 +1,84 @@
+@import "src/styles/variables.scss";
+
+.title {
+  text-align: center;
+  padding: 100px 0 50px;
+}
+
+.border {
+  width: 100%;
+  margin-top: 50px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.main {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  position: relative;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom {
+  display: flex;
+  padding-top: 26px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sub_title {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 32px;
+  font-family: var(--font-mont);
+  color: var(--primary-color);
+}
+
+.description {
+  font-weight: 500;
+  font-size: 18px;
+  padding-top: 20px;
+  line-height: 26px;
+  font-family: var(--font-mont);
+  letter-spacing: -0.2px;
+  color: var(--secondary-color);
+}
+
+.date {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: var(--font-mont);
+  letter-spacing: -0.2px;
+  color: #7c7c7c;
+}
+
+.arrow {
+  background: #f4f0ec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 40px;
+
+  cursor: pointer;
+  height: 40px;
+  transition: color 0.3s ease-in-out;
+
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: #bda76a;
+  }
+}
+
+@media screen and (max-width: $smDesktopWidth) {
+  .main {
+    flex-direction: column;
+  }
+}

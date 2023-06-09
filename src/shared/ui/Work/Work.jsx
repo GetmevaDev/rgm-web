@@ -13,6 +13,7 @@ const sizes = {
   two: styles.two,
   one: styles.one,
   three: styles.three,
+  four: styles.four,
 };
 
 const colors = {
@@ -32,7 +33,7 @@ export const Work = ({ size = "two", color = "gray", arr, title }) => (
 
         <div className={classNames(sizes[size])}>
           {arr?.map((item) => (
-            <WorkItem key={item.id} {...item} />
+            <WorkItem key={item.id} {...item} size={size} />
           ))}
         </div>
       </div>

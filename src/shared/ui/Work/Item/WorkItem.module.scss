@@ -14,7 +14,7 @@
   align-items: center;
   font-family: var(--font-mont);
   flex-direction: column;
-  padding: 52px 0;
+  padding: 52px 0 30px;
   border-radius: 10px;
 }
 
@@ -37,11 +37,23 @@
   color: var(--title-cover);
 }
 
+.title_size {
+  font-family: var(--font-mont);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: -0.62px;
+  color: var(--title-cover);
+  padding-bottom: 32px;
+}
+
 .description {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  padding: 0 57px;
+  padding: 0 27px;
   text-align: center;
   letter-spacing: -0.2px;
   color: var(--title-cover);

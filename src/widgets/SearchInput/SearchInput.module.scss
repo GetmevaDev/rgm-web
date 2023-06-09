@@ -1,0 +1,49 @@
+@import "src/styles/variables.scss";
+
+.search {
+  position: relative;
+}
+
+.input {
+  background: #f8f7f7;
+  border-radius: 10px;
+  padding: 35px 40px;
+  height: 50px;
+  font-weight: 500;
+  width: 390px;
+  font-size: 16px;
+  line-height: 20px;
+  border: 1px solid transparent;
+  outline: none;
+  /* identical to box height */
+  font-family: var(--font-mont);
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+
+  &::placeholder {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.2px;
+    font-family: var(--font-mont);
+    color: var(--secondary-color);
+  }
+
+  &:active,
+  &:focus {
+    border-color: #eae7e7;
+    background: #f2efef;
+  }
+}
+
+.search_svg {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+@media screen and (max-width: $phoneWidth) {
+  .input {
+    width: 100%;
+  }
+}

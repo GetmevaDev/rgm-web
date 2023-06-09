@@ -1,0 +1,14 @@
+@import "src/styles/variables.scss";
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: $smDesktopWidth) {
+  .posts {
+    grid-template-columns: auto;
+  }
+}
