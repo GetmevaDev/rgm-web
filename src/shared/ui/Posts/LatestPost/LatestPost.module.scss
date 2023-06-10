@@ -32,11 +32,14 @@
 }
 
 .sub_title {
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 32px;
   font-family: var(--font-mont);
   color: var(--primary-color);
+
+  h1 {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 32px;
+  }
 }
 
 .description {

@@ -14,13 +14,8 @@
   max-width: 700px;
 }
 
-.right {
-  border-left: 1px solid rgba(0, 0, 0, 0.2);
-}
-
 .title {
   font-weight: 700;
-  font-size: 20px;
   line-height: 32px;
   color: var(--primary-color);
   padding-top: 30px;
@@ -35,6 +30,24 @@
   font-family: var(--font-mont);
   padding-top: 20px;
   color: var(--secondary-color);
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    padding-top: 10px;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding: 10px 0 10px 30px;
+
+    li {
+      padding-top: 5px;
+    }
+  }
 }
 
 .date {
@@ -73,6 +86,7 @@
 
 .search {
   padding-left: 40px;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .block {
@@ -155,7 +169,7 @@
     flex-direction: column;
   }
 
-  .right {
+  .search {
     border-left: none;
   }
 }

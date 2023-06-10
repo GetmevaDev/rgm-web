@@ -3,7 +3,7 @@ import { fetchAPI } from "@/shared/lib";
 
 export async function getStaticProps({ params }) {
   const { data } = await fetchAPI(
-    `blog-posts-pages/${params.id}/?populate=deep`
+    `blog-posts-pages/find-by-slug/${params.id}?populate=*`
   );
 
   const { data: data1 } = await fetchAPI("blog-posts-pages?populate=deep");
@@ -29,7 +29,9 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
   const { data } = await fetchAPI("blog-posts-pages?populate=deep");
 
-  const paths = data?.map((post) => ({ params: { id: post.id.toString() } }));
+  const paths = data?.map((post) => ({
+    params: { id: post.attributes.slug },
+  }));
 
   return {
     paths,
@@ -38,5 +40,6 @@ export async function getStaticPaths() {
 }
 
 export default function BlogsPage({ data, data1, attributes }) {
+  console.log(data, "data");
   return <PostScreen {...data} data1={data1} attr={attributes} />;
 }

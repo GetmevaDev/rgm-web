@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
+import { truncateText } from "@/shared/utils/truncateText";
+
 import styles from "./Post.module.scss";
 
 export const Post = ({ title, description, image, alt, id, date }) => {
@@ -12,7 +14,6 @@ export const Post = ({ title, description, image, alt, id, date }) => {
   });
   const htmlContentDescription = md.render(description);
   const htmlContentTitle = md.render(title);
-  const link = id.toString();
   const maxLength = 130;
   const inputDate = new Date(date);
   const formattedDate = format(inputDate, "d MMMM yyyy", { locale: en });
@@ -25,13 +26,6 @@ export const Post = ({ title, description, image, alt, id, date }) => {
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
-
-  function truncateText(text, maxLength) {
-    if (text.length <= maxLength) {
-      return text;
-    }
-    return `${text.slice(0, maxLength)}...`;
-  }
 
   const iconColor = isHovered ? "white" : "black";
 
@@ -59,7 +53,7 @@ export const Post = ({ title, description, image, alt, id, date }) => {
 
       <div className={styles.bottom}>
         <div className={styles.date}>{formattedDate}</div>
-        <Link href={`/blog/${link}`}>
+        <Link href={`/blog/${id}`}>
           <div
             className={styles.arrow}
             onMouseEnter={handleMouseEnter}

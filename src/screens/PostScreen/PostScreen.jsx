@@ -1,13 +1,7 @@
 import React from "react";
 
 import { Layout } from "@/shared";
-import {
-  BlockMap,
-  GivingBack,
-  ImageBannerText,
-  MainPost,
-  Post,
-} from "@/shared/ui";
+import { BlockMap, GivingBack, ImageBannerText, MainPost } from "@/shared/ui";
 
 export const PostScreen = ({ attr, attributes, id, data1 }) => (
   <Layout
@@ -40,7 +34,7 @@ export const PostScreen = ({ attr, attributes, id, data1 }) => (
         image={attributes?.image?.data?.attributes?.url}
         alt={attributes?.image?.data?.attributes?.name}
         date={attributes?.createdAt}
-        id={id}
+        id={attributes?.slug}
       />
     </div>
     <div className="layout">
@@ -50,20 +44,3 @@ export const PostScreen = ({ attr, attributes, id, data1 }) => (
     <BlockMap />
   </Layout>
 );
-
-// {
-//   reverseData?.slice(0, 3).map((post) => {
-//     const resDate = new Date(post?.attributes?.createdAt);
-//     const resFormDate = format(resDate, "d MMMM yyyy", {
-//       locale: en,
-//     });
-//     return (
-//       <Link href={post?.id.toString()}>
-//         <div className={styles.latest_post}>
-//           <div className={styles.latest_title}>{post?.attributes?.title}</div>
-//           <div className={styles.latest_date}>{resFormDate}</div>
-//         </div>
-//       </Link>
-//     );
-//   });
-// }

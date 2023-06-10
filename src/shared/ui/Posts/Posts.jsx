@@ -15,7 +15,7 @@ export const Posts = ({ data }) => {
           description={post?.attributes?.description}
           image={post?.attributes?.image?.data?.attributes?.url}
           alt={post?.attributes?.image?.data?.attributes?.name}
-          id={post?.id}
+          id={post?.attributes?.slug}
           date={post?.attributes?.createdAt}
         />
       ))}

@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
+import { truncateText } from "@/shared/utils/truncateText";
+
 import { Typography } from "../..";
 
 import styles from "./LatestPost.module.scss";
@@ -35,6 +37,7 @@ export const LatestPost = ({ data }) => {
   const htmlContentTitle = md.render(latest[0]?.attributes?.title);
   const htmlContentDescription = md.render(latest[0]?.attributes?.description);
 
+  console.log(latest[0], "latest");
   return (
     <div className={styles.latest}>
       <Typography tag="h2" size="small" className={styles.title}>
@@ -58,14 +61,16 @@ export const LatestPost = ({ data }) => {
           />
           <div
             className={styles.description}
-            dangerouslySetInnerHTML={{ __html: htmlContentDescription }}
+            dangerouslySetInnerHTML={{
+              __html: truncateText(htmlContentDescription, 200),
+            }}
           />
 
           <div className={styles.bottom}>
             <div className={styles.date}>{formattedDate}</div>
 
             <div className={styles.arrow}>
-              <Link href={`/blog/${latest[0]?.id}`}>
+              <Link href={`/blog/${latest[0]?.attributes?.slug}`}>
                 <div
                   className={styles.arrow}
                   onMouseEnter={handleMouseEnter}

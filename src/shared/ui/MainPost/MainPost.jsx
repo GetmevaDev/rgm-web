@@ -74,14 +74,17 @@ export const MainPost = ({
                 const resFormDate = format(resDate, "d MMMM yyyy", {
                   locale: en,
                 });
+
                 return (
                   <Link
-                    href={result?.id.toString()}
+                    key={result?.id}
+                    href={result?.attributes?.slug}
+                    // chnage
                     className={styles.latest_post}
                   >
                     <div>
                       <div className={styles.latest_title}>
-                        {result?.attributes?.title}
+                        {result?.attributes?.latest_title}
                       </div>
                       <div className={styles.latest_date}>{resFormDate}</div>
                     </div>
@@ -95,14 +98,16 @@ export const MainPost = ({
                   const resFormDate = format(resDate, "d MMMM yyyy", {
                     locale: en,
                   });
+
                   return (
                     <Link
-                      href={post?.id.toString()}
+                      key={post?.id}
+                      href={post?.attributes?.slug}
                       className={styles.latest_post}
                     >
                       <div>
                         <div className={styles.latest_title}>
-                          {post?.attributes?.title}
+                          {post?.attributes?.latest_title}
                         </div>
                         <div className={styles.latest_date}>{resFormDate}</div>
                       </div>

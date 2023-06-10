@@ -36,7 +36,7 @@ export const SearchInput = ({ results, setResults }) => {
       } else {
         setResults([]);
       }
-    }, 1000);
+    }, 500);
   };
 
   return (
@@ -45,6 +45,7 @@ export const SearchInput = ({ results, setResults }) => {
         type="search"
         className={styles.input}
         placeholder="Search"
+        value={query}
         onChange={handleInputChange}
       />
       <svg

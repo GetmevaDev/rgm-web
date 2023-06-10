@@ -5,12 +5,16 @@
 }
 
 .title {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 32px;
   color: var(--primary-color);
   padding-top: 20px;
   font-family: var(--font-mont);
+
+  h1,
+  h2 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+  }
 }
 
 .description {
