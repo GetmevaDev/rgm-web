@@ -2,16 +2,14 @@ import React from "react";
 
 import { FadeInWhenVisible } from "@/widgets";
 
-import { PriceItem } from "./Item/PriceItem";
+import { Table } from "../Table/Table";
 
 import styles from "./Price.module.scss";
 
-export const Price = ({ items }) => (
+export const Price = ({ items, list }) => (
   <FadeInWhenVisible>
     <div className={styles.price}>
-      {items?.map((item) => (
-        <PriceItem key={item.id} {...item} />
-      ))}
+      <Table items={items} list={list} />
     </div>
   </FadeInWhenVisible>
 );

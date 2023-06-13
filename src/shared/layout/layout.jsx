@@ -46,7 +46,7 @@ export const Layout = ({
     isLoading,
   } = useSWR(
     "https://cms-rgm.herokuapp.com/api/layout?populate=deep",
-    // "http://localhost:1337/api/navigation?populate=deep",
+    // "http://localhost:1337/api/layout?populate=deep",
     fetcher
   );
 

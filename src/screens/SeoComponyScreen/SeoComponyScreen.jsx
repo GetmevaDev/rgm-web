@@ -4,6 +4,7 @@ import { Layout } from "@/shared";
 import {
   BlockMap,
   Description,
+  DescriptionSeo,
   GivingBack,
   ImageBannerText,
   Pledge,
@@ -38,11 +39,18 @@ export const SeoComponyScreen = ({ attributes }) => (
         imageDark={attributes?.banner?.image_dark?.data?.attributes?.url}
       />
 
-      <Description
+      <DescriptionSeo
         sub={attributes?.Description?.sub_description}
         description={attributes?.Description?.description}
+        title={attributes?.Description?.title}
+        image={attributes?.Description?.image?.data?.attributes?.url}
+        alt={attributes?.Description?.alt}
       />
-      <Price items={attributes?.PricingItemsss} />
+
+      <Price
+        items={attributes?.PricingItemsss}
+        list={attributes?.PricingItemList}
+      />
     </div>
 
     <Work

@@ -10,6 +10,7 @@ export * from "./Button/Button";
 export { CasesAsync as Cases } from "./Cases/Cases.async";
 export { ContactAsync as Contact } from "./Contact/Contact.async";
 export * from "./Description/Description";
+export * from "./DescriptionSeo/DescriptionSeo";
 export * from "./DescriptionTitle/DescriptionTitle";
 export { DevelopmentProcessAsync as DevelopmentProcess } from "./DevelopmentProcess/DevelopmentProcess.async";
 export * from "./DevelopmentProcess/Item/ProcessItem";

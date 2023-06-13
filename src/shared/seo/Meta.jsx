@@ -18,14 +18,13 @@ const Meta = ({
       <title>{title}</title>
       <link rel="icon" href="/svg/logo.svg" />
 
-      {description ? (
+      {description && (
         <>
           <meta name="description" content={description} />
           <meta name="og:title" content={title} />
           <meta name="og:description" content={description} />
           <meta property="og:image" content={image} />
           <meta property="og:type" content="website" />
-          <meta property="og:image" content={image} />
           <meta property="og:url" content={twitterUrl} />
 
           <meta name="twitter:card" content={twitterCard} />
@@ -35,8 +34,6 @@ const Meta = ({
           <meta name="twitter:description" content={twitterDescription} />
           <meta name="twitter:image" content={twitterImage} />
         </>
-      ) : (
-        <meta name="robots" content="noindex, nofollow" />
       )}
     </Head>
     {children}

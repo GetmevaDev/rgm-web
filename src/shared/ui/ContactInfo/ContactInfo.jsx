@@ -9,6 +9,7 @@ import styles from "./ContactInfo.module.scss";
 
 export const ContactInfo = () => {
   const { data, isError, isLoading } = useSWR(
+    // "https://cms-rgm.herokuapp.com/api/contact-info?populate=deep",
     "https://cms-rgm.herokuapp.com/api/contact-info?populate=deep",
 
     fetcher
