@@ -22,7 +22,7 @@ export const Table = ({ items, list }) => {
         <thead>
           <tr>
             <th className={styles.main}>
-              <div className={styles.featured}>Featured</div>
+              <div className={styles.featured}>Feature</div>
               <div className={styles.description} />
               <div className={styles.price_inner}>
                 <span className={styles.dollar} />
