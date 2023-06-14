@@ -9,7 +9,6 @@ import {
   ImageBannerText,
   ReadyToIncrease,
 } from "@/shared/ui";
-import { FadeInWhenVisible } from "@/widgets";
 
 export const AboutScreen = ({ attributes }) => (
   <Layout

@@ -43,6 +43,7 @@ export const SeoComponyScreen = ({ attributes }) => (
         sub={attributes?.Description?.sub_description}
         description={attributes?.Description?.description}
         title={attributes?.Description?.title}
+        text={attributes?.Description?.text}
         image={attributes?.Description?.image?.data?.attributes?.url}
         alt={attributes?.Description?.alt}
       />

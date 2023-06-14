@@ -32,16 +32,7 @@ const ImageBannerText = ({
 }) => {
   const [isActive, setIsActive] = useState(false);
 
-  const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
-  }
 
   const openPopup = () => {
     setIsActive(true);
