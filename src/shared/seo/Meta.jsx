@@ -17,23 +17,23 @@ const Meta = ({
     <Head>
       <title>{title}</title>
       <link rel="icon" href="/svg/logo.svg" />
+      <link rel="canonical" href={twitterUrl} />
+      <meta property="og:type" content="website" />
+      {title && <meta name="og:title" content={title} />}
+      {description && <meta name="description" content={description} />}
+      {description && <meta name="og:description" content={description} />}
+      {image && <meta name="description" content={description} />}
 
-      {description && (
-        <>
-          <meta name="description" content={description} />
-          <meta name="og:title" content={title} />
-          <meta name="og:description" content={description} />
-          <meta property="og:image" content={image} />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content={twitterUrl} />
-
-          <meta name="twitter:card" content={twitterCard} />
-          <meta property="twitter:domain" content={twitterDomain} />
-          <meta property="twitter:url" content={twitterUrl} />
-          <meta name="twitter:title" content={twitterTitle} />
-          <meta name="twitter:description" content={twitterDescription} />
-          <meta name="twitter:image" content={twitterImage} />
-        </>
+      {twitterUrl && <meta property="og:url" content={twitterUrl} />}
+      {twitterUrl && <meta property="twitter:url" content={twitterUrl} />}
+      {twitterCard && <meta name="twitter:card" content={twitterCard} />}
+      {twitterDomain && (
+        <meta property="twitter:domain" content={twitterDomain} />
+      )}
+      {twitterTitle && <meta name="twitter:title" content={twitterTitle} />}
+      {twitterImage && <meta name="twitter:image" content={twitterImage} />}
+      {twitterDescription && (
+        <meta name="twitter:description" content={twitterDescription} />
       )}
     </Head>
     {children}
