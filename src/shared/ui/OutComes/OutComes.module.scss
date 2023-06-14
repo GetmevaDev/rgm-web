@@ -37,9 +37,8 @@
 }
 
 .items {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   padding: 85px 0;
 }
 

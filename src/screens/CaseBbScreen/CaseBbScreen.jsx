@@ -9,7 +9,6 @@ import {
   OutComes,
   Work,
 } from "@/shared/ui";
-import { FadeInWhenVisible } from "@/widgets";
 
 export const CaseBbScreen = ({ attributes }) => (
   <Layout
@@ -29,7 +28,7 @@ export const CaseBbScreen = ({ attributes }) => (
         subDescrption={attributes?.Banner?.title_color}
         transform="capitalize"
         title={attributes?.Banner?.title}
-        buttonLink={attributes?.banner?.button_link}
+        buttonLink={attributes?.Banner?.button_link}
         imageLight={attributes?.Banner?.image_dark?.data?.attributes?.url}
         imageDark={attributes?.Banner?.image_dark?.data?.attributes?.url}
         description={attributes?.Banner?.description}
