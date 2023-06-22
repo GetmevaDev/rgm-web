@@ -73,10 +73,7 @@ export default function App({ Component, pageProps }) {
         `}
           </Script>
 
-          <ThemeProvider>
-            <Component {...pageProps} />
-            <ToastContainer />
-          </ThemeProvider>
+          <Component {...pageProps} />
         </main>
       </motion.div>
     </AnimatePresence>

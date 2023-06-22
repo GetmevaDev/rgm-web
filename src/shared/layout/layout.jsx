@@ -1,8 +1,6 @@
 import classNames from "classnames";
 import Image from "next/image";
 import React from "react";
-import { PulseLoader } from "react-spinners";
-import useSWR from "swr";
 
 import { ETheme } from "@/providers";
 import { Footer, Header } from "@/widgets";
@@ -12,17 +10,9 @@ import Meta from "../seo/Meta";
 
 import styles from "./layout.module.scss";
 
-export const fetcher = (...args) => fetch(...args).then((res) => res.json());
-
 const sizes = {
   layout: styles.layout,
   nolayout: styles.nolayout,
-};
-
-export const override = {
-  display: "block",
-  margin: "0 auto",
-  borderColor: "red",
 };
 
 export const Layout = ({
@@ -39,30 +29,6 @@ export const Layout = ({
   image,
 }) => {
   const { theme } = useTheme();
-
-  const {
-    data: navigation,
-    isError,
-    isLoading,
-  } = useSWR(
-    "https://cms-rgm.herokuapp.com/api/layout?populate=deep",
-    // "http://localhost:1337/api/layout?populate=deep",
-    fetcher
-  );
-
-  if (isLoading) {
-    return (
-      <div className={styles.loader}>
-        <PulseLoader
-          color="#bda76a"
-          cssOverride={override}
-          size={30}
-          aria-label="Loading Spinner"
-        />
-      </div>
-    );
-  }
-  if (isError) return <div>Error...</div>;
 
   return (
     <Meta
@@ -91,10 +57,10 @@ export const Layout = ({
       </div>
       <div className={classNames("app", {}, [theme])}>
         <div className={classNames(styles.layout, sizes[size])}>
-          <Header navigation={navigation?.data?.attributes} />
+          <Header />
 
           {children}
-          <Footer footer={navigation?.data?.attributes?.Footer} />
+          <Footer />
         </div>
       </div>
     </Meta>
