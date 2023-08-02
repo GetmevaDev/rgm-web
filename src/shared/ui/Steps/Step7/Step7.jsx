@@ -83,8 +83,7 @@ export const Step7 = ({ onBack, onNext, reviews, addons }) => {
   const handleAddonChange = (addonName) => {
     if (selectedAddons.includes(addonName)) {
       setSelectedAddons((prevAddons) =>
-        prevAddons.filter((addon) => addon !== addonName)
-      );
+        prevAddons.filter((addon) => addon !== addonName));
     } else {
       setSelectedAddons((prevAddons) => [...prevAddons, addonName]);
     }
