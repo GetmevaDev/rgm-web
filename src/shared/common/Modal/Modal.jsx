@@ -21,7 +21,12 @@ export const Modal = ({ onClose, children, isActive }) => {
     <div className={styles.overlay}>
       <div className={styles.popup}>
         <div className={styles.closeButton} onClick={onClose}>
-          <Image width={20} height={20} src="/images/close.svg" alt="close" />
+          <Image
+            width={20}
+            height={20}
+            src="/svg/close-black.svg"
+            alt="close"
+          />
         </div>
         <div className={styles.content}>{children}</div>
       </div>

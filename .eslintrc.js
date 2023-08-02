@@ -32,6 +32,8 @@ module.exports = {
     "react/jsx-props-no-spreading": "off",
     "react/prop-types": ["off"],
     "react/no-array-index-key": 0,
+    "no-plusplus": "off",
+    "react/no-unescaped-entities": "off",
     "react/function-component-definition": "off",
     "react/jsx-one-expression-per-line": "off",
     "react-hooks/rules-of-hooks": "error",
