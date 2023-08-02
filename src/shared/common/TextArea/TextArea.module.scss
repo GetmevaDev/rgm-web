@@ -13,6 +13,10 @@
   line-height: normal;
 }
 
+.input_error {
+  border: 1px solid red !important;
+}
+
 .textarea {
   border-radius: 10px;
   background: #f8f7f7;
@@ -22,4 +26,13 @@
   border: none;
   font-family: var(--font-mont);
   padding: 15px;
+}
+
+.error {
+  font-family: var(--font-mont);
+  color: red;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }

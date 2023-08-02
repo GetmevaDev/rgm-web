@@ -1,7 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
-import { Reviews } from "../Reviews/Reviews";
+import { zodResolver } from "@hookform/resolvers/zod";
+
 import { Steps } from "../Steps/Steps";
 import { Modal, Typography } from "..";
 
@@ -17,8 +20,25 @@ export const BuildStrategy = ({
 }) => {
   const [isActive, setIsActive] = useState(false);
 
+  const [formData, setFormData] = useState({
+    brought: "",
+    increase: "",
+    rating: "",
+    strategy: "",
+    consequences: "",
+    attempts: "",
+    services: "",
+    selectedPlan: null,
+    selectedAddons: [],
+  });
+
+  const onSubmit = (data) => {
+    setFormData((prevFormData) => ({ ...prevFormData }));
+  };
+
   const onClose = () => {
     setIsActive(!isActive);
+    setFormData(formData);
   };
 
   return (
@@ -36,16 +56,23 @@ export const BuildStrategy = ({
       </button>
       {isActive && (
         <Modal isActive={isActive} onClose={onClose}>
-          <Steps
-            reviews={reviews}
-            addons={addons}
-            items={items}
-            list={list}
-            packageItems={packageItems}
-            packageList={packageList}
-          />
+          <form>
+            <Steps
+              reviews={reviews}
+              addons={addons}
+              items={items}
+              onSubmit={onSubmit}
+              formData={formData}
+              setFormData={setFormData}
+              list={list}
+              packageItems={packageItems}
+              packageList={packageList}
+            />
+          </form>
         </Modal>
       )}
     </div>
   );
 };
+
+//  robert@robertgerov.com

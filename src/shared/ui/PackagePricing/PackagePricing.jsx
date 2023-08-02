@@ -9,13 +9,14 @@ import { Button } from "..";
 
 import styles from "./PackagePricing.module.scss";
 
-export const PackagePricing = ({ items, list }) => {
-  const [selectedPlan, setSelectedPlan] = useState(null);
-
+export const PackagePricing = ({ items, list, formData, setFormData }) => {
   const isMatches = useMediaQuery("(max-width: 480px)");
 
   const handleSelectPlan = (item) => {
-    setSelectedPlan((prevSelected) => (prevSelected === item ? null : item));
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      selectedPlan: prevFormData.selectedPlan === item ? null : item,
+    }));
   };
 
   return (
@@ -164,15 +165,15 @@ export const PackagePricing = ({ items, list }) => {
       <div className={styles.planButtons}>
         {items?.map((item) => (
           <Button
-            variant={selectedPlan === item ? "outline" : "contained"}
+            variant={formData?.selectedPlan === item ? "outline" : "contained"}
             type="button"
             key={item.id}
             className={classNames(styles.button, {
-              [styles.selected]: selectedPlan === item.id,
+              [styles.selected]: formData?.selectedPlan === item.id,
             })}
             onClick={() => handleSelectPlan(item)}
           >
-            {selectedPlan === item ? (
+            {formData?.selectedPlan === item ? (
               <div className={styles.select_svg}>
                 <Checkmark />
                 Choose Plan

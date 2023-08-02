@@ -41,6 +41,7 @@ module.exports = {
     quotes: ["error", "double"],
     "implicit-arrow-linebreak": "off",
     "import/no-unresolved": "off",
+    "react/jsx-curly-newline": "off",
     "import/prefer-default-export": "off",
     "import/extensions": "off",
     "import/no-extraneous-dependencies": "off",

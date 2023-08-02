@@ -77,18 +77,31 @@ const Card = ({ name, price, description, onClick, isSelected }) => {
     </div>
   );
 };
-export const Step7 = ({ onBack, onNext, reviews, addons }) => {
-  const [selectedAddons, setSelectedAddons] = useState([]);
+export const Step7 = ({
+  onBack,
+  onNext,
+  reviews,
+  addons,
+  formData,
+  setFormData,
+}) => {
+  const { selectedAddons } = formData;
 
   const handleAddonChange = (addonName) => {
-    if (selectedAddons.includes(addonName)) {
-      setSelectedAddons((prevAddons) =>
-        prevAddons.filter((addon) => addon !== addonName));
+    if (selectedAddons?.includes(addonName)) {
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        selectedAddons: prevFormData?.selectedAddons?.filter(
+          (addon) => addon !== addonName
+        ),
+      }));
     } else {
-      setSelectedAddons((prevAddons) => [...prevAddons, addonName]);
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        selectedAddons: [...prevFormData.selectedAddons, addonName],
+      }));
     }
   };
-
   console.log(selectedAddons, "select");
   return (
     <div>
@@ -105,7 +118,7 @@ export const Step7 = ({ onBack, onNext, reviews, addons }) => {
             name={addon.name}
             price={addon.price}
             key={addon.id}
-            isSelected={selectedAddons.includes(addon.name)}
+            isSelected={selectedAddons?.includes(addon.name)}
             description={addon.description}
             onClick={() => handleAddonChange(addon.name)}
           />

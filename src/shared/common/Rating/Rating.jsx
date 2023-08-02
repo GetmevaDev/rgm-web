@@ -1,27 +1,25 @@
-// Rating.js
 import React, { useState } from "react";
 
 import styles from "./Rating.module.scss";
 
-export const Rating = ({ label }) => {
-  const [rating, setRating] = useState(0);
+export const Rating = ({ label, value, onRatingChange }) => {
   const [hoveredRating, setHoveredRating] = useState(0);
 
-  const handleRatingChange = (value) => {
-    setRating(value);
+  const handleRatingChange = (newValue) => {
+    onRatingChange(newValue);
   };
 
-  const handleHover = (value) => {
-    setHoveredRating(value);
+  const handleHover = (newValue) => {
+    setHoveredRating(newValue);
   };
 
   const handleMouseLeave = () => {
     setHoveredRating(0);
   };
+
   return (
     <div className={styles.ratingContainer}>
       <p className={styles.label}>{label}</p>
-      <p className={styles.rating}>{rating}</p>
       <div className={styles.starsContainer}>
         {[...Array(10)].map((_, index) => {
           const ratingValue = index + 1;
@@ -30,7 +28,7 @@ export const Rating = ({ label }) => {
               key={ratingValue}
               type="button"
               className={`${styles.ratingNumber} ${
-                ratingValue <= rating || ratingValue <= hoveredRating
+                ratingValue <= value || ratingValue <= hoveredRating
                   ? styles.active
                   : ""
               }`}

@@ -47,7 +47,7 @@ export const Step6 = ({ onBack, onNext, reviews, items, list }) => {
           <div className={styles.title}>Step 6</div>
 
           <div className={styles.question}>
-            If yes, does it require updating or improvement?
+            Does your website require updating or improvement?
           </div>
           {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
           <div className={styles.options}>

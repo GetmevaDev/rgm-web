@@ -5,7 +5,7 @@ import { Reviews } from "../../Reviews/Reviews";
 
 import styles from "../Steps.module.scss";
 
-export const Step9 = ({ onBack, onNext, reviews }) => (
+export const Step9 = ({ onBack, onNext, reviews, handleSubmit }) => (
   <div>
     <div className={styles.title}>Step 9: Final Evaluation</div>
 
@@ -24,7 +24,12 @@ export const Step9 = ({ onBack, onNext, reviews }) => (
         Yes
       </Button>
 
-      <Button variant="outline" type="button" className={styles.final_btn}>
+      <Button
+        variant="outline"
+        type="button"
+        className={styles.final_btn}
+        onClick={handleSubmit}
+      >
         Maybe, I need more information
       </Button>
     </div>

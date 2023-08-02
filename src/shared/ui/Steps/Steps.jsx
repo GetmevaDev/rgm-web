@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 import { getUniqueReviews, shuffleReviews } from "@/shared/utils";
+import emailjs from "@emailjs/browser";
 
 import { Step0 } from "./Step0/Step0";
 import { Step1 } from "./Step1/Step1";
@@ -20,11 +22,15 @@ export const Steps = ({
   list,
   packageItems,
   packageList,
+  formData,
+  setFormData,
+  onSubmit,
 }) => {
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(1);
 
-  const handleNext = () => {
-    setStep((prevStep) => prevStep + 1);
+  const handleNext = (data, nextStep = step + 1) => {
+    onSubmit(data);
+    setStep(nextStep);
   };
 
   useEffect(() => {
@@ -34,6 +40,44 @@ export const Steps = ({
   const handleBack = () => {
     setStep((prevStep) => prevStep - 1);
   };
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log("Submitted data:", formData);
+  //   setFormData({
+  //     brought: "",
+  //     increase: "",
+  //     rating: "",
+  //     strategy: "",
+  //     consequences: "",
+  //     attempts: "",
+  //     services: "",
+  //     selectedPlan: null,
+  //     selectedAddons: [],
+  //   });
+  // };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    emailjs
+      .send(
+        "service_mw3qmm3",
+        "template_fhgximq",
+        formData,
+        "user_iw2a3XOS7O7HrGbR8S31M"
+      )
+      .then(
+        (result) => {
+          console.log("Submitted data:", formData);
+          toast.success(result.text);
+        },
+        (error) => {
+          toast.error(error.text);
+        }
+      );
+  };
+
+  console.log(step, "step");
 
   switch (step) {
     case 0:
@@ -45,6 +89,8 @@ export const Steps = ({
         <Step1
           onNext={handleNext}
           onBack={handleBack}
+          formData={formData}
+          setFormData={setFormData}
           reviews={getUniqueReviews(reviews, step)}
         />
       );
@@ -53,6 +99,8 @@ export const Steps = ({
         <Step2
           onNext={handleNext}
           onBack={handleBack}
+          formData={formData}
+          setFormData={setFormData}
           reviews={getUniqueReviews(reviews, step)}
         />
       );
@@ -61,6 +109,8 @@ export const Steps = ({
         <Step3
           onNext={handleNext}
           onBack={handleBack}
+          formData={formData}
+          setFormData={setFormData}
           reviews={getUniqueReviews(reviews, step)}
         />
       );
@@ -70,6 +120,8 @@ export const Steps = ({
         <Step4
           onNext={handleNext}
           onBack={handleBack}
+          formData={formData}
+          setFormData={setFormData}
           reviews={getUniqueReviews(reviews, step)}
         />
       );
@@ -80,6 +132,8 @@ export const Steps = ({
           onBack={handleBack}
           items={items}
           list={list}
+          formData={formData}
+          setFormData={setFormData}
           packageItems={packageItems}
           packageList={packageList}
           reviews={getUniqueReviews(reviews, step)}
@@ -101,6 +155,8 @@ export const Steps = ({
           onNext={handleNext}
           onBack={handleBack}
           addons={addons}
+          formData={formData}
+          setFormData={setFormData}
           reviews={getUniqueReviews(reviews, step)}
         />
       );
@@ -112,6 +168,8 @@ export const Steps = ({
           addons={addons}
           items={items}
           list={list}
+          formData={formData}
+          setFormData={setFormData}
           reviews={getUniqueReviews(reviews, step)}
         />
       );
@@ -123,7 +181,10 @@ export const Steps = ({
           onBack={handleBack}
           addons={addons}
           items={items}
+          formData={formData}
+          setFormData={setFormData}
           list={list}
+          handleSubmit={handleSubmit}
           reviews={getUniqueReviews(reviews, step)}
         />
       );

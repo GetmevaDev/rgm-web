@@ -6,11 +6,16 @@ import { Button } from "../..";
 
 import styles from "../Steps.module.scss";
 
-export const Step8 = ({ items, list, onNext }) => (
+export const Step8 = ({ items, list, onNext, formData, setFormData }) => (
   <div>
     <div className={styles.title}>Step 8: Our Marketing Pricing</div>
     <p className={styles.sub}>*All plans require a 6 month commitment.*</p>
-    <Table items={items} list={list} />
+    <Table
+      items={items}
+      list={list}
+      formData={formData}
+      setFormData={setFormData}
+    />
 
     <Button
       variant="contained"

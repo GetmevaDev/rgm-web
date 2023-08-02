@@ -9,13 +9,16 @@ import { Button } from "../Button/Button";
 
 import styles from "./Table.module.scss";
 
-export const Table = ({ items, list }) => {
-  const [selectedPlan, setSelectedPlan] = useState(null);
-
+export const Table = ({ items, list, formData, setFormData }) => {
   const isMatches = useMediaQuery("(max-width: 480px)");
 
-  const handleSelectPlan = (item) => {
-    setSelectedPlan((prevSelected) => (prevSelected === item ? null : item));
+  const { selectedPlan } = formData;
+
+  const handleSelectPlan = (plan) => {
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      selectedPlan: plan?.title,
+    }));
   };
 
   return (
@@ -143,7 +146,7 @@ export const Table = ({ items, list }) => {
       <div className={styles.planButtons}>
         {items?.map((item) => (
           <Button
-            variant={selectedPlan === item ? "outline" : "contained"}
+            variant={selectedPlan === item.title ? "outline" : "contained"}
             type="button"
             key={item.id}
             className={classNames(styles.button, {
@@ -151,7 +154,7 @@ export const Table = ({ items, list }) => {
             })}
             onClick={() => handleSelectPlan(item)}
           >
-            {selectedPlan === item ? (
+            {selectedPlan === item.title ? (
               <div className={styles.select_svg}>
                 <Checkmark />
                 Choose Plan

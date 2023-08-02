@@ -12,8 +12,8 @@ export const Step5 = ({
   onBack,
   onNext,
   reviews,
-  items,
-  list,
+  formData,
+  setFormData,
   packageItems,
   packageList,
 }) => {
@@ -35,20 +35,28 @@ export const Step5 = ({
       setShowPriceComponent(true);
     }
   };
+
+  console.log(isQuestion, "isQuestion");
+
   return (
     <div>
       {showPriceComponent ? (
         <div>
-          <PackagePricing items={packageItems} list={packageList} />
+          <PackagePricing
+            items={packageItems}
+            list={packageList}
+            formData={formData}
+            setFormData={setFormData}
+          />
 
-          <Button
-            variant="contained"
-            onClick={() => console.log("77")}
-            type="button"
-            className={styles.btn_submit}
-          >
-            Submit
-          </Button>
+          <div className={styles.buttons}>
+            <Button variant="outline" onClick={() => onBack(5)} type="button">
+              Back
+            </Button>
+            <Button variant="contained" onClick={() => onNext(7)} type="button">
+              Next
+            </Button>
+          </div>
 
           <Reviews reviews={reviews} />
         </div>
@@ -57,7 +65,7 @@ export const Step5 = ({
           <div className={styles.title}>Step 5</div>
 
           <div className={styles.question}>
-            Does your website require updating or improvement?
+            Do you currently have a website?
           </div>
           {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
           <div className={styles.options}>
