@@ -46,23 +46,22 @@ export const Steps = ({
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("test", formData);
-    // emailjs
-    //   .send(
-    //     "service_mw3qmm3",
-    //     "template_fhgximq",
-    //     formData,
-    //     "user_iw2a3XOS7O7HrGbR8S31M"
-    //   )
-    //   .then(
-    //     (result) => {
-    //       console.log("Submitted data:", formData);
-    //       toast.success(result.text);
-    //     },
-    //     (error) => {
-    //       toast.error(error.text);
-    //     }
-    //   );
+    emailjs
+      .send(
+        "service_ok9prgn",
+        "template_fhgximq",
+        formData,
+        "user_iw2a3XOS7O7HrGbR8S31M"
+      )
+      .then(
+        (result) => {
+          console.log("Submitted data:", formData);
+          toast.success(result.text);
+        },
+        (error) => {
+          toast.error(error.text);
+        }
+      );
   };
   switch (step) {
     case 0:

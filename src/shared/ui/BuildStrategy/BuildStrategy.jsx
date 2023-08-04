@@ -1,9 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState } from "react";
-import { FormProvider, useForm } from "react-hook-form";
-import { z } from "zod";
-
-import { zodResolver } from "@hookform/resolvers/zod";
 
 import { Steps } from "../Steps/Steps";
 import { Modal, Typography } from "..";
@@ -26,9 +22,13 @@ export const BuildStrategy = ({
     rating: "",
     strategy: "",
     consequences: "",
+    businessName: "",
+    domainName: "",
+    decisionMakers: "",
     attempts: "",
     services: "",
-    selectedPlan: null,
+    selectedPlanPrice: null,
+    selectedPlanPackage: null,
     isQuestion: null,
     isUpdating: null,
     selectedAddons: [],
@@ -49,7 +49,6 @@ export const BuildStrategy = ({
       consequences: "",
       attempts: "",
       services: "",
-      selectedPlan: null,
       selectedAddons: [],
     });
   };
@@ -88,5 +87,3 @@ export const BuildStrategy = ({
     </div>
   );
 };
-
-//  robert@robertgerov.com

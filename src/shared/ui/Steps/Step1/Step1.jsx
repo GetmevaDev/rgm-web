@@ -10,6 +10,8 @@ export const Step1 = ({ formData, setFormData, onNext, onBack, reviews }) => {
 
   const [broughtError, setBroughtError] = useState("");
   const [increaseError, setIncreaseError] = useState("");
+  const [businessNameError, setBusinessNameError] = useState("");
+  const [domainNameError, setDomainNameError] = useState("");
 
   const handleFormChange = useCallback(
     (field, value) => {
@@ -19,21 +21,29 @@ export const Step1 = ({ formData, setFormData, onNext, onBack, reviews }) => {
   );
 
   useEffect(() => {
-    const { brought, increase } = formData;
+    const { brought, increase, businessName, domainName } = formData;
 
-    if (brought || increase) {
+    if ((brought || increase || businessName, domainName)) {
       setBroughtError(brought ? "" : "Complete the field");
       setIncreaseError(increase ? "" : "Complete the field");
+      setBusinessNameError(businessName ? "" : "Complete the field");
+      setDomainNameError(domainName ? "" : "Complete the field");
     }
 
-    setIsNextButtonDisabled(!brought || !increase);
+    setIsNextButtonDisabled(
+      !brought || !increase || !businessName || !domainName
+    );
   }, [formData]);
 
   const handleFormInteraction = useCallback(() => {
-    const { brought, increase } = formData;
+    const { brought, increase, businessName, domainName } = formData;
     setBroughtError(brought ? "" : "Complete the field");
     setIncreaseError(increase ? "" : "Complete the field");
-    setIsNextButtonDisabled(!brought || !increase);
+    setBusinessNameError(businessName ? "" : "Complete the field");
+    setDomainNameError(domainName ? "" : "Complete the field");
+    setIsNextButtonDisabled(
+      !brought || !increase || !businessName || !domainName
+    );
   }, [formData]);
 
   return (
@@ -59,6 +69,31 @@ export const Step1 = ({ formData, setFormData, onNext, onBack, reviews }) => {
             error={increaseError}
           />
         </div>
+      </div>
+
+      <div className={styles.grid}>
+        <TextArea
+          placeholder="Business name "
+          value={formData?.businessName}
+          onChange={(e) => handleFormChange("businessName", e.target.value)}
+          onBlur={handleFormInteraction}
+          error={businessNameError}
+        />
+
+        <TextArea
+          placeholder="Domain name "
+          value={formData?.domainName}
+          onChange={(e) => handleFormChange("domainName", e.target.value)}
+          onBlur={handleFormInteraction}
+          error={domainNameError}
+        />
+
+        <TextArea
+          placeholder="Additional decision makers"
+          value={formData?.decision_makers}
+          onChange={(e) => handleFormChange("decision_makers", e.target.value)}
+          onBlur={handleFormInteraction}
+        />
       </div>
 
       <div className={styles.buttons}>

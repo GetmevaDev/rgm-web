@@ -181,3 +181,14 @@
   margin: 0 auto;
   padding: 22px 0;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+
+  textarea {
+    height: 50px;
+    overflow-y: hidden;
+  }
+}

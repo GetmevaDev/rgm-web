@@ -12,14 +12,16 @@ import styles from "./Table.module.scss";
 export const Table = ({ items, list, formData, setFormData }) => {
   const isMatches = useMediaQuery("(max-width: 480px)");
 
-  const { selectedPlan } = formData;
+  const { selectedPlanPrice } = formData;
 
   const handleSelectPlan = (plan) => {
     setFormData((prevFormData) => ({
       ...prevFormData,
-      selectedPlan: plan?.title,
+      selectedPlanPrice: plan?.title,
     }));
   };
+
+  console.log(selectedPlanPrice, "selectedPlanPrice");
 
   return (
     <div className={styles.table}>
@@ -146,15 +148,15 @@ export const Table = ({ items, list, formData, setFormData }) => {
       <div className={styles.planButtons}>
         {items?.map((item) => (
           <Button
-            variant={selectedPlan === item.title ? "outline" : "contained"}
+            variant={selectedPlanPrice === item.title ? "outline" : "contained"}
             type="button"
             key={item.id}
             className={classNames(styles.button, {
-              [styles.selected]: selectedPlan === item.id,
+              [styles.selected]: selectedPlanPrice === item.id,
             })}
             onClick={() => handleSelectPlan(item)}
           >
-            {selectedPlan === item.title ? (
+            {selectedPlanPrice === item.title ? (
               <div className={styles.select_svg}>
                 <Checkmark />
                 Choose Plan

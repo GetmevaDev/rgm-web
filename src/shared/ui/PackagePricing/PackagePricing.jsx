@@ -15,7 +15,8 @@ export const PackagePricing = ({ items, list, formData, setFormData }) => {
   const handleSelectPlan = (item) => {
     setFormData((prevFormData) => ({
       ...prevFormData,
-      selectedPlan: prevFormData.selectedPlan === item ? null : item,
+      selectedPlanPackage:
+        prevFormData.selectedPlanPackage === item ? null : item,
     }));
   };
 
@@ -165,15 +166,17 @@ export const PackagePricing = ({ items, list, formData, setFormData }) => {
       <div className={styles.planButtons}>
         {items?.map((item) => (
           <Button
-            variant={formData?.selectedPlan === item ? "outline" : "contained"}
+            variant={
+              formData?.selectedPlanPackage === item ? "outline" : "contained"
+            }
             type="button"
             key={item.id}
             className={classNames(styles.button, {
-              [styles.selected]: formData?.selectedPlan === item.id,
+              [styles.selected]: formData?.selectedPlanPackage === item.id,
             })}
             onClick={() => handleSelectPlan(item)}
           >
-            {formData?.selectedPlan === item ? (
+            {formData?.selectedPlanPackage === item ? (
               <div className={styles.select_svg}>
                 <Checkmark />
                 Choose Plan
