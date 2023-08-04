@@ -4,7 +4,7 @@ import React from "react";
 
 import styles from "./Modal.module.scss";
 
-export const Modal = ({ onClose, children, isActive }) => {
+export const Modal = ({ onClose, children, isActive, step }) => {
   React.useEffect(() => {
     if (isActive) {
       document.documentElement.style.overflowY = "hidden";
@@ -19,7 +19,7 @@ export const Modal = ({ onClose, children, isActive }) => {
 
   return (
     <div className={styles.overlay}>
-      <div className={styles.popup}>
+      <div className={`${styles.popup} ${styles[`step${step && step}`]}`}>
         <div className={styles.closeButton} onClick={onClose}>
           <Image
             width={20}

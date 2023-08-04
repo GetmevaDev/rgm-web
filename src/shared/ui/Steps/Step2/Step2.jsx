@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 import { Rating } from "@/shared/common";
 
@@ -8,14 +8,35 @@ import { Reviews } from "../../Reviews/Reviews";
 import styles from "../Steps.module.scss";
 
 export const Step2 = ({ onBack, onNext, reviews, formData, setFormData }) => {
+  const [isNextButtonDisabled, setIsNextButtonDisabled] = useState(true);
+  const [strategyError, setStrategyError] = useState("");
+
+  const handleFormChange = useCallback(
+    (field, value) => {
+      setFormData({ ...formData, [field]: value });
+    },
+    [formData, setFormData]
+  );
+
   const handleRatingChange = (value) => {
     setFormData({ ...formData, rating: value });
   };
 
-  const handleNext = () => {
-    setFormData({ ...formData });
-    onNext();
-  };
+  useEffect(() => {
+    const { strategy } = formData;
+
+    if (strategy) {
+      setStrategyError(strategy ? "" : "Complete the field");
+    }
+
+    setIsNextButtonDisabled(!strategy);
+  }, [formData]);
+
+  const handleFormInteraction = useCallback(() => {
+    const { strategy } = formData;
+    setStrategyError(strategy ? "" : "Complete the field");
+    setIsNextButtonDisabled(!strategy);
+  }, [formData]);
 
   return (
     <div>
@@ -33,9 +54,9 @@ export const Step2 = ({ onBack, onNext, reviews, formData, setFormData }) => {
           <TextArea
             placeholder="If you could change something about your current strategy, what would it be?"
             value={formData.strategy}
-            onChange={(e) =>
-              setFormData({ ...formData, strategy: e.target.value })
-            }
+            onChange={(e) => handleFormChange("strategy", e.target.value)}
+            onBlur={handleFormInteraction}
+            error={strategyError}
           />
         </div>
       </div>
@@ -43,7 +64,12 @@ export const Step2 = ({ onBack, onNext, reviews, formData, setFormData }) => {
         <Button variant="outline" onClick={onBack} type="button">
           Back
         </Button>
-        <Button variant="contained" onClick={handleNext} type="button">
+        <Button
+          variant="contained"
+          onClick={onNext}
+          type="button"
+          disabled={isNextButtonDisabled}
+        >
           Next
         </Button>
       </div>

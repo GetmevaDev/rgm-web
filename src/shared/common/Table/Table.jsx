@@ -58,7 +58,7 @@ export const Table = ({ items, list, formData, setFormData }) => {
           </tr>
         </thead>
         <tbody className={styles.tbody}>
-          {list.map((row, index) => (
+          {list?.map((row, index) => (
             <tr
               key={index}
               className={index % 2 === 0 ? styles.even_row : styles.row}

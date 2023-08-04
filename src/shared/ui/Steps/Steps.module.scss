@@ -152,9 +152,32 @@
 
 .btn_submit {
   width: 100%;
+  margin-bottom: 100px;
 }
 
 .final_btn {
   width: 365px !important;
   height: 60px;
+}
+
+.desc_step {
+  color: var(--primary-color);
+  text-align: center;
+  font-family: var(--font-mont);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.answers_end {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.close_button {
+  margin: 0 auto;
+  padding: 22px 0;
 }

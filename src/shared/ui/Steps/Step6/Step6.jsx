@@ -3,83 +3,112 @@ import React, { useState } from "react";
 import { Radio } from "@/shared/common";
 import { Table } from "@/shared/common/Table/Table";
 
-import { Button } from "../..";
+import { Button, PackagePricing } from "../..";
 import { Reviews } from "../../Reviews/Reviews";
 
 import styles from "../Steps.module.scss";
 
-export const Step6 = ({ onBack, onNext, reviews, items, list }) => {
-  const [isQuestion, setIsQuestion] = useState(null);
+export const Step6 = ({
+  onBack,
+  reviews,
+  setStep,
+  formData,
+  setFormData,
+  packageItems,
+  packageList,
+}) => {
   const [errorMessage, setErrorMessage] = useState("");
-  const [showPriceComponent, setShowPriceComponent] = useState(false);
+
+  const { isUpdating } = formData;
 
   const handleChoice = (value) => {
-    setIsQuestion(value);
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      isUpdating: value,
+    }));
     setErrorMessage("");
   };
 
   const handleNext = () => {
-    if (isQuestion === null) {
-      setErrorMessage("Please select an option");
-    } else if (isQuestion === "yes") {
-      onNext(7);
-    } else {
-      setShowPriceComponent(true);
+    if (isQuestion !== "yes" && isQuestion !== "no") {
+      setErrorMessage("Please select an option.");
+      return;
     }
+
+    onNext();
   };
+
   return (
     <div>
-      {showPriceComponent ? (
-        <div>
-          <Table items={items} list={list} />
-
-          <Button
-            variant="contained"
-            onClick={() => console.log("77")}
-            type="button"
-            className={styles.btn_submit}
-          >
-            Submit
-          </Button>
-        </div>
-      ) : (
-        <div>
-          <div className={styles.title}>Step 6</div>
-
-          <div className={styles.question}>
-            Does your website require updating or improvement?
-          </div>
-          {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
-          <div className={styles.options}>
-            <Radio
-              label="Yes"
-              name="option"
-              value="yes"
-              ariaLabel="yes"
-              checked={isQuestion === "yes"}
-              onChange={() => handleChoice("yes")}
+      <div>
+        {formData?.isQuestion === "no" ? (
+          <div>
+            <PackagePricing
+              items={packageItems}
+              list={packageList}
+              formData={formData}
+              setFormData={setFormData}
             />
 
-            <Radio
-              label="No"
-              name="option"
-              value="no"
-              ariaLabel="no"
-              checked={isQuestion === "no"}
-              onChange={() => handleChoice("no")}
-            />
+            <div className={styles.buttons}>
+              <Button variant="outline" onClick={onBack} type="button">
+                Back
+              </Button>
+              <Button
+                variant="contained"
+                onClick={() => setStep(7)}
+                type="button"
+              >
+                Next
+              </Button>
+            </div>
+
+            <Reviews reviews={reviews} />
           </div>
-          <div className={styles.buttons}>
-            <Button variant="outline" onClick={onBack} type="button">
-              Back
-            </Button>
-            <Button variant="contained" onClick={handleNext} type="button">
-              Next
-            </Button>
+        ) : (
+          <div>
+            <div className={styles.title}>Step 6</div>
+
+            <div className={styles.question}>
+              Does your website require updating or improvement?
+            </div>
+            <div className={styles.options}>
+              <Radio
+                label="Yes"
+                name="option"
+                value="yes"
+                ariaLabel="yes"
+                checked={isUpdating === "yes"}
+                onChange={() => handleChoice("yes")}
+              />
+
+              <Radio
+                label="No"
+                name="option"
+                value="no"
+                ariaLabel="no"
+                checked={isUpdating === "no"}
+                onChange={() => handleChoice("no")}
+              />
+            </div>
+            <div className={styles.buttons}>
+              <Button variant="outline" onClick={onBack} type="button">
+                Back
+              </Button>
+
+              <Button
+                variant="contained"
+                onClick={() => (isUpdating === "no" ? setStep(8) : setStep(7))}
+                type="button"
+                disabled={isUpdating !== "yes" && isUpdating !== "no"}
+              >
+                Next
+              </Button>
+            </div>
+            <Reviews reviews={reviews} />
           </div>
-          <Reviews reviews={reviews} />
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };

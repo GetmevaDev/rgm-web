@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState } from "react";
-import { useForm } from "react-hook-form";
+import { FormProvider, useForm } from "react-hook-form";
 import { z } from "zod";
 
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -18,8 +18,8 @@ export const BuildStrategy = ({
   packageItems,
   packageList,
 }) => {
+  const [step, setStep] = useState(6);
   const [isActive, setIsActive] = useState(false);
-
   const [formData, setFormData] = useState({
     brought: "",
     increase: "",
@@ -29,6 +29,8 @@ export const BuildStrategy = ({
     attempts: "",
     services: "",
     selectedPlan: null,
+    isQuestion: null,
+    isUpdating: null,
     selectedAddons: [],
   });
 
@@ -38,13 +40,24 @@ export const BuildStrategy = ({
 
   const onClose = () => {
     setIsActive(!isActive);
-    setFormData(formData);
+    setStep(0);
+    setFormData({
+      brought: "",
+      increase: "",
+      rating: "",
+      strategy: "",
+      consequences: "",
+      attempts: "",
+      services: "",
+      selectedPlan: null,
+      selectedAddons: [],
+    });
   };
 
   return (
     <div className={styles.build}>
       <Typography tag="h2" size="small" color="white" className={styles.title}>
-        Lorem ipsum dolor sit amet
+        Ready To Out-Perform Your Competition?
       </Typography>
 
       <button
@@ -55,20 +68,21 @@ export const BuildStrategy = ({
         Let's Craft Your Success Strategy!
       </button>
       {isActive && (
-        <Modal isActive={isActive} onClose={onClose}>
-          <form>
-            <Steps
-              reviews={reviews}
-              addons={addons}
-              items={items}
-              onSubmit={onSubmit}
-              formData={formData}
-              setFormData={setFormData}
-              list={list}
-              packageItems={packageItems}
-              packageList={packageList}
-            />
-          </form>
+        <Modal isActive={isActive} onClose={onClose} step={step}>
+          <Steps
+            reviews={reviews}
+            addons={addons}
+            items={items}
+            onSubmit={onSubmit}
+            formData={formData}
+            step={step}
+            onClose={onClose}
+            setStep={setStep}
+            setFormData={setFormData}
+            list={list}
+            packageItems={packageItems}
+            packageList={packageList}
+          />
         </Modal>
       )}
     </div>

@@ -6,7 +6,9 @@ export const Rating = ({ label, value, onRatingChange }) => {
   const [hoveredRating, setHoveredRating] = useState(0);
 
   const handleRatingChange = (newValue) => {
-    onRatingChange(newValue);
+    // If the same rating is clicked again, unselect it (set value to 0)
+    const newValueToSet = newValue === value ? 0 : newValue;
+    onRatingChange(newValueToSet);
   };
 
   const handleHover = (newValue) => {
