@@ -18,7 +18,7 @@ export const BuildStrategy = ({
   packageItems,
   packageList,
 }) => {
-  const [step, setStep] = useState(6);
+  const [step, setStep] = useState(0);
   const [isActive, setIsActive] = useState(false);
   const [formData, setFormData] = useState({
     brought: "",
