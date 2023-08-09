@@ -28,7 +28,7 @@ export const Step9 = ({ onBack, onNext, reviews, handleSubmit }) => (
         variant="outline"
         type="button"
         className={styles.final_btn}
-        onClick={handleSubmit}
+        onClick={onNext}
       >
         Maybe, I need more information
       </Button>

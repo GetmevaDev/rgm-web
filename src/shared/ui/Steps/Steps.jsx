@@ -57,6 +57,7 @@ export const Steps = ({
         (result) => {
           console.log("Submitted data:", formData);
           toast.success(result.text);
+          handleNext();
         },
         (error) => {
           toast.error(error.text);
@@ -156,6 +157,7 @@ export const Steps = ({
           addons={addons}
           items={items}
           list={list}
+          handleSubmit={handleSubmit}
           formData={formData}
           setFormData={setFormData}
           reviews={getUniqueReviews(reviews, step)}

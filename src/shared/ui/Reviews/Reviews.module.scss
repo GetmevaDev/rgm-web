@@ -1,3 +1,5 @@
+@import "src/styles/variables.scss";
+
 .reviews {
   padding-top: 50px;
 }
@@ -49,4 +51,10 @@
   line-height: 26px;
   padding-top: 15px;
   letter-spacing: -0.2px;
+}
+
+@media screen and (max-width: $phoneWidth) {
+  .cards {
+    grid-template-columns: auto;
+  }
 }

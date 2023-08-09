@@ -1,3 +1,5 @@
+@import "src/styles/variables.scss";
+
 /* Rating.module.css */
 .ratingContainer {
   display: flex;
@@ -51,4 +53,24 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+}
+
+@media screen and (max-width: $phoneWidth) {
+  .ratingContainer {
+    align-items: flex-start;
+  }
+
+  .starsContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .ratingNumber + .ratingNumber {
+    margin-left: 0;
+  }
+
+  .ratingNumber {
+    margin-right: 5px;
+    margin-top: 5px;
+  }
 }

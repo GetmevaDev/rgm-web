@@ -1,3 +1,5 @@
+@import "src/styles/variables.scss";
+
 .title {
   font-family: var(--font-mont);
   font-size: 35px;
@@ -190,5 +192,21 @@
   textarea {
     height: 50px;
     overflow-y: hidden;
+  }
+}
+
+@media screen and (max-width: $phoneWidth) {
+  .answers,
+  .grid {
+    grid-template-columns: auto;
+  }
+
+  .answers_end {
+    grid-template-columns: auto;
+  }
+
+  .addons_cards {
+    grid-template-columns: auto;
+    grid-template-areas: none;
   }
 }

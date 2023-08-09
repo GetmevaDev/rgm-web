@@ -275,3 +275,16 @@
   width: 100%;
   margin-top: 50px;
 }
+
+@media screen and (max-width: $phoneWidth) {
+  .planButtons {
+    justify-content: end;
+  }
+
+  .button {
+    width: 80px;
+    padding: 5px 15px;
+    margin-top: 20px;
+    font-size: 10px;
+  }
+}
