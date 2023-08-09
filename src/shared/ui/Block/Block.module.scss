@@ -173,6 +173,7 @@
 @media screen and (max-width: $smDesktopWidth) {
   .block,
   .block_reverse {
+    display: grid;
     grid-template-columns: auto;
 
     img {
@@ -180,6 +181,11 @@
       height: 100%;
       transform: none;
     }
+  }
+
+  .gray {
+    margin-bottom: 50px;
+    padding-bottom: 50px;
   }
 
   .right {
