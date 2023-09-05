@@ -6,7 +6,9 @@ export async function getStaticProps() {
     data: { attributes },
   } = await fetchAPI("seo-service-page?populate=deep");
 
-  if (!attributes) {
+  const { data } = await fetchAPI("reviews?populate=deep");
+
+  if (!attributes && !data) {
     return {
       notFound: true,
     };
@@ -15,10 +17,11 @@ export async function getStaticProps() {
   return {
     props: {
       attributes,
+      data,
     },
     revalidate: 60, // In seconds
   };
 }
-export default function SeoCompany({ attributes }) {
-  return <SeoComponyScreen attributes={attributes} />;
+export default function SeoCompany({ attributes, data }) {
+  return <SeoComponyScreen attributes={attributes} reviews={data} />;
 }

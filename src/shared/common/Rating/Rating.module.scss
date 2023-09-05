@@ -1,0 +1,76 @@
+@import "src/styles/variables.scss";
+
+/* Rating.module.css */
+.ratingContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.ratingValue {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.starsContainer {
+  margin: 10px 0;
+}
+
+.ratingNumber {
+  cursor: pointer;
+  border: none;
+  border-radius: 100px;
+  background: #d7caa6;
+  padding: 10px 15px;
+  color: #000;
+  font-family: var(--font-mont);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  transition: color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.ratingNumber + .ratingNumber {
+  margin-left: 10px;
+}
+
+.ratingNumber.active {
+  background: #bda76a;
+  color: #fff;
+}
+
+/* Add a hover effect */
+.ratingNumber:hover,
+.ratingNumber.active {
+  color: #fff;
+  background: #bda76a;
+}
+
+.label {
+  font-family: var(--font-mont);
+  color: var(--primary-color);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@media screen and (max-width: $phoneWidth) {
+  .ratingContainer {
+    align-items: flex-start;
+  }
+
+  .starsContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .ratingNumber + .ratingNumber {
+    margin-left: 0;
+  }
+
+  .ratingNumber {
+    margin-right: 5px;
+    margin-top: 5px;
+  }
+}

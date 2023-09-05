@@ -3,6 +3,7 @@ import React from "react";
 import { Layout } from "@/shared";
 import {
   BlockMap,
+  BuildStrategy,
   Description,
   DescriptionSeo,
   GivingBack,
@@ -13,7 +14,7 @@ import {
   Work,
 } from "@/shared/ui";
 
-export const SeoComponyScreen = ({ attributes }) => (
+export const SeoComponyScreen = ({ attributes, reviews }) => (
   <Layout
     title={attributes?.seo?.title}
     description={attributes?.seo?.description}
@@ -40,7 +41,7 @@ export const SeoComponyScreen = ({ attributes }) => (
       />
 
       <DescriptionSeo
-        sub={attributes?.Description?.sub_description}
+        // sub={attributes?.Description?.sub_description}
         description={attributes?.Description?.description}
         title={attributes?.Description?.title}
         text={attributes?.Description?.text}
@@ -48,10 +49,21 @@ export const SeoComponyScreen = ({ attributes }) => (
         alt={attributes?.Description?.alt}
       />
 
-      <Price
+      <BuildStrategy
+        reviews={reviews}
+        addons={attributes?.addons}
         items={attributes?.PricingItemsss}
+        packageItems={attributes?.packageItems}
+        packageList={attributes?.PackageItemList}
         list={attributes?.PricingItemList}
       />
+
+      {console.log(attributes, "attr")}
+
+      {/* <Price
+        items={attributes?.PricingItemsss}
+        list={attributes?.PricingItemList}
+      /> */}
     </div>
 
     <Work

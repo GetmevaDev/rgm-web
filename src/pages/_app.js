@@ -58,6 +58,8 @@ export default function App({ Component, pageProps }) {
         className="base-page-size"
       >
         <main className={`${mont.variable} ${inter.variable}`}>
+          <ToastContainer />
+
           <Script
             async
             src="https://www.googletagmanager.com/gtag/js?id=G-D8LMD1Y3RJ"

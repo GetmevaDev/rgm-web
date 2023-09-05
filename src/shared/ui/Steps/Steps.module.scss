@@ -1,0 +1,212 @@
+@import "src/styles/variables.scss";
+
+.title {
+  font-family: var(--font-mont);
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--primary-color);
+  padding-bottom: 30px;
+  line-height: 147.9%;
+}
+
+.sub_title {
+  padding-top: 30px;
+  font-size: 20px;
+  font-family: var(--font-mont);
+  font-style: normal;
+  font-weight: 700;
+  color: var(--primary-color);
+  line-height: 32px;
+}
+
+.description {
+  padding: 30px 0;
+  font-size: 16px;
+  font-family: var(--font-mont);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  color: var(--dev-color);
+  letter-spacing: -0.2px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+
+  button {
+    width: 150px;
+  }
+}
+
+.answers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: flex-start;
+
+  .answer {
+    display: block;
+    width: 100%;
+  }
+}
+
+.question {
+  color: var(--primary-color);
+  padding-bottom: 15px;
+  font-family: var(--font-mont);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.step_desc {
+  font-family: var(--font-mont);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  color: var(--primary-color);
+}
+
+.addons_cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "b b a" "b b c" "b b c";
+  gap: 20px;
+}
+
+.addon_card {
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid var(--color-price);
+  background: #fff;
+  margin-top: 33px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: space-between;
+
+  .name {
+    color: var(--primary-color);
+    font-family: var(--font-mont);
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+  }
+
+  .price {
+    color: var(--primary-color);
+    font-family: var(--font-mont);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+  }
+
+  .addon_description {
+    color: var(--primary-color);
+    font-family: var(--font-mont);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: -0.2px;
+  }
+
+  .button {
+    text-transform: capitalize;
+  }
+}
+
+.button_step7 {
+  width: 100%;
+  text-transform: capitalize;
+  .select_svg {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.sub {
+  padding-bottom: 42px;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 32px;
+  color: var(--secondary-color);
+  font-family: var(--font-mont);
+}
+
+.btn_submit {
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.final_btn {
+  width: 365px !important;
+  height: 60px;
+}
+
+.desc_step {
+  color: var(--primary-color);
+  text-align: center;
+  font-family: var(--font-mont);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.answers_end {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.close_button {
+  margin: 0 auto;
+  padding: 22px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+
+  textarea {
+    height: 50px;
+    overflow-y: hidden;
+  }
+}
+
+@media screen and (max-width: $phoneWidth) {
+  .answers,
+  .grid {
+    grid-template-columns: auto;
+  }
+
+  .answers_end {
+    grid-template-columns: auto;
+  }
+
+  .addons_cards {
+    grid-template-columns: auto;
+    grid-template-areas: none;
+  }
+}

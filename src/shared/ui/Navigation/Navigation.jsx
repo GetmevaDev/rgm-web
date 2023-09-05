@@ -8,8 +8,6 @@ import { ETheme } from "@/providers";
 import { useTheme } from "@/shared/hooks";
 import { CloseSvg, MenuDarkIcon, MenuLightIcon } from "@/shared/icons";
 
-import { ThemeSwitcher } from "..";
-
 import styles from "./Navigation.module.scss";
 
 const Navigation = ({ className, items }) => {
@@ -61,8 +59,8 @@ const Navigation = ({ className, items }) => {
               {item.text}
             </Link>
 
-            {item?.SubHeaderItems?.length > 0 &&
-              renderSubMenu(item?.SubHeaderItems)}
+            {/* {item?.SubHeaderItems?.length > 0 &&
+              renderSubMenu(item?.SubHeaderItems)} */}
           </li>
         ))}
       </ul>

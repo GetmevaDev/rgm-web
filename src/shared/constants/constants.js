@@ -6,5 +6,5 @@ export const ROUTES = {
   CASE_YAGOLAW: "/case-stidies/yagolaw",
   CASE_GENTLE: "/case-stidies/gentle",
   CASE_BB: "/case-stidies/bb",
-  CASE_SMILES: "/case-stidies/smiles",
+  CASE_SMILES: "/case-stidies/all-smiles-dental-spa",
 };

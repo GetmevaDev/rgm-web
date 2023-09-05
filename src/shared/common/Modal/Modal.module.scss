@@ -1,0 +1,100 @@
+@import "src/styles/variables.scss";
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 8999;
+}
+
+.popup {
+  background: #ffffff;
+  border-radius: 10px;
+  position: relative;
+  padding: 50px 70px;
+
+  max-width: 1170px;
+  z-index: 9999;
+  margin: 0 auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.step6 {
+  height: 100vh;
+}
+
+.step7 {
+  height: 100vh;
+}
+
+.step7 .content {
+  height: 100vh;
+}
+
+.step8 .content {
+  height: 100vh;
+}
+
+.closeButton {
+  border-radius: 150px;
+  outline: none;
+  padding: 15px;
+  right: 0;
+  top: 0;
+  position: absolute;
+  user-select: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.content {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: $smDesktopWidth) {
+  .popup {
+    padding: 15px 25px;
+
+    max-width: 750px;
+  }
+
+  .step1,
+  .step2,
+  .step3,
+  .step4,
+  .step5,
+  .step6,
+  .step7,
+  .step8,
+  .step9 {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: $phoneWidth) {
+  .popup {
+    padding: 15px 25px;
+  }
+
+  .step1,
+  .step2,
+  .step3,
+  .step4,
+  .step5,
+  .step6,
+  .step7,
+  .step8,
+  .step9 {
+    height: 100%;
+  }
+}

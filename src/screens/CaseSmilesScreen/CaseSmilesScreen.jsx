@@ -66,7 +66,10 @@ export const CaseSmilesScreen = ({ attributes }) => (
       title={attributes?.SeeOutComes?.title}
     />
 
-    <KeywordProfile startCenter={13} startRight={25} />
+    <KeywordProfile
+      grid="three"
+      items={attributes?.KeywordProfile?.KeywordItem}
+    />
 
     <BlockMap />
   </Layout>

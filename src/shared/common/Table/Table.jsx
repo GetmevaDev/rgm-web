@@ -1,23 +1,36 @@
 import classNames from "classnames";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 import { useMediaQuery } from "@/shared/hooks";
+import { Checkmark } from "@/shared/icons";
+
+import { Button } from "../Button/Button";
 
 import styles from "./Table.module.scss";
 
-export const Table = ({ items, list }) => {
+export const Table = ({ items, list, formData, setFormData }) => {
   const isMatches = useMediaQuery("(max-width: 480px)");
+
+  const { selectedPlanPrice } = formData;
+
+  const handleSelectPlan = (plan) => {
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      selectedPlanPrice: plan?.title,
+    }));
+  };
+
+  console.log(selectedPlanPrice, "selectedPlanPrice");
 
   return (
     <div className={styles.table}>
       <table className={styles.price}>
         <colgroup>
-          <col style={{ width: "285px" }} />
-          <col style={{ width: "215px" }} />
-          <col style={{ width: "215px" }} />
-          <col style={{ width: "215px" }} />
-          <col style={{ width: "215px" }} />
+          <col style={{ width: "300px" }} />
+          <col style={{ width: "290px" }} />
+          <col style={{ width: "290px" }} />
+          <col style={{ width: "290px" }} />
         </colgroup>
         <thead>
           <tr>
@@ -47,7 +60,7 @@ export const Table = ({ items, list }) => {
           </tr>
         </thead>
         <tbody className={styles.tbody}>
-          {list.map((row, index) => (
+          {list?.map((row, index) => (
             <tr
               key={index}
               className={index % 2 === 0 ? styles.even_row : styles.row}
@@ -70,24 +83,6 @@ export const Table = ({ items, list }) => {
                   />
                 )}
               </td>
-              <td>
-                {row.available2 ? (
-                  <Image
-                    width={!isMatches ? 25 : 20}
-                    height={!isMatches ? 25 : 20}
-                    alt="arrow"
-                    src="/images/arrow-khaki.svg"
-                  />
-                ) : (
-                  <Image
-                    width={!isMatches ? 25 : 20}
-                    height={!isMatches ? 25 : 20}
-                    alt="arrow"
-                    src="/images/close-seo.svg"
-                  />
-                )}
-              </td>
-
               <td
                 className={
                   index % 2 === 0 ? styles.even_highlight : styles.highlight
@@ -111,7 +106,7 @@ export const Table = ({ items, list }) => {
               </td>
 
               <td>
-                {row.available4 ? (
+                {row.available2 ? (
                   <Image
                     width={!isMatches ? 25 : 20}
                     height={!isMatches ? 25 : 20}
@@ -127,10 +122,51 @@ export const Table = ({ items, list }) => {
                   />
                 )}
               </td>
+
+              {/* <td>
+                {row.available4 ? (
+                  <Image
+                    width={!isMatches ? 25 : 20}
+                    height={!isMatches ? 25 : 20}
+                    alt="arrow"
+                    src="/images/arrow-khaki.svg"
+                  />
+                ) : (
+                  <Image
+                    width={!isMatches ? 25 : 20}
+                    height={!isMatches ? 25 : 20}
+                    alt="arrow"
+                    src="/images/close-seo.svg"
+                  />
+                )}
+              </td> */}
             </tr>
           ))}
         </tbody>
       </table>
+
+      <div className={styles.planButtons}>
+        {items?.map((item) => (
+          <Button
+            variant={selectedPlanPrice === item.title ? "outline" : "contained"}
+            type="button"
+            key={item.id}
+            className={classNames(styles.button, {
+              [styles.selected]: selectedPlanPrice === item.id,
+            })}
+            onClick={() => handleSelectPlan(item)}
+          >
+            {selectedPlanPrice === item.title ? (
+              <div className={styles.select_svg}>
+                <Checkmark />
+                Choose Plan
+              </div>
+            ) : (
+              "Choose Plan"
+            )}
+          </Button>
+        ))}
+      </div>
     </div>
   );
 };

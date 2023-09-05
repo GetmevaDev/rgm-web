@@ -94,20 +94,20 @@
 .item {
   position: relative;
 
-  &:nth-child(2) {
-    &::after {
-      content: "";
-      width: 9px;
-      z-index: 2;
-      height: 6px;
-      background-image: url("/svg/arrow.svg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      position: absolute;
-      right: -12px;
-      top: 8px;
-    }
-  }
+  // &:nth-child(2) {
+  //   &::after {
+  //     content: "";
+  //     width: 9px;
+  //     z-index: 2;
+  //     height: 6px;
+  //     background-image: url("/svg/arrow.svg");
+  //     background-repeat: no-repeat;
+  //     background-size: cover;
+  //     position: absolute;
+  //     right: -12px;
+  //     top: 8px;
+  //   }
+  // }
 }
 
 @media (max-width: $tableWidth) {
