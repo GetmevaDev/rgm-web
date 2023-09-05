@@ -9,7 +9,6 @@ import {
   OutComes,
   Work,
 } from "@/shared/ui";
-import { FadeInWhenVisible } from "@/widgets";
 
 export const CaseGentleScreen = ({ attributes }) => (
   <Layout
@@ -59,7 +58,12 @@ export const CaseGentleScreen = ({ attributes }) => (
       />
     </div>
 
-    <KeywordProfile startCenter={7} numbers color="gray" />
+    {console.log(attributes, "attr")}
+    <KeywordProfile
+      items={attributes?.KeywordProfile?.KeywordItem}
+      grid="two"
+      color="gray"
+    />
 
     <BlockMap />
   </Layout>

@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React from "react";
+import React, { useState } from "react";
 
 import { FadeInWhenVisible } from "@/widgets";
 
@@ -12,12 +12,7 @@ const colors = {
   white: styles.white,
 };
 
-const KeywordProfile = ({
-  numbers,
-  startCenter,
-  startRight,
-  color = "white",
-}) => (
+const KeywordProfile = ({ color = "white", items, grid }) => (
   <FadeInWhenVisible>
     <div className={classNames(styles.keyword, colors[color])}>
       <div className={styles.keyword_inner}>
@@ -25,41 +20,24 @@ const KeywordProfile = ({
           Keyword Profile
         </Typography>
 
-        <div className={styles.list_inner}>
-          <ol className={numbers ? styles.list : styles.numbers}>
-            <li>Endodontist in williston park</li>
-            <li>Endodontist in williston park, ny</li>
-            <li>Root canal in williston park</li>
-            <li>Emergency dentistry in williston park</li>
-            <li>Emergency dentistry in williston park, ny</li>
-            <li> Apical surgery in williston park</li>
-          </ol>
-          <ol
-            className={numbers ? styles.list : styles.numbers}
-            start={startCenter}
-          >
-            <li>Endodontist in williston park</li>
-            <li>Endodontist in williston park, ny</li>
-            <li>Root canal in williston park</li>
-            <li>Emergency dentistry in williston park</li>
-            <li>Emergency dentistry in williston park, ny</li>
-            <li> Apical surgery in williston park</li>
-          </ol>
-
-          {startRight && (
-            <ol
-              className={numbers ? styles.list : styles.numbers}
-              start={startRight}
+        <ol
+          className={classNames(styles.column_list, {
+            [styles.column_list_two]: grid === "two",
+            [styles.column_list_three]: grid === "three",
+          })}
+        >
+          {items?.map((item) => (
+            <li
+              key={item.id}
+              className={classNames(styles.column_item, {
+                [styles.column_item_two]: grid === "two",
+                [styles.column_item_three]: grid === "three",
+              })}
             >
-              <li>Endodontist in williston park</li>
-              <li>Endodontist in williston park, ny</li>
-              <li>Root canal in williston park</li>
-              <li>Emergency dentistry in williston park</li>
-              <li>Emergency dentistry in williston park, ny</li>
-              <li> Apical surgery in williston park</li>
-            </ol>
-          )}
-        </div>
+              {item.text}
+            </li>
+          ))}
+        </ol>
       </div>
     </div>
   </FadeInWhenVisible>
