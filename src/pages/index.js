@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 import { HomeScreen } from "@/screens";
 import { fetchAPI } from "@/shared/lib";
 
@@ -21,5 +23,15 @@ export async function getStaticProps() {
 }
 
 export default function Home({ attributes }) {
-  return <HomeScreen attributes={attributes} />;
+  return (
+    <>
+      <Head>
+        <title>Home</title>
+        <meta name="description" content="Home" />
+
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <HomeScreen attributes={attributes} />
+    </>
+  );
 }

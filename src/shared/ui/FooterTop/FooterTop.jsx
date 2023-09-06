@@ -8,7 +8,7 @@ import { useTheme } from "@/shared/hooks";
 
 import styles from "./FooterTop.module.scss";
 
-const FooterTop = ({ footer }) => {
+export const FooterTop = ({ footer }) => {
   const { theme } = useTheme();
 
   return (

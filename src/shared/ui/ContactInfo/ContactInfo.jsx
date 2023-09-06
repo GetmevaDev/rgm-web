@@ -2,10 +2,10 @@ import React from "react";
 import { PulseLoader } from "react-spinners";
 import useSWR from "swr";
 
-import { fetcher, override } from "@/shared";
+import { override } from "@/shared";
+import { fetcher } from "@/widgets/Header/Header";
 
 import styles from "./ContactInfo.module.scss";
-//
 
 export const ContactInfo = () => {
   const { data, isError, isLoading } = useSWR(
