@@ -6,7 +6,7 @@ import { Reviews } from "../../Reviews/Reviews";
 import styles from "../Steps.module.scss";
 
 export const Step0 = ({ onNext, reviews }) => (
-  <div>
+  <div className={styles.step0}>
     <h3 className={styles.title}>A Tailored Approach to Your Digital Growth</h3>
 
     <p className={styles.sub_title}>
