@@ -74,6 +74,10 @@ export default function App({ Component, pageProps }) {
           gtag('config', 'G-D8LMD1Y3RJ');
         `}
           </Script>
+          <Script
+            src="//code.tidio.co/66km30tbyc7srpnrqbkijuwu1albc2ux.js"
+            async
+          />
 
           <Component {...pageProps} />
         </main>
