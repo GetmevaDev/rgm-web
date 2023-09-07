@@ -1,4 +1,6 @@
+import classNames from "classnames";
 import React, { useCallback, useEffect, useState } from "react";
+import { Controller, useForm } from "react-hook-form";
 
 import { Button, TextArea } from "../..";
 import { Reviews } from "../../Reviews/Reviews";
@@ -6,73 +8,66 @@ import { Reviews } from "../../Reviews/Reviews";
 import styles from "../Steps.module.scss";
 
 export const Step3 = ({ onBack, onNext, reviews, formData, setFormData }) => {
-  const [isNextButtonDisabled, setIsNextButtonDisabled] = useState(true);
+  const { control, handleSubmit, formState, setValue } = useForm({
+    defaultValues: formData,
+  });
 
-  const [attemptstError, setAttemptsError] = useState("");
-  const [consequencesError, setConsequencesError] = useState("");
+  const { isNextButtonDisabled } = formState;
 
-  const handleFormChange = useCallback(
-    (field, value) => {
-      setFormData({ ...formData, [field]: value });
-    },
-    [formData, setFormData]
-  );
-
-  useEffect(() => {
-    const { attempts, consequences } = formData;
-
-    if (attempts || consequences) {
-      setAttemptsError(attempts ? "" : "Complete the field");
-      setConsequencesError(consequences ? "" : "Complete the field");
-    }
-
-    setIsNextButtonDisabled(!attempts || !consequences);
-  }, [formData]);
-
-  const handleFormInteraction = useCallback(() => {
-    const { attempts, consequences } = formData;
-    setAttemptsError(attempts ? "" : "Complete the field");
-    setConsequencesError(consequences ? "" : "Complete the field");
-    setIsNextButtonDisabled(!attempts || !consequences);
-  }, [formData]);
+  const onSubmit = (data) => {
+    setFormData({ ...formData, ...data });
+    onNext();
+  };
 
   return (
-    <div>
+    <div className={styles.step3_inner}>
       <div className={styles.title}>Step 3: Considering Changes</div>
 
-      <div className={styles.answers_end}>
-        <div className={styles.answer}>
-          <TextArea
-            placeholder="Have you made attempts to make this change in the past? If so, please elaborate. If not, what prevented you from doing so?"
-            onChange={(e) => handleFormChange("attempts", e.target.value)}
-            onBlur={handleFormInteraction}
-            error={attemptstError}
-            value={formData.attempts}
-          />
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div className={styles.answers_end}>
+          <div className={classNames(styles.answer, styles.answer_step3)}>
+            <Controller
+              name="attempts"
+              control={control}
+              rules={{ required: "Complete the field" }}
+              render={({ field }) => (
+                <TextArea
+                  {...field}
+                  placeholder="Have you made attempts to make this change in the past? If so, please elaborate. If not, what prevented you from doing so?"
+                  error={formState.errors.attempts?.message}
+                />
+              )}
+            />
+          </div>
+          <div className={classNames(styles.answer, styles.answer_step3)}>
+            <Controller
+              name="consequences"
+              control={control}
+              rules={{ required: "Complete the field" }}
+              render={({ field }) => (
+                <TextArea
+                  {...field}
+                  placeholder="If you do not make this change now, what do you believe the consequences would be?"
+                  error={formState.errors.consequences?.message}
+                />
+              )}
+            />
+          </div>
         </div>
-        <div className={styles.answer}>
-          <TextArea
-            placeholder="If you do not make this change now, what do you believe the consequences would be?"
-            value={formData.consequences}
-            onChange={(e) => handleFormChange("consequences", e.target.value)}
-            onBlur={handleFormInteraction}
-            error={consequencesError}
-          />
+        <div className={styles.buttons}>
+          <Button variant="outline" onClick={onBack} type="button">
+            Back
+          </Button>
+          <Button
+            variant="contained"
+            type="submit"
+            disabled={isNextButtonDisabled}
+          >
+            Next
+          </Button>
         </div>
-      </div>
-      <div className={styles.buttons}>
-        <Button variant="outline" onClick={onBack} type="button">
-          Back
-        </Button>
-        <Button
-          variant="contained"
-          onClick={onNext}
-          type="button"
-          disabled={isNextButtonDisabled}
-        >
-          Next
-        </Button>
-      </div>
+      </form>
+
       <Reviews reviews={reviews} />
     </div>
   );

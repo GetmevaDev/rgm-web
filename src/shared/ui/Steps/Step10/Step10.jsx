@@ -6,7 +6,7 @@ import { Reviews } from "../../Reviews/Reviews";
 import styles from "../Steps.module.scss";
 
 export const Step10 = ({ onClose, reviews }) => (
-  <div>
+  <div className={styles.step10}>
     <p className={styles.desc_step}>
       Thank you for completing the survey. A representative will contact you
       shortly to authorize the agreement.
