@@ -8,6 +8,7 @@
   color: var(--primary-color);
   padding-bottom: 30px;
   line-height: 147.9%;
+  padding-top: 30px;
 }
 
 .sub_title {
@@ -40,6 +41,80 @@
 
   button {
     width: 150px;
+  }
+}
+
+.textarea {
+  border-radius: 10px;
+  background: #f8f7f7;
+  height: 150px;
+  resize: none;
+  outline: none;
+  border: none;
+  font-family: var(--font-mont);
+  padding: 15px;
+}
+
+.agree_btn {
+  padding: 22px 30px;
+}
+
+.step75 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+
+  .process {
+    color: var(--secondary-color);
+    font-family: var(--font-mont);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px; /* 162.5% */
+    letter-spacing: -0.2px;
+    padding-bottom: 15px;
+  }
+
+  .step7_title {
+    color: var(--primary-color);
+    font-family: var(--font-mont);
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 147.9%;
+    padding-bottom: 30px;
+  }
+
+  .step7_description {
+    color: var(--secondary-color);
+    font-family: var(--font-mont);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: -0.2px;
+    padding-bottom: 25px;
+  }
+
+  .step7_sub_description {
+    color: var(--primary-color);
+    text-align: center;
+    font-family: var(--font-mont);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    padding-bottom: 50px;
   }
 }
 
@@ -206,6 +281,10 @@
 }
 
 @media screen and (max-width: $phoneWidth) {
+  .agree_btn {
+    padding: 10px 25px;
+  }
+
   .answers,
   .grid {
     grid-template-columns: auto;

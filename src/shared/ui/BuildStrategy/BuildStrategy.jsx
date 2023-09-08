@@ -14,7 +14,7 @@ export const BuildStrategy = ({
   packageItems,
   packageList,
 }) => {
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(8);
   const [isActive, setIsActive] = useState(false);
   const [formData, setFormData] = useState({
     brought: "",
@@ -32,6 +32,7 @@ export const BuildStrategy = ({
     services: "",
     selectedPlanPrice: null,
     selectedPlanPackage: null,
+    websiteFree: "",
     isQuestion: null,
     isUpdating: null,
     selectedAddons: [],
@@ -52,6 +53,8 @@ export const BuildStrategy = ({
       consequences: "",
       attempts: "",
       services: "",
+      websiteFree: "",
+
       selectedAddons: [],
     });
   };

@@ -19,6 +19,8 @@ export const Step8 = ({
   const handleBack = () => {
     if (formData?.isUpdating === "no") {
       setStep(6);
+    } else {
+      setStep(7);
     }
   };
 

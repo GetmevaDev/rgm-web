@@ -1,0 +1,42 @@
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.placeholder {
+  color: var(--dev-color);
+  font-family: var(--font-mont);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.input_error {
+  border: 1px solid red !important;
+}
+
+.input_focused {
+  border: 1px solid var(--dev-color); /* Стиль рамки при фокусе */
+}
+
+.input {
+  border-radius: 10px;
+  background: #f8f7f7;
+  resize: none;
+  outline: none;
+  border: none;
+  height: 50px;
+  font-family: var(--font-mont);
+  padding: 15px;
+}
+
+.error {
+  font-family: var(--font-mont);
+  color: red;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}

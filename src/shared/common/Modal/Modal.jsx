@@ -1,4 +1,5 @@
 /* eslint-disable react/button-has-type */
+import classNames from "classnames";
 import Image from "next/image";
 import React from "react";
 
@@ -17,9 +18,17 @@ export const Modal = ({ onClose, children, isActive, step }) => {
     };
   }, [isActive]);
 
+  const modalClasses = classNames(
+    styles.overlay,
+    styles.popup,
+    styles[`step${step && step.toString().replace(".", "_")}`]
+  );
+
+  console.log(step, "step");
+
   return (
     <div className={styles.overlay}>
-      <div className={`${styles.popup} ${styles[`step${step && step}`]}`}>
+      <div className={modalClasses}>
         <div className={styles.closeButton} onClick={onClose}>
           <Image
             width={20}

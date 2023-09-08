@@ -83,6 +83,7 @@ export const Step7 = ({
   reviews,
   addons,
   formData,
+  setStep,
   setFormData,
 }) => {
   const { selectedAddons } = formData;
@@ -129,7 +130,7 @@ export const Step7 = ({
         <Button variant="outline" onClick={onBack} type="button">
           Back
         </Button>
-        <Button variant="contained" onClick={onNext} type="button">
+        <Button variant="contained" onClick={() => setStep(7.5)} type="button">
           Next
         </Button>
       </div>

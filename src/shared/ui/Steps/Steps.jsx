@@ -17,6 +17,7 @@ import { Step8 } from "./Step8/Step8";
 import { Step9 } from "./Step9/Step9";
 import { Step10 } from "./Step10/Step10";
 import { Step65 } from "./Step6.5/Step6.5";
+import { Step75 } from "./Step7.5/Step7.5";
 
 export const Steps = ({
   reviews,
@@ -159,6 +160,20 @@ export const Steps = ({
           onNext={handleNext}
           onBack={handleBack}
           addons={addons}
+          formData={formData}
+          setStep={setStep}
+          setFormData={setFormData}
+          reviews={getUniqueReviews(reviews, step)}
+        />
+      );
+
+    case 7.5:
+      return (
+        <Step75
+          onNext={handleNext}
+          onBack={handleBack}
+          addons={addons}
+          setStep={setStep}
           formData={formData}
           setFormData={setFormData}
           reviews={getUniqueReviews(reviews, step)}

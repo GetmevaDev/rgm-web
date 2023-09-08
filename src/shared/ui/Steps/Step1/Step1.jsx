@@ -1,5 +1,8 @@
 import React from "react";
 import { Controller, useForm } from "react-hook-form";
+import ReactInputMask from "react-input-mask";
+
+import { PhoneNumberInput } from "@/shared/common";
 
 import { Button, TextArea } from "../..";
 import { Reviews } from "../../Reviews/Reviews";
@@ -27,7 +30,13 @@ export const Step1 = ({ formData, setFormData, onNext, onBack, reviews }) => {
           <Controller
             name="fullName"
             control={control}
-            rules={{ required: "Complete the field" }}
+            rules={{
+              required: "Complete the field",
+              pattern: {
+                value: /^[A-Za-z]+$/,
+                message: "Please enter only letters for full name",
+              },
+            }}
             render={({ field }) => (
               <TextArea
                 {...field}
@@ -40,20 +49,31 @@ export const Step1 = ({ formData, setFormData, onNext, onBack, reviews }) => {
           <Controller
             name="phoneNumber"
             control={control}
-            rules={{ required: "Complete the field" }}
+            rules={{
+              required: "Complete the field",
+              pattern: {
+                message: "Invalid phone number format, must be 10 digits",
+              },
+            }}
             render={({ field }) => (
-              <TextArea
-                {...field}
+              <PhoneNumberInput
+                value={field.value}
                 placeholder="Phone number"
                 error={formState.errors.phoneNumber?.message}
+                onChange={(value) => field.onChange(value)}
               />
             )}
           />
-
           <Controller
             name="email"
             control={control}
-            rules={{ required: "Complete the field" }}
+            rules={{
+              required: "Complete the field",
+              pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                message: "Invalid email address format",
+              },
+            }}
             render={({ field }) => (
               <TextArea
                 type="email"
