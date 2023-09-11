@@ -23,15 +23,5 @@ export async function getStaticProps() {
 }
 
 export default function Home({ attributes }) {
-  return (
-    <>
-      <Head>
-        <title>Home</title>
-        <meta name="description" content="Home" />
-
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <HomeScreen attributes={attributes} />
-    </>
-  );
+  return <HomeScreen attributes={attributes} />;
 }

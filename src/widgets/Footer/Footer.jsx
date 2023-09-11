@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 import useSWR from "swr";
 
-import { Button, FooterTop } from "@/shared/ui";
+import { Button, CustomerReviews, FooterTop } from "@/shared/ui";
 
 import { fetcher } from "../Header/Header";
 

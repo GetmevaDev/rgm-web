@@ -7,6 +7,7 @@ import {
   Block,
   BlockMap,
   BridgeBusiness,
+  CustomerReviews,
   FeaturedPress,
   ImageBannerText,
   OurServices,
