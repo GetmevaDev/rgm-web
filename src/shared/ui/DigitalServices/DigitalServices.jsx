@@ -20,7 +20,6 @@ export const DigitalServices = ({ services }) => (
           </Link>
         ))}
       </div>
-      {console.log(services, "services")}
 
       <div className={styles.grid_three}>
         {services?.DigitalService?.slice(2, 5).map((item) => (
