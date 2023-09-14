@@ -33,7 +33,7 @@ export const Step1 = ({ formData, setFormData, onNext, onBack, reviews }) => {
             rules={{
               required: "Complete the field",
               pattern: {
-                value: /^[A-Za-z]+$/,
+                value: /^[A-Za-z\s]+$/,
                 message: "Please enter only letters for full name",
               },
             }}
