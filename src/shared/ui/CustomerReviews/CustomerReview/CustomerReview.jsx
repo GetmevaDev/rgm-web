@@ -15,13 +15,15 @@ export const CustomerReview = ({ title, description, buttonView, logo }) => {
   };
   return (
     <div className={styles.review} style={descriptionStyle}>
-      <Image
-        src={logo?.data?.attributes?.url}
-        width={170}
-        className={styles.image}
-        height={102}
-        alt={logo?.data?.attributes?.name}
-      />
+      <div className={styles.image_inner}>
+        <Image
+          src={logo?.data?.attributes?.url}
+          width={150}
+          className={styles.image}
+          height={102}
+          alt={logo?.data?.attributes?.name}
+        />
+      </div>
       <div className={styles.title}>{title}</div>
       <div className={styles.border} />
       <div className={styles.description}>
