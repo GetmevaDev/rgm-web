@@ -72,12 +72,10 @@ export const OutPerfom = () => {
     <div className={styles.out}>
       <div className={styles.left}>
         <div className={styles.title}>
-          READY TO OUT-PERFORM YOUR COMPETITION?
+          {seoData?.data?.attributes?.TitleStepForm}
         </div>
         <div className={styles.description}>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
-          et magnis dis parturient montes, nascetur ridiculus mus.
+          {seoData?.data?.attributes?.DescriptionStepForm}
         </div>
 
         {content}
