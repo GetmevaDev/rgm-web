@@ -49,14 +49,14 @@ export const SeoComponyScreen = ({ attributes, reviews }) => (
         alt={attributes?.Description?.alt}
       />
 
-      <BuildStrategy
+      {/* <BuildStrategy
         reviews={reviews}
         addons={attributes?.addons}
         items={attributes?.PricingItemsss}
         packageItems={attributes?.packageItems}
         packageList={attributes?.PackageItemList}
         list={attributes?.PricingItemList}
-      />
+      /> */}
 
       {console.log(attributes, "attr")}
 

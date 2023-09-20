@@ -16,11 +16,13 @@ export { BridgeBusinessAsync as BridgeBusiness } from "./BridgeBusiness/BridgeBu
 export * from "./BuildStrategy/BuildStrategy";
 export { CasesAsync as Cases } from "./Cases/Cases.async";
 export { ContactAsync as Contact } from "./Contact/Contact.async";
+export * from "./CustomerReviews/CustomerReviews";
 export * from "./DescriptionSeo/DescriptionSeo";
 export * from "./DescriptionTitle/DescriptionTitle";
 export { DevelopmentProcessAsync as DevelopmentProcess } from "./DevelopmentProcess/DevelopmentProcess.async";
 export * from "./DevelopmentProcess/Item/ProcessItem";
 export { DevelopTeamAsync as DevelopTeam } from "./DevelopTeam/DevelopTeam.async";
+export * from "./DigitalServices/DigitalServices";
 export { FeaturedPressAsync as FeaturedPress } from "./FeaturedPress/FeaturedPress.async";
 export { FeedbackAsync as Feedback } from "./Feedback/Feedback.async";
 export { FooterTopAsync as FooterTop } from "./FooterTop/FooterTop.async";

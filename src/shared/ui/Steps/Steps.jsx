@@ -16,6 +16,8 @@ import { Step7 } from "./Step7/Step7";
 import { Step8 } from "./Step8/Step8";
 import { Step9 } from "./Step9/Step9";
 import { Step10 } from "./Step10/Step10";
+import { Step65 } from "./Step6.5/Step6.5";
+import { Step75 } from "./Step7.5/Step7.5";
 
 export const Steps = ({
   reviews,
@@ -44,8 +46,7 @@ export const Steps = ({
     setStep((prevStep) => prevStep - 1);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     emailjs
       .send(
         "service_ok9prgn",
@@ -138,12 +139,41 @@ export const Steps = ({
           reviews={getUniqueReviews(reviews, step)}
         />
       );
+    case 6.5:
+      return (
+        <Step65
+          onNext={handleNext}
+          onBack={handleBack}
+          items={items}
+          list={list}
+          formData={formData}
+          packageItems={packageItems}
+          setStep={setStep}
+          packageList={packageList}
+          setFormData={setFormData}
+          reviews={getUniqueReviews(reviews, step)}
+        />
+      );
     case 7:
       return (
         <Step7
           onNext={handleNext}
           onBack={handleBack}
           addons={addons}
+          formData={formData}
+          setStep={setStep}
+          setFormData={setFormData}
+          reviews={getUniqueReviews(reviews, step)}
+        />
+      );
+
+    case 7.5:
+      return (
+        <Step75
+          onNext={handleNext}
+          onBack={handleBack}
+          addons={addons}
+          setStep={setStep}
           formData={formData}
           setFormData={setFormData}
           reviews={getUniqueReviews(reviews, step)}
@@ -157,7 +187,7 @@ export const Steps = ({
           addons={addons}
           items={items}
           list={list}
-          handleSubmit={handleSubmit}
+          setStep={setStep}
           formData={formData}
           setFormData={setFormData}
           reviews={getUniqueReviews(reviews, step)}

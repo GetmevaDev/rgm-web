@@ -1,0 +1,53 @@
+@import "src/styles/variables.scss";
+
+.out {
+  margin-bottom: 100px;
+
+  border-radius: 10px;
+  background: linear-gradient(90deg, #bda76a 16.62%, #ead7a5 100%);
+
+  padding: 82px 60px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title {
+  color: var(--title-cover);
+  font-family: var(--font-mont);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 58px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.description {
+  overflow: hidden;
+  color: var(--title-cover);
+  font-family: var(--font-mont);
+  text-overflow: ellipsis;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  padding-bottom: 30px;
+  line-height: 24px;
+}
+
+.button {
+  width: 420px;
+  border-radius: 10px;
+  border: none;
+}
+
+@media screen and (max-width: $phoneWidth) {
+  .button {
+    width: 100%;
+  }
+}

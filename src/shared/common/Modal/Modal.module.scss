@@ -80,12 +80,32 @@
   }
 }
 
+.step10 {
+  height: 70%;
+}
+
+.step9 {
+  height: 80%;
+}
+
+.step7_5 {
+  height: 60%;
+}
+.content {
+  height: 100%;
+}
+
 @media screen and (max-width: $smDesktopWidth) {
   .popup {
     padding: 15px 25px;
 
     max-width: 750px;
   }
+
+  .content {
+    height: 100%;
+  }
+  
   .step0,
   .step1,
   .step2,
@@ -101,6 +121,10 @@
 }
 
 @media screen and (max-width: $phoneWidth) {
+  .overlay {
+    display: block;
+  }
+
   .popup {
     padding: 15px 25px;
   }
@@ -113,7 +137,13 @@
   .step6,
   .step7,
   .step8,
-  .step9 {
+  .step9,
+  .step7_5,
+  .step10 {
+    height: 100%;
+  }
+
+  .content {
     height: 100%;
   }
 }

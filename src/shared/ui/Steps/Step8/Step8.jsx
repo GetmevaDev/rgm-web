@@ -12,25 +12,37 @@ export const Step8 = ({
   onNext,
   formData,
   setFormData,
+  setStep,
   handleSubmit,
-}) => (
-  <div>
-    <div className={styles.title}>Step 8: Our Marketing Pricing</div>
-    <p className={styles.sub}>*All plans require a 6 month commitment.*</p>
-    <Table
-      items={items}
-      list={list}
-      formData={formData}
-      setFormData={setFormData}
-    />
+  onBack,
+}) => {
+  const handleBack = () => {
+    if (formData?.isUpdating === "no") {
+      setStep(6);
+    } else {
+      setStep(7);
+    }
+  };
 
-    <Button
-      variant="contained"
-      onClick={handleSubmit}
-      type="button"
-      className={styles.btn_submit}
-    >
-      Submit
-    </Button>
-  </div>
-);
+  return (
+    <div>
+      <div className={styles.title}>Step 8: Our Marketing Pricing</div>
+      <p className={styles.sub}>*All plans require a 6 month commitment.*</p>
+      <Table
+        items={items}
+        list={list}
+        formData={formData}
+        setFormData={setFormData}
+      />
+
+      <div className={styles.buttons}>
+        <Button variant="outline" onClick={handleBack} type="button">
+          Back
+        </Button>
+        <Button variant="contained" onClick={onNext} type="button">
+          Next
+        </Button>
+      </div>
+    </div>
+  );
+};

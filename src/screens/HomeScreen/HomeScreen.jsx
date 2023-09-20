@@ -7,6 +7,7 @@ import {
   Block,
   BlockMap,
   BridgeBusiness,
+  CustomerReviews,
   FeaturedPress,
   ImageBannerText,
   OurServices,
@@ -63,6 +64,7 @@ export const HomeScreen = ({ attributes }) => (
       title={attributes?.OurServices?.title}
       description={attributes?.OurServices?.description}
       items={attributes?.OurServices?.OurServicesItems?.OurServiceItem}
+      slug={attributes?.OurServices?.OurServiceItem?.slug}
     />
 
     <div className="layout">

@@ -67,7 +67,7 @@ export const Step6 = ({
           </div>
         ) : (
           <div>
-            <div className={styles.title}>Step 6</div>
+            <div className={styles.title}>Step 6:</div>
 
             <div className={styles.question}>
               Does your website require updating or improvement?
@@ -98,7 +98,10 @@ export const Step6 = ({
 
               <Button
                 variant="contained"
-                onClick={() => (isUpdating === "no" ? setStep(8) : setStep(7))}
+                // eslint-disable-next-line no-confusing-arrow
+                onClick={() =>
+                  isUpdating === "no" ? setStep(8) : setStep(6.5)
+                }
                 type="button"
                 disabled={isUpdating !== "yes" && isUpdating !== "no"}
               >
