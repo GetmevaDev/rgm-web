@@ -60,6 +60,25 @@
 .content {
   margin-top: 10px;
 }
+@media screen and (max-width: $desktopWidth) {
+  .popup {
+    padding: 15px 25px;
+
+    max-width: 750px;
+  }
+  .step0,
+  .step1,
+  .step2,
+  .step3,
+  .step4,
+  .step5,
+  .step6,
+  .step7,
+  .step8,
+  .step9 {
+    height: 100%;
+  }
+}
 
 .step10 {
   height: 70%;
@@ -86,7 +105,7 @@
   .content {
     height: 100%;
   }
-
+  
   .step0,
   .step1,
   .step2,
