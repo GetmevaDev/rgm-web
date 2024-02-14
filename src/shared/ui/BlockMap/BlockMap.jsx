@@ -8,7 +8,6 @@ import { CustomerReviews, DigitalServices, Map } from "..";
 import styles from "./BlockMap.module.scss";
 
 export const BlockMap = () => {
-  const [data, setData] = useState([]);
   const [dataServices, setDataServices] = useState([]);
   const router = useRouter();
 
@@ -16,7 +15,6 @@ export const BlockMap = () => {
     fetch("https://cms-rgm.herokuapp.com/api/layout?populate=deep")
       .then((response) => response.json())
       .then((data) => {
-        setData(data?.data?.attributes?.CustomerReviews);
         setDataServices(data?.data?.attributes?.DigitalServices);
         console.log(data, "data");
       })
@@ -30,7 +28,7 @@ export const BlockMap = () => {
   return (
     <>
       <div className="layout">
-        {/* <CustomerReviews data={data} setData={setData} /> */}
+        {!isHomePage && <CustomerReviews />}
 
         <OutPerfom />
       </div>
