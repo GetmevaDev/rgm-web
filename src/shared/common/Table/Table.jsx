@@ -53,7 +53,7 @@ export const Table = ({ items, list, formData, setFormData }) => {
                   <span className={styles.price}>
                     {item.price && ` ${item.price}`}
                   </span>
-                  <span className={styles.mouth}>{item.price && "/Mouth"}</span>
+                  <span className={styles.mouth}>{item.price && "/Month"}</span>
                 </div>
               </th>
             ))}
