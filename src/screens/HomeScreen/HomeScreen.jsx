@@ -49,6 +49,8 @@ export const HomeScreen = ({ attributes }) => (
         image={attributes?.image_banner?.image?.data?.attributes?.url}
       />
 
+      <CustomerReviews data={attributes?.CustomerReviews} />
+
       <BridgeBusiness
         subTitle={attributes?.BridgeBusiness?.title_color}
         title={attributes?.BridgeBusiness?.title}

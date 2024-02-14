@@ -30,7 +30,7 @@ export const BlockMap = () => {
   return (
     <>
       <div className="layout">
-        <CustomerReviews data={data} setData={setData} />
+        {/* <CustomerReviews data={data} setData={setData} /> */}
 
         <OutPerfom />
       </div>
