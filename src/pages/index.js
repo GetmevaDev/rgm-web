@@ -1,5 +1,3 @@
-import Head from "next/head";
-
 import { HomeScreen } from "@/screens";
 import { fetchAPI } from "@/shared/lib";
 

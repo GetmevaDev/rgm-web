@@ -13,8 +13,8 @@ const Banner = ({ title, subTitle, description, image, button, link }) => (
     <section className={styles.banner}>
       <div className={styles.image_inner}>
         <Image
-          width={475}
-          height={650}
+          width={400}
+          height={550}
           src={image}
           alt="robert"
           className={styles.image}
@@ -30,9 +30,17 @@ const Banner = ({ title, subTitle, description, image, button, link }) => (
       </div>
 
       <div className={styles.banner_right}>
-        <Typography tag="h2">
-          {title} <span className={styles.color}>{subTitle}</span>
-        </Typography>
+        <div>
+          <Typography tag="h2" size="small">
+            <span className={styles.color}>{subTitle.split(",")[0]}</span>
+          </Typography>
+          <Typography tag="h2" size="small">
+            {title}
+          </Typography>
+          <Typography tag="h2" size="small">
+            <span className={styles.color}>{subTitle.split(",")[1]}</span>
+          </Typography>
+        </div>
 
         <p className={styles.description}>{description}</p>
         <div className={styles.buttons}>
