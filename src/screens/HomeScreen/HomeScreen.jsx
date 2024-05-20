@@ -81,7 +81,6 @@ export const HomeScreen = ({ attributes }) => (
     </div>
 
     <Awards
-      images={attributes?.Awards?.images?.data}
       title={attributes?.Awards?.title}
       subTitle={attributes?.Awards?.title_color}
     />
