@@ -30,7 +30,7 @@ const BridgeBusiness = ({ title, subTitle, description, items }) => (
           </div>
         ))}
 
-        <div className={styles.data}>*Data for Q4, 2022</div>
+        <div className={styles.data}>*Data for Q1, 2024</div>
       </div>
     </section>
   </FadeInWhenVisible>
