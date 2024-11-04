@@ -40,14 +40,13 @@ export default function App({ Component, pageProps }) {
         </script>
       </Head>
       <noscript>
-          <iframe
-            title="GTM"
-            src="https://www.googletagmanager.com/ns.html?id=GTM-KCWFCDNT"
-            height="0"
-            width="0"
-            style="display:none;visibility:hidden"
-          >
-          </iframe>
+        <iframe
+          title="GTM"
+          src="https://www.googletagmanager.com/ns.html?id=GTM-KCWFCDNT"
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden"
+        />
       </noscript>
       <motion.div
         key={router.route}
