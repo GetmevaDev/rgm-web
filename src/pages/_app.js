@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import Head from 'next/head';
+import Head from "next/head";
 import { useRouter } from "next/router";
 import Script from "next/script";
 import { ToastContainer } from "react-toastify";
@@ -40,8 +40,13 @@ export default function App({ Component, pageProps }) {
         </script>
       </Head>
       <noscript>
-          <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCWFCDNT"
-                        height="0" width="0" style="display:none;visibility:hidden">
+          <iframe 
+            title="GTM" 
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KCWFCDNT" 
+            height="0" 
+            width="0" 
+            style="display:none;visibility:hidden"
+          >
           </iframe>
       </noscript>
       <motion.div
