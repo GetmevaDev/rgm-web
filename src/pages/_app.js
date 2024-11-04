@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import Script from "next/script";
 import { ToastContainer } from "react-toastify";
 
-import { ThemeProvider } from "@/providers";
+// import { ThemeProvider } from "@/providers";
 // eslint-disable-next-line import/order
 import { Inter, Montserrat } from "@next/font/google";
 
@@ -40,11 +40,11 @@ export default function App({ Component, pageProps }) {
         </script>
       </Head>
       <noscript>
-          <iframe 
-            title="GTM" 
-            src="https://www.googletagmanager.com/ns.html?id=GTM-KCWFCDNT" 
-            height="0" 
-            width="0" 
+          <iframe
+            title="GTM"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KCWFCDNT"
+            height="0"
+            width="0"
             style="display:none;visibility:hidden"
           >
           </iframe>
